@@ -44,7 +44,7 @@ function copyClassicScripts() {
 }
 
 export default defineConfig({
-  base: "/",
+  base: process.env.VITE_BASE || "/",
   publicDir: "public",
   plugins: [react(), copyClassicScripts()],
   build: {
