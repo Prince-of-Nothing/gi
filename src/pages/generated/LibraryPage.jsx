@@ -131,12 +131,12 @@ export default function LibraryPage() {
     document.body.className = "library-page";
     const _added = [];
     (async () => {
-      try { await import("../../js/site-header.js"); } catch (e) { console.error('module load failed', "js/site-header.js", e); }
+      // skipped legacy site-header.js
       try { await import("../../js/library.js"); } catch (e) { console.error('module load failed', "js/library.js", e); }
       try { await import("../../js/profile-nav.js"); } catch (e) { console.error('module load failed', "js/profile-nav.js", e); }
       try { const blob=new Blob(["import { supabase } from \"./js/supabaseClient.js\"; import { mountMyLists } from \"./js/reading-lists.js\"; supabase.auth.getSession().then(({ data }) => { if (data.session?.user) mountMyLists(document.getElementById(\"myListsSection\"), supabase, data.session.user); });"],{type:'text/javascript'}); const u=URL.createObjectURL(blob); await import(/* @vite-ignore */ u); URL.revokeObjectURL(u); } catch(e){ console.error('inline module failed', e); }
       try { (0,eval)("\n  if (\"serviceWorker\" in navigator && location.protocol === \"https:\") {\n    window.addEventListener(\"load\", () => navigator.serviceWorker.register(\"/sw.js\", { scope: \"/\" }).catch((error) => console.warn(\"GidiReads offline support could not start:\", error)));\n  }\n"); } catch(e){ console.error('inline script failed', e); }
-      try { await import("../../js/site-footer.js"); } catch (e) { console.error('module load failed', "js/site-footer.js", e); }
+      // skipped legacy site-footer.js
       try { await import("../../js/theme-sync.js"); } catch (e) { console.error('module load failed', "js/theme-sync.js", e); }
     })();
     return () => {

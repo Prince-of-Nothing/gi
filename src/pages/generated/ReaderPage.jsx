@@ -268,7 +268,7 @@ export default function ReaderPage() {
     document.body.className = "reader-body";
     const _added = [];
     (async () => {
-      try { await import("../../js/site-header.js"); } catch (e) { console.error('module load failed', "js/site-header.js", e); }
+      // skipped legacy site-header.js
       try { await import("../../js/reader.js"); } catch (e) { console.error('module load failed', "js/reader.js", e); }
       try { (0,eval)("\n  if (\"serviceWorker\" in navigator && location.protocol === \"https:\") {\n    window.addEventListener(\"load\", () => navigator.serviceWorker.register(\"/sw.js\", { scope: \"/\" }).catch((error) => console.warn(\"GidiReads offline support could not start:\", error)));\n  }\n"); } catch(e){ console.error('inline script failed', e); }
       try { await import("../../js/theme-sync.js"); } catch (e) { console.error('module load failed', "js/theme-sync.js", e); }

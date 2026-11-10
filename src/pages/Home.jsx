@@ -239,12 +239,12 @@ export default function Home() {
     document.body.classList.add('home-page');
     (async () => {
       // Load legacy page behavior after markup is in DOM
-      try { await import('../../js/app.js?v=story-fix-01'); } catch (e) { console.error('home app load failed', e); }
-      try { await import('../../js/onboarding-tour.js?v=role-tour-01'); } catch (_) {}
-      try { const mod = await import('../../js/holiday-rail.js'); mod.mountHolidayRail?.(document.getElementById('hhHomeMount')); } catch (_) {}
-      try { await import('../../js/index.js'); } catch (_) {}
-      try { await import('../../js/profile-nav.js'); } catch (_) {}
-      try { await import('../../js/theme-sync.js'); } catch (_) {}
+      try { await import('../js/app.js?v=story-fix-01'); } catch (e) { console.error('home app load failed', e); }
+      try { await import('../js/onboarding-tour.js?v=role-tour-01'); } catch (_) {}
+      try { const mod = await import('../js/holiday-rail.js'); mod.mountHolidayRail?.(document.getElementById('hhHomeMount')); } catch (_) {}
+      try { await import('../js/index.js'); } catch (_) {}
+      try { await import('../js/profile-nav.js'); } catch (_) {}
+      try { await import('../js/theme-sync.js'); } catch (_) {}
     })();
     return () => {
       document.body.classList.remove('home-page');

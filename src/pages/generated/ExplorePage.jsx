@@ -144,11 +144,11 @@ export default function ExplorePage() {
     document.body.className = "explore-page";
     const _added = [];
     (async () => {
-      try { await import("../../js/site-header.js"); } catch (e) { console.error('module load failed', "js/site-header.js", e); }
+      // skipped legacy site-header.js
       try { (0,eval)("\n(() => {\n  const ids = ['featuredGrid','discoverGrid','resultsGrid','taxonomyShowcaseGrid','publicListsGrid'];\n  const fail = message => {\n    ids.forEach(id => { const el = document.getElementById(id); if (el && (el.textContent.includes('Loading') || !el.textContent.trim())) el.innerHTML = `<div class=\"explore-empty\" role=\"status\">${String(message).replace(/[&<>\"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]))}</div>`; });\n    console.error('[GidiReads Explore]', message);\n  };\n  window.addEventListener('unhandledrejection', event => { const msg = event.reason?.message || String(event.reason || 'Unexpected loading error'); fail(`Explore encountered a loading error: ${msg}`); });\n  setTimeout(() => { if (ids.some(id => document.getElementById(id)?.textContent.includes('Loading'))) fail('Explore is taking too long to load. Please check your connection and refresh. If it repeats, send the exact error shown in the browser console.'); }, 18000);\n  import('./js/explore.js?v=12-public-reading-list-discovery').catch(error => fail(`Explore could not start: ${error?.message || error}`));\n})();\n"); } catch(e){ console.error('inline script failed', e); }
       try { await import("../../js/profile-nav.js"); } catch (e) { console.error('module load failed', "js/profile-nav.js", e); }
       try { const blob=new Blob(["import { mountHolidayRail } from \"./js/holiday-rail.js\"; mountHolidayRail(document.getElementById(\"hhExploreMount\"), { compact: true });"],{type:'text/javascript'}); const u=URL.createObjectURL(blob); await import(/* @vite-ignore */ u); URL.revokeObjectURL(u); } catch(e){ console.error('inline module failed', e); }
-      try { await import("../../js/site-footer.js"); } catch (e) { console.error('module load failed', "js/site-footer.js", e); }
+      // skipped legacy site-footer.js
       try { await import("../../js/theme-sync.js"); } catch (e) { console.error('module load failed', "js/theme-sync.js", e); }
     })();
     return () => {

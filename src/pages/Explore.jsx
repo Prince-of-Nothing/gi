@@ -132,10 +132,10 @@ export default function Explore() {
   React.useEffect(() => {
     document.body.classList.add('explore-page');
     (async () => {
-      try { await import('../../js/explore.js?v=12-public-reading-list-discovery'); } catch (e) { console.error('explore page load failed', e); }
-      try { await import('../../js/profile-nav.js'); } catch (_) {}
-      try { const mod = await import('../../js/holiday-rail.js'); mod.mountHolidayRail?.(document.getElementById('hhExploreMount'), { compact: true }); } catch (_) {}
-      try { await import('../../js/theme-sync.js'); } catch (_) {}
+      try { await import('../js/explore.js?v=12-public-reading-list-discovery'); } catch (e) { console.error('explore page load failed', e); }
+      try { await import('../js/profile-nav.js'); } catch (_) {}
+      try { const mod = await import('../js/holiday-rail.js'); mod.mountHolidayRail?.(document.getElementById('hhExploreMount'), { compact: true }); } catch (_) {}
+      try { await import('../js/theme-sync.js'); } catch (_) {}
     })();
     return () => {
       document.body.classList.remove('explore-page');

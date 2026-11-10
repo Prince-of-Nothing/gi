@@ -33,9 +33,9 @@ export default function AnalyticsPage() {
     document.body.className = "";
     const _added = [];
     (async () => {
-      try { await import("../../js/site-header.js"); } catch (e) { console.error('module load failed', "js/site-header.js", e); }
+      // skipped legacy site-header.js
       try { await import("../../js/analytics.js"); } catch (e) { console.error('module load failed', "js/analytics.js", e); }
-      try { await import("../../js/site-footer.js"); } catch (e) { console.error('module load failed', "js/site-footer.js", e); }
+      // skipped legacy site-footer.js
       try { await import("../../js/theme-sync.js"); } catch (e) { console.error('module load failed', "js/theme-sync.js", e); }
     })();
     return () => {

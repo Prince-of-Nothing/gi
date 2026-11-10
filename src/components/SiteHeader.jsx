@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { supabase } from '../../js/supabaseClient.js';
+import { supabase } from '../js/supabaseClient.js';
 
 export default function SiteHeader() {
   const [isAdmin, setIsAdmin] = React.useState(false);

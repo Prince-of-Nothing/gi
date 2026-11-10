@@ -143,10 +143,10 @@ export default function AuthorPage() {
     const _added = [];
     (async () => {
       try { await import("../../js/preload.js"); } catch (e) { console.error('module load failed', "js/preload.js", e); }
-      try { await import("../../js/site-header.js"); } catch (e) { console.error('module load failed', "js/site-header.js", e); }
+      // skipped legacy site-header.js
       try { await import("../../js/author.js"); } catch (e) { console.error('module load failed', "js/author.js", e); }
       try { await import("../../js/profile-nav.js"); } catch (e) { console.error('module load failed', "js/profile-nav.js", e); }
-      try { await import("../../js/site-footer.js"); } catch (e) { console.error('module load failed', "js/site-footer.js", e); }
+      // skipped legacy site-footer.js
       try { await import("../../js/theme-sync.js"); } catch (e) { console.error('module load failed', "js/theme-sync.js", e); }
     })();
     return () => {
