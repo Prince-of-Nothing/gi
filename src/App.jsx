@@ -28,7 +28,7 @@ import CreatorEarningsPage from './pages/generated/CreatorEarningsPage.jsx';
 import ExplorePage from './pages/generated/ExplorePage.jsx';
 import HolidayHeartsEntryPage from './pages/generated/HolidayHeartsEntryPage.jsx';
 import HolidayHeartsPage from './pages/generated/HolidayHeartsPage.jsx';
-import LibraryPage from './pages/generated/LibraryPage.jsx';
+import LibraryPage from './pages/LibraryPage.jsx';
 import ModeratorPage from './pages/generated/ModeratorPage.jsx';
 import MyGidireadsPage from './pages/generated/MyGidireadsPage.jsx';
 import MyStoriesPage from './pages/generated/MyStoriesPage.jsx';
