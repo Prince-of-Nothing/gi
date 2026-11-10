@@ -1,8 +1,10 @@
-import React, { Suspense } from 'react';
+﻿import React, { Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/Layout.jsx';
+import RequireAuth from './components/RequireAuth.jsx';
 import Home from './pages/Home.jsx';
 import Explore from './pages/Explore.jsx';
+import AuthPage from './pages/AuthPage.jsx';
 import AccountPage from './pages/generated/AccountPage.jsx';
 import AdminEconomyPage from './pages/generated/AdminEconomyPage.jsx';
 import AdminPage from './pages/generated/AdminPage.jsx';
@@ -12,7 +14,6 @@ import AeDraftReviewPage from './pages/generated/AeDraftReviewPage.jsx';
 import AeReviewPage from './pages/generated/AeReviewPage.jsx';
 import AePage from './pages/generated/AePage.jsx';
 import AnalyticsPage from './pages/generated/AnalyticsPage.jsx';
-import AuthPage from './pages/generated/AuthPage.jsx';
 import AuthorNotesPage from './pages/generated/AuthorNotesPage.jsx';
 import AuthorPage from './pages/generated/AuthorPage.jsx';
 import AuthorsStudioPage from './pages/generated/AuthorsStudioPage.jsx';
@@ -52,16 +53,16 @@ import WelcomePage from './pages/generated/WelcomePage.jsx';
 
 export default function App() {
   return (
-    <Suspense fallback={<div style={{ padding: 24 }}>Loading…</div>}>
+    <Suspense fallback={<div style={{ padding: 24 }}>Loadingâ€¦</div>}>
       <Routes>
         <Route path="/" element={<Layout><Home /></Layout>} />
         <Route path="/index.html" element={<Layout><Home /></Layout>} />
-        <Route path="/account" element={<AccountPage />} />
-        <Route path="/account.html" element={<AccountPage />} />
-        <Route path="/admin-economy" element={<AdminEconomyPage />} />
-        <Route path="/admin-economy.html" element={<AdminEconomyPage />} />
-        <Route path="/admin" element={<AdminPage />} />
-        <Route path="/admin.html" element={<AdminPage />} />
+        <Route path="/account" element={<RequireAuth><AccountPage /></RequireAuth>} />
+        <Route path="/account.html" element={<RequireAuth><AccountPage /></RequireAuth>} />
+        <Route path="/admin-economy" element={<RequireAuth><AdminEconomyPage /></RequireAuth>} />
+        <Route path="/admin-economy.html" element={<RequireAuth><AdminEconomyPage /></RequireAuth>} />
+        <Route path="/admin" element={<RequireAuth><AdminPage /></RequireAuth>} />
+        <Route path="/admin.html" element={<RequireAuth><AdminPage /></RequireAuth>} />
         <Route path="/ae-apply" element={<AeApplyPage />} />
         <Route path="/ae-apply.html" element={<AeApplyPage />} />
         <Route path="/ae-author-feedback" element={<AeAuthorFeedbackPage />} />
@@ -72,48 +73,48 @@ export default function App() {
         <Route path="/ae-review.html" element={<AeReviewPage />} />
         <Route path="/ae" element={<AePage />} />
         <Route path="/ae.html" element={<AePage />} />
-        <Route path="/analytics" element={<AnalyticsPage />} />
-        <Route path="/analytics.html" element={<AnalyticsPage />} />
+        <Route path="/analytics" element={<RequireAuth><AnalyticsPage /></RequireAuth>} />
+        <Route path="/analytics.html" element={<RequireAuth><AnalyticsPage /></RequireAuth>} />
         <Route path="/auth" element={<AuthPage />} />
         <Route path="/auth.html" element={<AuthPage />} />
-        <Route path="/author-notes" element={<AuthorNotesPage />} />
-        <Route path="/author-notes.html" element={<AuthorNotesPage />} />
+        <Route path="/author-notes" element={<RequireAuth><AuthorNotesPage /></RequireAuth>} />
+        <Route path="/author-notes.html" element={<RequireAuth><AuthorNotesPage /></RequireAuth>} />
         <Route path="/author" element={<AuthorPage />} />
         <Route path="/author.html" element={<AuthorPage />} />
-        <Route path="/authors-studio" element={<AuthorsStudioPage />} />
-        <Route path="/authors-studio.html" element={<AuthorsStudioPage />} />
-        <Route path="/chapter-editor" element={<ChapterEditorPage />} />
-        <Route path="/chapter-editor.html" element={<ChapterEditorPage />} />
-        <Route path="/chapter-pricing" element={<ChapterPricingPage />} />
-        <Route path="/chapter-pricing.html" element={<ChapterPricingPage />} />
+        <Route path="/authors-studio" element={<RequireAuth><AuthorsStudioPage /></RequireAuth>} />
+        <Route path="/authors-studio.html" element={<RequireAuth><AuthorsStudioPage /></RequireAuth>} />
+        <Route path="/chapter-editor" element={<RequireAuth><ChapterEditorPage /></RequireAuth>} />
+        <Route path="/chapter-editor.html" element={<RequireAuth><ChapterEditorPage /></RequireAuth>} />
+        <Route path="/chapter-pricing" element={<RequireAuth><ChapterPricingPage /></RequireAuth>} />
+        <Route path="/chapter-pricing.html" element={<RequireAuth><ChapterPricingPage /></RequireAuth>} />
         <Route path="/collection" element={<CollectionPage />} />
         <Route path="/collection.html" element={<CollectionPage />} />
         <Route path="/community-space" element={<CommunitySpacePage />} />
         <Route path="/community-space.html" element={<CommunitySpacePage />} />
         <Route path="/community" element={<CommunityPage />} />
         <Route path="/community.html" element={<CommunityPage />} />
-        <Route path="/contract-center" element={<ContractCenterPage />} />
-        <Route path="/contract-center.html" element={<ContractCenterPage />} />
-        <Route path="/create-story" element={<CreateStoryPage />} />
-        <Route path="/create-story.html" element={<CreateStoryPage />} />
-        <Route path="/creator-earnings" element={<CreatorEarningsPage />} />
-        <Route path="/creator-earnings.html" element={<CreatorEarningsPage />} />
+        <Route path="/contract-center" element={<RequireAuth><ContractCenterPage /></RequireAuth>} />
+        <Route path="/contract-center.html" element={<RequireAuth><ContractCenterPage /></RequireAuth>} />
+        <Route path="/create-story" element={<RequireAuth><CreateStoryPage /></RequireAuth>} />
+        <Route path="/create-story.html" element={<RequireAuth><CreateStoryPage /></RequireAuth>} />
+        <Route path="/creator-earnings" element={<RequireAuth><CreatorEarningsPage /></RequireAuth>} />
+        <Route path="/creator-earnings.html" element={<RequireAuth><CreatorEarningsPage /></RequireAuth>} />
         <Route path="/explore" element={<Layout><Explore /></Layout>} />
         <Route path="/explore.html" element={<Layout><Explore /></Layout>} />
         <Route path="/holiday-hearts-entry" element={<HolidayHeartsEntryPage />} />
         <Route path="/holiday-hearts-entry.html" element={<HolidayHeartsEntryPage />} />
         <Route path="/holiday-hearts" element={<HolidayHeartsPage />} />
         <Route path="/holiday-hearts.html" element={<HolidayHeartsPage />} />
-        <Route path="/library" element={<LibraryPage />} />
-        <Route path="/library.html" element={<LibraryPage />} />
-        <Route path="/moderator" element={<ModeratorPage />} />
-        <Route path="/moderator.html" element={<ModeratorPage />} />
-        <Route path="/my-gidireads" element={<MyGidireadsPage />} />
-        <Route path="/my-gidireads.html" element={<MyGidireadsPage />} />
-        <Route path="/my-stories" element={<MyStoriesPage />} />
-        <Route path="/my-stories.html" element={<MyStoriesPage />} />
-        <Route path="/notifications" element={<NotificationsPage />} />
-        <Route path="/notifications.html" element={<NotificationsPage />} />
+        <Route path="/library" element={<RequireAuth><LibraryPage /></RequireAuth>} />
+        <Route path="/library.html" element={<RequireAuth><LibraryPage /></RequireAuth>} />
+        <Route path="/moderator" element={<RequireAuth><ModeratorPage /></RequireAuth>} />
+        <Route path="/moderator.html" element={<RequireAuth><ModeratorPage /></RequireAuth>} />
+        <Route path="/my-gidireads" element={<RequireAuth><MyGidireadsPage /></RequireAuth>} />
+        <Route path="/my-gidireads.html" element={<RequireAuth><MyGidireadsPage /></RequireAuth>} />
+        <Route path="/my-stories" element={<RequireAuth><MyStoriesPage /></RequireAuth>} />
+        <Route path="/my-stories.html" element={<RequireAuth><MyStoriesPage /></RequireAuth>} />
+        <Route path="/notifications" element={<RequireAuth><NotificationsPage /></RequireAuth>} />
+        <Route path="/notifications.html" element={<RequireAuth><NotificationsPage /></RequireAuth>} />
         <Route path="/opportunities" element={<OpportunitiesPage />} />
         <Route path="/opportunities.html" element={<OpportunitiesPage />} />
         <Route path="/opportunity" element={<OpportunityPage />} />
@@ -128,24 +129,24 @@ export default function App() {
         <Route path="/reading-list.html" element={<ReadingListPage />} />
         <Route path="/reset-password" element={<ResetPasswordPage />} />
         <Route path="/reset-password.html" element={<ResetPasswordPage />} />
-        <Route path="/settings" element={<SettingsPage />} />
-        <Route path="/settings.html" element={<SettingsPage />} />
-        <Route path="/store" element={<StorePage />} />
-        <Route path="/store.html" element={<StorePage />} />
-        <Route path="/story-bible" element={<StoryBiblePage />} />
-        <Route path="/story-bible.html" element={<StoryBiblePage />} />
-        <Route path="/story-metadata" element={<StoryMetadataPage />} />
-        <Route path="/story-metadata.html" element={<StoryMetadataPage />} />
-        <Route path="/story-publishing" element={<StoryPublishingPage />} />
-        <Route path="/story-publishing.html" element={<StoryPublishingPage />} />
-        <Route path="/story-workspace" element={<StoryWorkspacePage />} />
-        <Route path="/story-workspace.html" element={<StoryWorkspacePage />} />
+        <Route path="/settings" element={<RequireAuth><SettingsPage /></RequireAuth>} />
+        <Route path="/settings.html" element={<RequireAuth><SettingsPage /></RequireAuth>} />
+        <Route path="/store" element={<RequireAuth><StorePage /></RequireAuth>} />
+        <Route path="/store.html" element={<RequireAuth><StorePage /></RequireAuth>} />
+        <Route path="/story-bible" element={<RequireAuth><StoryBiblePage /></RequireAuth>} />
+        <Route path="/story-bible.html" element={<RequireAuth><StoryBiblePage /></RequireAuth>} />
+        <Route path="/story-metadata" element={<RequireAuth><StoryMetadataPage /></RequireAuth>} />
+        <Route path="/story-metadata.html" element={<RequireAuth><StoryMetadataPage /></RequireAuth>} />
+        <Route path="/story-publishing" element={<RequireAuth><StoryPublishingPage /></RequireAuth>} />
+        <Route path="/story-publishing.html" element={<RequireAuth><StoryPublishingPage /></RequireAuth>} />
+        <Route path="/story-workspace" element={<RequireAuth><StoryWorkspacePage /></RequireAuth>} />
+        <Route path="/story-workspace.html" element={<RequireAuth><StoryWorkspacePage /></RequireAuth>} />
         <Route path="/story" element={<StoryPage />} />
         <Route path="/story.html" element={<StoryPage />} />
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/terms.html" element={<TermsPage />} />
-        <Route path="/test" element={<TestPage />} />
-        <Route path="/test.html" element={<TestPage />} />
+        <Route path="/test" element={<RequireAuth><TestPage /></RequireAuth>} />
+        <Route path="/test.html" element={<RequireAuth><TestPage /></RequireAuth>} />
         <Route path="/welcome" element={<WelcomePage />} />
         <Route path="/welcome.html" element={<WelcomePage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
