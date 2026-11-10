@@ -1,0 +1,324 @@
+[
+  {
+    "file": "account.html",
+    "base": "account",
+    "route": "/account",
+    "comp": "AccountPage",
+    "bodyClass": ""
+  },
+  {
+    "file": "admin-economy.html",
+    "base": "admin-economy",
+    "route": "/admin-economy",
+    "comp": "AdminEconomyPage",
+    "bodyClass": ""
+  },
+  {
+    "file": "admin.html",
+    "base": "admin",
+    "route": "/admin",
+    "comp": "AdminPage",
+    "bodyClass": ""
+  },
+  {
+    "file": "ae-apply.html",
+    "base": "ae-apply",
+    "route": "/ae-apply",
+    "comp": "AeApplyPage",
+    "bodyClass": ""
+  },
+  {
+    "file": "ae-author-feedback.html",
+    "base": "ae-author-feedback",
+    "route": "/ae-author-feedback",
+    "comp": "AeAuthorFeedbackPage",
+    "bodyClass": ""
+  },
+  {
+    "file": "ae-draft-review.html",
+    "base": "ae-draft-review",
+    "route": "/ae-draft-review",
+    "comp": "AeDraftReviewPage",
+    "bodyClass": ""
+  },
+  {
+    "file": "ae-review.html",
+    "base": "ae-review",
+    "route": "/ae-review",
+    "comp": "AeReviewPage",
+    "bodyClass": ""
+  },
+  {
+    "file": "ae.html",
+    "base": "ae",
+    "route": "/ae",
+    "comp": "AePage",
+    "bodyClass": ""
+  },
+  {
+    "file": "analytics.html",
+    "base": "analytics",
+    "route": "/analytics",
+    "comp": "AnalyticsPage",
+    "bodyClass": ""
+  },
+  {
+    "file": "auth.html",
+    "base": "auth",
+    "route": "/auth",
+    "comp": "AuthPage",
+    "bodyClass": "gr-auth-page"
+  },
+  {
+    "file": "author-notes.html",
+    "base": "author-notes",
+    "route": "/author-notes",
+    "comp": "AuthorNotesPage",
+    "bodyClass": ""
+  },
+  {
+    "file": "author.html",
+    "base": "author",
+    "route": "/author",
+    "comp": "AuthorPage",
+    "bodyClass": "author-profile-page"
+  },
+  {
+    "file": "authors-studio.html",
+    "base": "authors-studio",
+    "route": "/authors-studio",
+    "comp": "AuthorsStudioPage",
+    "bodyClass": ""
+  },
+  {
+    "file": "chapter-editor.html",
+    "base": "chapter-editor",
+    "route": "/chapter-editor",
+    "comp": "ChapterEditorPage",
+    "bodyClass": ""
+  },
+  {
+    "file": "chapter-pricing.html",
+    "base": "chapter-pricing",
+    "route": "/chapter-pricing",
+    "comp": "ChapterPricingPage",
+    "bodyClass": ""
+  },
+  {
+    "file": "collection.html",
+    "base": "collection",
+    "route": "/collection",
+    "comp": "CollectionPage",
+    "bodyClass": "collection-page"
+  },
+  {
+    "file": "community-space.html",
+    "base": "community-space",
+    "route": "/community-space",
+    "comp": "CommunitySpacePage",
+    "bodyClass": "gathering-page"
+  },
+  {
+    "file": "community.html",
+    "base": "community",
+    "route": "/community",
+    "comp": "CommunityPage",
+    "bodyClass": "gathering-page"
+  },
+  {
+    "file": "contract-center.html",
+    "base": "contract-center",
+    "route": "/contract-center",
+    "comp": "ContractCenterPage",
+    "bodyClass": ""
+  },
+  {
+    "file": "create-story.html",
+    "base": "create-story",
+    "route": "/create-story",
+    "comp": "CreateStoryPage",
+    "bodyClass": ""
+  },
+  {
+    "file": "creator-earnings.html",
+    "base": "creator-earnings",
+    "route": "/creator-earnings",
+    "comp": "CreatorEarningsPage",
+    "bodyClass": ""
+  },
+  {
+    "file": "explore.html",
+    "base": "explore",
+    "route": "/explore",
+    "comp": "ExplorePage",
+    "bodyClass": "explore-page"
+  },
+  {
+    "file": "holiday-hearts-entry.html",
+    "base": "holiday-hearts-entry",
+    "route": "/holiday-hearts-entry",
+    "comp": "HolidayHeartsEntryPage",
+    "bodyClass": "oc-body hh-body"
+  },
+  {
+    "file": "holiday-hearts.html",
+    "base": "holiday-hearts",
+    "route": "/holiday-hearts",
+    "comp": "HolidayHeartsPage",
+    "bodyClass": "oc-body hh-body"
+  },
+  {
+    "file": "library.html",
+    "base": "library",
+    "route": "/library",
+    "comp": "LibraryPage",
+    "bodyClass": "library-page"
+  },
+  {
+    "file": "moderator.html",
+    "base": "moderator",
+    "route": "/moderator",
+    "comp": "ModeratorPage",
+    "bodyClass": ""
+  },
+  {
+    "file": "my-gidireads.html",
+    "base": "my-gidireads",
+    "route": "/my-gidireads",
+    "comp": "MyGidireadsPage",
+    "bodyClass": ""
+  },
+  {
+    "file": "my-stories.html",
+    "base": "my-stories",
+    "route": "/my-stories",
+    "comp": "MyStoriesPage",
+    "bodyClass": ""
+  },
+  {
+    "file": "notifications.html",
+    "base": "notifications",
+    "route": "/notifications",
+    "comp": "NotificationsPage",
+    "bodyClass": ""
+  },
+  {
+    "file": "opportunities.html",
+    "base": "opportunities",
+    "route": "/opportunities",
+    "comp": "OpportunitiesPage",
+    "bodyClass": "oc-body"
+  },
+  {
+    "file": "opportunity.html",
+    "base": "opportunity",
+    "route": "/opportunity",
+    "comp": "OpportunityPage",
+    "bodyClass": "oc-body"
+  },
+  {
+    "file": "people.html",
+    "base": "people",
+    "route": "/people",
+    "comp": "PeoplePage",
+    "bodyClass": ""
+  },
+  {
+    "file": "rankings.html",
+    "base": "rankings",
+    "route": "/rankings",
+    "comp": "RankingsPage",
+    "bodyClass": "rankings-page"
+  },
+  {
+    "file": "reader.html",
+    "base": "reader",
+    "route": "/reader",
+    "comp": "ReaderPage",
+    "bodyClass": "reader-body"
+  },
+  {
+    "file": "reading-list.html",
+    "base": "reading-list",
+    "route": "/reading-list",
+    "comp": "ReadingListPage",
+    "bodyClass": ""
+  },
+  {
+    "file": "reset-password.html",
+    "base": "reset-password",
+    "route": "/reset-password",
+    "comp": "ResetPasswordPage",
+    "bodyClass": ""
+  },
+  {
+    "file": "settings.html",
+    "base": "settings",
+    "route": "/settings",
+    "comp": "SettingsPage",
+    "bodyClass": ""
+  },
+  {
+    "file": "store.html",
+    "base": "store",
+    "route": "/store",
+    "comp": "StorePage",
+    "bodyClass": ""
+  },
+  {
+    "file": "story-bible.html",
+    "base": "story-bible",
+    "route": "/story-bible",
+    "comp": "StoryBiblePage",
+    "bodyClass": ""
+  },
+  {
+    "file": "story-metadata.html",
+    "base": "story-metadata",
+    "route": "/story-metadata",
+    "comp": "StoryMetadataPage",
+    "bodyClass": ""
+  },
+  {
+    "file": "story-publishing.html",
+    "base": "story-publishing",
+    "route": "/story-publishing",
+    "comp": "StoryPublishingPage",
+    "bodyClass": ""
+  },
+  {
+    "file": "story-workspace.html",
+    "base": "story-workspace",
+    "route": "/story-workspace",
+    "comp": "StoryWorkspacePage",
+    "bodyClass": ""
+  },
+  {
+    "file": "story.html",
+    "base": "story",
+    "route": "/story",
+    "comp": "StoryPage",
+    "bodyClass": ""
+  },
+  {
+    "file": "terms.html",
+    "base": "terms",
+    "route": "/terms",
+    "comp": "TermsPage",
+    "bodyClass": "gr-page"
+  },
+  {
+    "file": "test.html",
+    "base": "test",
+    "route": "/test",
+    "comp": "TestPage",
+    "bodyClass": ""
+  },
+  {
+    "file": "welcome.html",
+    "base": "welcome",
+    "route": "/welcome",
+    "comp": "WelcomePage",
+    "bodyClass": "gr-welcome-page"
+  }
+]

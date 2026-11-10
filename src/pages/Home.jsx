@@ -237,7 +237,6 @@ const HOME_HTML = `
 export default function Home() {
   React.useEffect(() => {
     document.body.classList.add('home-page');
-    let cancelled = false;
     (async () => {
       // Load legacy page behavior after markup is in DOM
       try { await import('../../js/app.js?v=story-fix-01'); } catch (e) { console.error('home app load failed', e); }
@@ -248,7 +247,6 @@ export default function Home() {
       try { await import('../../js/theme-sync.js'); } catch (_) {}
     })();
     return () => {
-      cancelled = true;
       document.body.classList.remove('home-page');
     };
   }, []);

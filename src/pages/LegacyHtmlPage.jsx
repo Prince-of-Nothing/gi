@@ -10,9 +10,12 @@ export default function LegacyHtmlPage({ src, bodyClass = '' }) {
     let cancelled = false;
     setError(null);
     setHtml('');
-    fetch(src, { credentials: 'same-origin' })
+    const file = src && src.endsWith('.html') ? src.replace(/^\//, '') : '';
+    const base = import.meta.env.BASE_URL || '/';
+    const fetchSrc = file ? `${base}legacy-html/${file}` : src;
+    fetch(fetchSrc, { credentials: 'same-origin' })
       .then((r) => {
-        if (!r.ok) throw new Error(`Failed to load ${src} (${r.status})`);
+        if (!r.ok) throw new Error(`Failed to load ${fetchSrc} (${r.status})`);
         return r.text();
       })
       .then((text) => { if (!cancelled) setHtml(text); })
