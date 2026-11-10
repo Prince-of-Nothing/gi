@@ -1,0 +1,14 @@
+/* Homepage shelves: horizontal rails and calmer story cards (loaded after style.css) */
+.home-page .home-section{padding:54px 0}
+.home-page .home-section-head{margin-bottom:20px}
+.home-page .home-story-grid:not(.home-story-grid-continue){scroll-padding-inline:2px;display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x proximity;padding:4px 2px 16px;margin:0 -2px;scrollbar-width:none;-webkit-overflow-scrolling:touch;-webkit-mask-image:linear-gradient(90deg,#000 94%,transparent);mask-image:linear-gradient(90deg,#000 94%,transparent)}
+.home-page .home-story-grid:not(.home-story-grid-continue)::-webkit-scrollbar{display:none}
+.home-page .home-story-grid:not(.home-story-grid-continue) .home-story-card{flex:0 0 158px;scroll-snap-align:start}
+.home-page .home-story-grid-continue{display:flex;gap:16px;overflow-x:auto;padding-bottom:12px;scrollbar-width:none}
+.home-page .home-story-grid-continue .home-story-card{flex:0 0 158px}
+.home-page .home-cover-wrap{border-radius:12px;border-color:rgba(255,255,255,.1);box-shadow:0 10px 26px rgba(0,0,0,.4);transition:box-shadow .2s}
+.home-page .home-story-card:hover .home-cover-wrap{box-shadow:0 14px 34px rgba(0,0,0,.5),0 0 24px rgba(160,100,210,.22)}
+.home-page .home-story-card h3{margin:12px 0 2px;font-size:1.02rem}
+.home-page .home-story-card > p{font-size:.78rem}
+@media(min-width:900px){.home-page .home-story-grid:not(.home-story-grid-continue) .home-story-card,.home-page .home-story-grid-continue .home-story-card{flex-basis:184px}}
+@media(max-width:560px){.home-page .home-section{padding:40px 0}.home-page .home-story-grid:not(.home-story-grid-continue) .home-story-card,.home-page .home-story-grid-continue .home-story-card{flex-basis:138px}}

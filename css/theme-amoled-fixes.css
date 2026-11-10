@@ -1,0 +1,850 @@
+/* GidiReads - AMOLED (pure black) theme.
+ *
+ * Scope: EVERY rule is guarded by html[data-site-theme="amoled"], so the Dark
+ * (plum) and Beige (lilac) themes are completely untouched.
+ *
+ * Strategy (mirrors the Beige repair files, which re-point the same token
+ * families at warm paper): re-point every per-page dark/plum design token at a
+ * true-black palette, then flatten the literal dark surfaces and glows that
+ * page CSS hard-codes. Content images (covers, illustrations, avatars) keep
+ * their own pixels.
+ *
+ * Palette:
+ *   page / shell      #000000
+ *   raised surface    #08080a
+ *   card / panel      #0d0d10
+ *   control           #0a0a0c
+ *   soft band         #121216
+ *   line              rgba(255,255,255,.10) - .16
+ *   text              #f4f2f7   muted  #b6b0c0   faint  #8d8799
+ *   accents           lilac #cdb6f2 / #b98ef0, gold #e2c077, pink #f2a6bd
+ */
+
+/* ==========================================================================
+   0. Global tokens
+   ========================================================================== */
+html[data-site-theme="amoled"] {
+  --nav-surface: #000000;
+  --nav-text: #f4f2f7;
+  --nav-accent: #cdb6f2;
+  --line-color: rgba(255, 255, 255, .14);
+  --page-glow: none;
+  --shadow: 0 24px 60px rgba(0, 0, 0, .85);
+  --gold: #e2c077;
+  --gold-soft: #2a2114;
+}
+html[data-site-theme="amoled"] body,
+html[data-site-theme="amoled"] html {
+  background-color: #000 !important;
+  background-image: none !important;
+  color: #f4f2f7 !important;
+}
+
+/* ==========================================================================
+   1. Shared chrome: nav, footer, bottom nav
+   ========================================================================== */
+html[data-site-theme="amoled"] .site-nav,
+html[data-site-theme="amoled"] .gathering-top,
+html[data-site-theme="amoled"] .story-nav-v2,
+html[data-site-theme="amoled"] .oc-top,
+html[data-site-theme="amoled"] .ae-header,
+html[data-site-theme="amoled"] .res-top,
+html[data-site-theme="amoled"] .resources-top,
+html[data-site-theme="amoled"] .site-footer,
+html[data-site-theme="amoled"] .footer-inner,
+html[data-site-theme="amoled"] .gr-footer-inner,
+html[data-site-theme="amoled"] .bottom-nav {
+  background: #000 !important;
+  background-image: none !important;
+  border-color: rgba(255, 255, 255, .12) !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+html[data-site-theme="amoled"] .site-nav .brand,
+html[data-site-theme="amoled"] .site-nav .brand span,
+html[data-site-theme="amoled"] .nav-links a,
+html[data-site-theme="amoled"] .home-desktop-links a,
+html[data-site-theme="amoled"] .explore-main-links a,
+html[data-site-theme="amoled"] .collection-nav-links a,
+html[data-site-theme="amoled"] .mgr-top-link,
+html[data-site-theme="amoled"] .ce-nav-link,
+html[data-site-theme="amoled"] .bottom-nav-item,
+html[data-site-theme="amoled"] .footer-col a,
+html[data-site-theme="amoled"] .footer-bottom,
+html[data-site-theme="amoled"] .footer-tagline {
+  color: #d9d4e3 !important;
+}
+html[data-site-theme="amoled"] .nav-links a:hover,
+html[data-site-theme="amoled"] .nav-links a.active,
+html[data-site-theme="amoled"] .home-desktop-links a:hover,
+html[data-site-theme="amoled"] .home-desktop-links a.is-active,
+html[data-site-theme="amoled"] .explore-main-links a:hover,
+html[data-site-theme="amoled"] .explore-main-links a.active,
+html[data-site-theme="amoled"] .bottom-nav-item.active {
+  color: #dcc8ff !important;
+}
+
+/* ==========================================================================
+   2. Home (index.html)
+   ========================================================================== */
+html[data-site-theme="amoled"] .home-page,
+html[data-site-theme="amoled"] .home-page body {
+  --home-bg: #000;
+  --home-surface: #0a0a0d;
+  --home-surface-2: #0f0f13;
+  --home-surface-3: #15151a;
+  --home-text: #f4f2f7;
+  --home-muted: #b6b0c0;
+  --home-faint: #8d8799;
+  --home-line: rgba(255, 255, 255, .12);
+  --home-lilac: #cdb6f2;
+  --home-lilac-bright: #e2ccff;
+  --home-gold: #e2c077;
+  background: #000 !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .home-page .home-hero,
+html[data-site-theme="amoled"] .home-hero {
+  background: radial-gradient(ellipse at 20% 0%, rgba(120, 70, 170, .18), transparent 55%), #000 !important;
+  background-image: radial-gradient(ellipse at 20% 0%, rgba(120, 70, 170, .18), transparent 55%), #000 !important;
+  border-color: rgba(255, 255, 255, .08) !important;
+}
+html[data-site-theme="amoled"] .home-soft-section,
+html[data-site-theme="amoled"] .home-taxonomy-section,
+html[data-site-theme="amoled"] .home-featured-card,
+html[data-site-theme="amoled"] .home-stat,
+html[data-site-theme="amoled"] .home-shelf,
+html[data-site-theme="amoled"] .home-section {
+  background: #08080a !important;
+  background-image: none !important;
+  border-color: rgba(255, 255, 255, .09) !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .home-search,
+html[data-site-theme="amoled"] .home-nav-search {
+  background: #0f0f13 !important;
+  border-color: rgba(255, 255, 255, .14) !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .home-search input {
+  background: transparent !important;
+  color: #f4f2f7 !important;
+}
+
+/* ==========================================================================
+   3. Explore
+   ========================================================================== */
+html[data-site-theme="amoled"] .explore-page {
+  --ex-bg: #000;
+  --ex-surface: #0a0a0d;
+  --ex-surface2: #121216;
+  --ex-soft: #17171c;
+  --ex-line: rgba(255, 255, 255, .12);
+  --ex-wash: rgba(255, 255, 255, .04);
+  --ex-text: #f4f2f7;
+  --ex-white: #f4f2f7;
+  --ex-black: #000;
+  --ex-muted: #b6b0c0;
+  --ex-lilac: #cdb6f2;
+  --ex-lilac-deep: #b98ef0;
+  --ex-rose-deep: #f2a6bd;
+  --ex-gold: #e2c077;
+  background: #000 !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .explore-hero {
+  background: radial-gradient(ellipse at 70% 10%, rgba(120, 70, 170, .2), transparent 55%), #000 !important;
+  background-image: radial-gradient(ellipse at 70% 10%, rgba(120, 70, 170, .2), transparent 55%), #000 !important;
+  border-color: rgba(255, 255, 255, .09) !important;
+}
+html[data-site-theme="amoled"] .explore-hero h1,
+html[data-site-theme="amoled"] .explore-hero p,
+html[data-site-theme="amoled"] .explore-hero .explore-hero-sub {
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .explore-search,
+html[data-site-theme="amoled"] .explore-search input,
+html[data-site-theme="amoled"] .explore-toolbar,
+html[data-site-theme="amoled"] .explore-tab,
+html[data-site-theme="amoled"] .explore-filter-btn,
+html[data-site-theme="amoled"] .explore-filter-panel,
+html[data-site-theme="amoled"] .explore-card {
+  background-color: #0f0f13 !important;
+  border-color: rgba(255, 255, 255, .12) !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .explore-tab.active {
+  background: #1a1a20 !important;
+  color: #e6d5ff !important;
+  border-color: #6b4a9a !important;
+}
+html[data-site-theme="amoled"] .explore-card-cover {
+  background: #0a0a0d !important;
+}
+html[data-site-theme="amoled"] .explore-section-kicker,
+html[data-site-theme="amoled"] .explore-eyebrow,
+html[data-site-theme="amoled"] .featured-author,
+html[data-site-theme="amoled"] .featured-genre {
+  color: #b98ef0 !important;
+}
+
+/* ==========================================================================
+   4. Story detail
+   ========================================================================== */
+html[data-site-theme="amoled"] .story-page {
+  --story-bg: #000;
+  --story-surface: #0a0a0d;
+  --story-surface-2: #121216;
+  --story-ink: #f4f2f7;
+  --story-white: #f4f2f7;
+  --story-muted: #b6b0c0;
+  --story-faint: #8d8799;
+  --story-line: rgba(255, 255, 255, .12);
+  --story-lilac: #b98ef0;
+  --story-lilac-soft: #191322;
+  --story-gold: #e2c077;
+  --story-pink: #f2a6bd;
+  --story-purple: #cdb6f2;
+  background: #000 !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .story-hero-v2,
+html[data-site-theme="amoled"] .story-hero {
+  background: radial-gradient(ellipse at 50% 0%, rgba(110, 60, 160, .22), transparent 60%), #000 !important;
+  background-image: radial-gradient(ellipse at 50% 0%, rgba(110, 60, 160, .22), transparent 60%), #000 !important;
+  border-color: rgba(255, 255, 255, .08) !important;
+}
+html[data-site-theme="amoled"] .story-hero-v2 h1,
+html[data-site-theme="amoled"] .story-hero h1,
+html[data-site-theme="amoled"] .story-hero-v2 p {
+  color: #f4f2f7 !important;
+}
+
+/* ==========================================================================
+   5. Library
+   ========================================================================== */
+html[data-site-theme="amoled"] .library-page {
+  --lib-bg: #000;
+  --lib-bg2: #08080a;
+  --lib-surface: #0a0a0d;
+  --lib-surface2: #121216;
+  --lib-text: #f4f2f7;
+  --lib-muted: #b6b0c0;
+  --lib-border: rgba(255, 255, 255, .12);
+  --lib-soft: rgba(255, 255, 255, .05);
+  --lib-plum: #cdb6f2;
+  --lib-lilac: #b98ef0;
+  --lib-gold: #e2c077;
+  --lib-shadow: 0 18px 45px rgba(0, 0, 0, .8);
+  background: #000 !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .library-hero,
+html[data-site-theme="amoled"] .library-shelf,
+html[data-site-theme="amoled"] .lib-card,
+html[data-site-theme="amoled"] .library-card {
+  background: #08080a !important;
+  background-image: none !important;
+  border-color: rgba(255, 255, 255, .1) !important;
+  color: #f4f2f7 !important;
+}
+
+/* ==========================================================================
+   6. Profile family: author / account edit / people
+   ========================================================================== */
+html[data-site-theme="amoled"] .gr-profile-page,
+html[data-site-theme="amoled"] .gr-edit-page,
+html[data-site-theme="amoled"] .gr-people-page,
+html[data-site-theme="amoled"] .people-page {
+  --gp-bg: #000;
+  --gp-surface: #0a0a0d;
+  --gp-panel: #0d0d10;
+  --gp-panel2: #131317;
+  --gp-text: #f4f2f7;
+  --gp-muted: #b6b0c0;
+  --gp-line: rgba(255, 255, 255, .12);
+  --gp-lilac: #b98ef0;
+  --gp-gold: #e2c077;
+  --gp-pink: #f2a6bd;
+  --gp-ink: #f4f2f7;
+  background: #000 !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .gr-profile-card,
+html[data-site-theme="amoled"] .gr-panel,
+html[data-site-theme="amoled"] .gr-story-card,
+html[data-site-theme="amoled"] .gr-public-badge,
+html[data-site-theme="amoled"] .gr-people-card,
+html[data-site-theme="amoled"] .people-card,
+html[data-site-theme="amoled"] .gr-empty,
+html[data-site-theme="amoled"] .account-form,
+html[data-site-theme="amoled"] .account-panel,
+html[data-site-theme="amoled"] .profile-editor-panel {
+  background: #0d0d10 !important;
+  background-image: none !important;
+  border-color: rgba(255, 255, 255, .12) !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .gr-cover {
+  background-color: #000 !important;
+}
+
+/* ==========================================================================
+   7. Manager / notifications / settings / reading list
+   ========================================================================== */
+html[data-site-theme="amoled"] .mgr-page {
+  --mgr-bg: #000;
+  --mgr-surface: #0a0a0d;
+  --mgr-surface2: #121216;
+  --mgr-text: #f4f2f7;
+  --mgr-muted: #b6b0c0;
+  --mgr-line: rgba(255, 255, 255, .12);
+  --mgr-lilac: #b98ef0;
+  --mgr-gold: #e2c077;
+  --mgr-plum: #cdb6f2;
+  background: #000 !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .mgr-hero,
+html[data-site-theme="amoled"] .mgr-card,
+html[data-site-theme="amoled"] .mgr-panel,
+html[data-site-theme="amoled"] .notifications-page .notification-row,
+html[data-site-theme="amoled"] .notification-row,
+html[data-site-theme="amoled"] .notification-tab,
+html[data-site-theme="amoled"] .notification-empty,
+html[data-site-theme="amoled"] .notifications-mark-all,
+html[data-site-theme="amoled"] .settings-shell,
+html[data-site-theme="amoled"] .settings-card,
+html[data-site-theme="amoled"] .theme-option:not(.is-selected),
+html[data-site-theme="amoled"] .reading-list-card,
+html[data-site-theme="amoled"] .rl-card,
+html[data-site-theme="amoled"] .reading-list-page .card {
+  background: #0d0d10 !important;
+  background-image: none !important;
+  border-color: rgba(255, 255, 255, .12) !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .notification-row.is-unread {
+  background: linear-gradient(90deg, rgba(160, 110, 220, .14), #0d0d10) !important;
+}
+
+/* ==========================================================================
+   8. Opportunities / Holiday Hearts / creator economy
+   ========================================================================== */
+html[data-site-theme="amoled"] .oc-body,
+html[data-site-theme="amoled"] .oc {
+  --oc-bg: #000;
+  --oc-surface: #0a0a0d;
+  --oc-surface-2: #121216;
+  --oc-ink: #f4f2f7;
+  --oc-muted: #b6b0c0;
+  --oc-line: rgba(255, 255, 255, .12);
+  --oc-lilac: #cdb6f2;
+  --oc-pink: #f2a6bd;
+  --oc-gold: #e2c077;
+  --oc-soft: #17171c;
+  background: #000 !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .oc-hero,
+html[data-site-theme="amoled"] .hh-hero,
+html[data-site-theme="amoled"] .oc-card,
+html[data-site-theme="amoled"] .oc-panel,
+html[data-site-theme="amoled"] .od-hero,
+html[data-site-theme="amoled"] .od-panel,
+html[data-site-theme="amoled"] .ce-wrap,
+html[data-site-theme="amoled"] .ce-hero,
+html[data-site-theme="amoled"] .ce-card,
+html[data-site-theme="amoled"] .ce-panel {
+  background: #0a0a0d !important;
+  background-image: none !important;
+  border-color: rgba(255, 255, 255, .1) !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .hh-stage,
+html[data-site-theme="amoled"] .hh-facts,
+html[data-site-theme="amoled"] .oc-chip,
+html[data-site-theme="amoled"] .oc-filter {
+  background: #121216 !important;
+  border-color: rgba(255, 255, 255, .12) !important;
+  color: #e8e3f0 !important;
+}
+html[data-site-theme="amoled"] .oc-btn-quiet {
+  color: #e8e3f0 !important;
+  border-color: rgba(255, 255, 255, .3) !important;
+}
+
+/* ==========================================================================
+   9. Community (The Gathering)
+   ========================================================================== */
+html[data-site-theme="amoled"] .gathering-page {
+  --gath-bg: #000;
+  --gath-surface: #0a0a0d;
+  --gath-surface-2: #121216;
+  --gath-text: #f4f2f7;
+  --gath-muted: #b6b0c0;
+  --gath-line: rgba(255, 255, 255, .12);
+  --gath-accent: #b98ef0;
+  background: #000 !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .gathering-hero,
+html[data-site-theme="amoled"] .gathering-card,
+html[data-site-theme="amoled"] .gathering-panel,
+html[data-site-theme="amoled"] .community-card,
+html[data-site-theme="amoled"] .portal-card {
+  background: #08080a !important;
+  border-color: rgba(255, 255, 255, .1) !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .portal-caption,
+html[data-site-theme="amoled"] .gathering-hero h1,
+html[data-site-theme="amoled"] .gathering-hero em,
+html[data-site-theme="amoled"] .gathering-hero .eyebrow {
+  color: #e8dcff !important;
+}
+
+/* ==========================================================================
+   10. Collection / resources / store / AE / auth
+   ========================================================================== */
+html[data-site-theme="amoled"] .collection-page {
+  --col-bg: #000;
+  --col-surface: #0a0a0d;
+  --col-text: #f4f2f7;
+  --col-muted: #b6b0c0;
+  --col-line: rgba(255, 255, 255, .12);
+  background: #000 !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .collection-hero,
+html[data-site-theme="amoled"] .collection-card,
+html[data-site-theme="amoled"] .collection-more-wrap,
+html[data-site-theme="amoled"] .collection-empty {
+  background: #08080a !important;
+  background-image: none !important;
+  border-color: rgba(255, 255, 255, .1) !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .resources-page {
+  --res-bg: #000;
+  --res-panel: #0a0a0d;
+  --res-panel2: #121216;
+  --res-text: #f4f2f7;
+  --res-muted: #b6b0c0;
+  --res-line: rgba(255, 255, 255, .12);
+  --res-accent: #b98ef0;
+  --res-glow: rgba(120, 70, 170, .18);
+  background: #000 !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .res-card,
+html[data-site-theme="amoled"] .resources-hero,
+html[data-site-theme="amoled"] .resource-card {
+  background: #0a0a0d !important;
+  border-color: rgba(255, 255, 255, .1) !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .store-page,
+html[data-site-theme="amoled"] .store-shell {
+  background: #000 !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .ae-shell,
+html[data-site-theme="amoled"] .ae-public-wrap {
+  --ae-bg: #000;
+  --ae-panel: #0a0a0d;
+  --ae-line: rgba(255, 255, 255, .12);
+  --ae-text: #f4f2f7;
+  --ae-muted: #b6b0c0;
+  --ae-accent: #b98ef0;
+  --ae-blue: #8ed8ef;
+  background: #000 !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .ae-panel,
+html[data-site-theme="amoled"] .ae-notice,
+html[data-site-theme="amoled"] .ae-card {
+  background: #0a0a0d !important;
+  border-color: rgba(255, 255, 255, .1) !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .ae-hero-art {
+  background: radial-gradient(ellipse at 15% 10%, rgba(120, 70, 170, .16), transparent 48%), #000 !important;
+  border-color: rgba(255, 255, 255, .1) !important;
+}
+html[data-site-theme="amoled"] .gr-auth-page,
+html[data-site-theme="amoled"] .auth-page {
+  background: #000 !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .gr-auth-panel,
+html[data-site-theme="amoled"] .auth-card {
+  background: #0a0a0d !important;
+  border-color: rgba(255, 255, 255, .12) !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .front-card,
+html[data-site-theme="amoled"] .front-page {
+  background: #000 !important;
+  color: #f4f2f7 !important;
+}
+
+/* ==========================================================================
+   11. Admin / moderator (dark workspaces) - keep them black
+   ========================================================================== */
+html[data-site-theme="amoled"] .admin-shell,
+html[data-site-theme="amoled"] .adm-shell,
+html[data-site-theme="amoled"] .mod-shell,
+html[data-site-theme="amoled"] .moderator-shell,
+html[data-site-theme="amoled"] .admin-page,
+html[data-site-theme="amoled"] .moderator-page {
+  background: #000 !important;
+  background-image: none !important;
+  color: #f4f2f7 !important;
+}
+
+/* ==========================================================================
+   12. Studio + Insights (data-theme stays "dark" for AMOLED)
+   ========================================================================== */
+html[data-site-theme="amoled"] .studio-shell,
+html[data-site-theme="amoled"] .shell {
+  --bg: #000;
+  --surface: #0a0a0d;
+  --paper: #0d0d10;
+  --ink: #f4f2f7;
+  --muted: #b6b0c0;
+  --line: rgba(255, 255, 255, .12);
+  --plum: #cdb6f2;
+  --plum-deep: #e2ccff;
+  --lilac: #b98ef0;
+  --lilac-soft: #17131d;
+  --gold: #e2c077;
+  --gold-soft: #2a2114;
+  --highlight: #cdb6f2;
+  --input-bg: #0a0a0c;
+  --nav-bg: #000;
+  --nav-text: #f4f2f7;
+  --hero-bg: #08080a;
+  --hero-ink: #f4f2f7;
+  --hero-muted: #c3bccd;
+  --hero-details: #d6cee0;
+  --panel: #0a0a0d;
+  --panel-2: #121216;
+  --accent: #b98ef0;
+  --glow: rgba(120, 70, 170, .18);
+  --ivory: #000;
+  --ivory-deep: #08080a;
+  --ink-soft: #b6b0c0;
+  --white: #f4f2f7;
+  --shadow: 0 24px 60px rgba(0, 0, 0, .85);
+  --e-bg: #000;
+  --e-surface: #0a0a0d;
+  --e-paper: #0d0d10;
+  --e-ink: #f4f2f7;
+  --e-muted: #b6b0c0;
+  --e-line: rgba(255, 255, 255, .12);
+  --e-plum: #cdb6f2;
+  --e-lilac: #7d5f8a;
+  --e-gold: #e2c077;
+  --w-bg: #000;
+  --w-surface: #0a0a0d;
+  --w-paper: #0d0d10;
+  --w-ink: #f4f2f7;
+  --w-muted: #b6b0c0;
+  --w-line: rgba(255, 255, 255, .12);
+  --w-plum: #cdb6f2;
+  --w-lilac: #7d5f8a;
+  --w-gold: #e2c077;
+  --w-pink: #f2a6bd;
+  --story-bg: #000;
+  --story-surface: #0a0a0d;
+  --story-paper: #0d0d10;
+  --story-ink: #f4f2f7;
+  --story-muted: #b6b0c0;
+  --story-line: rgba(255, 255, 255, .12);
+  --story-lilac: #7d5f8a;
+  --story-plum: #cdb6f2;
+  --story-gold: #e2c077;
+  --story-deep: #000;
+  --gr-ink: #f4f2f7;
+  --gr-muted: #b6b0c0;
+  --gr-bg: #000;
+  --gr-surface: #0a0a0d;
+  --gr-surface-2: #121216;
+  --gr-line: rgba(255, 255, 255, .12);
+  --gr-lilac: #b98ef0;
+  --gr-lilac-strong: #cdb6f2;
+  --gr-warm: #e2c077;
+  --gr-danger: #ff9db0;
+  background: #000 !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .studio-shell,
+html[data-site-theme="amoled"] .shell,
+html[data-site-theme="amoled"] .studio-page,
+html[data-site-theme="amoled"] .studio-content,
+html[data-site-theme="amoled"] .studio-main {
+  background-color: #000 !important;
+  background-image: none !important;
+}
+html[data-site-theme="amoled"] .studio-sidebar,
+html[data-site-theme="amoled"] .studio-topbar,
+html[data-site-theme="amoled"] .editor-panel,
+html[data-site-theme="amoled"] .form-panel,
+html[data-site-theme="amoled"] .settings-panel,
+html[data-site-theme="amoled"] .paper:not(.reader-paper),
+html[data-site-theme="amoled"] .studio-content .paper,
+html[data-site-theme="amoled"] .quick-action,
+html[data-site-theme="amoled"] .notice,
+html[data-site-theme="amoled"] .shelf-book,
+html[data-site-theme="amoled"] .timeline-item {
+  background-color: #0a0a0d !important;
+  background-image: none !important;
+  border-color: rgba(255, 255, 255, .1) !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .studio-topbar {
+  background: #000 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, .1) !important;
+  backdrop-filter: none !important;
+}
+html[data-site-theme="amoled"] .studio-nav-item:hover,
+html[data-site-theme="amoled"] .studio-nav-item.active {
+  background: #15121b !important;
+  color: #dcc8ff !important;
+}
+html[data-site-theme="amoled"] .continue-card {
+  background: radial-gradient(ellipse at 30% 20%, rgba(110, 60, 160, .22), transparent 62%), #050507 !important;
+  background-image: radial-gradient(ellipse at 30% 20%, rgba(110, 60, 160, .22), transparent 62%), #050507 !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .continue-art,
+html[data-site-theme="amoled"] .editorial-art {
+  background: #0a0a0d !important;
+}
+html[data-site-theme="amoled"] .continue-copy h2 { color: #f4f2f7 !important; }
+html[data-site-theme="amoled"] .continue-meta,
+html[data-site-theme="amoled"] .continue-type,
+html[data-site-theme="amoled"] .continue-details { color: #c3bccd !important; }
+html[data-site-theme="amoled"] .button-dark,
+html[data-site-theme="amoled"] .btn-primary {
+  background: #d9c2f5 !important;
+  border-color: #d9c2f5 !important;
+  color: #14101a !important;
+}
+html[data-site-theme="amoled"] .paper-sheet { background: #121216 !important; }
+html[data-site-theme="amoled"] .paper-sheet:before,
+html[data-site-theme="amoled"] .paper-sheet:after { background: rgba(255, 255, 255, .16) !important; }
+
+/* Story workspaces (story-workspace.css uses --ws-* tokens) */
+html[data-site-theme="amoled"] .ws-shell,
+html[data-site-theme="amoled"] .ws {
+  --ws-bg: #000;
+  --ws-panel: #0a0a0d;
+  --ws-panel-2: #121216;
+  --ws-text: #f4f2f7;
+  --ws-muted: #b6b0c0;
+  --ws-line: rgba(255, 255, 255, .12);
+  --ws-accent: #b98ef0;
+  --ws-accent-2: #e2ccff;
+  --ws-gold: #e2c077;
+  --ws-shadow: 0 18px 55px rgba(0, 0, 0, .8);
+  background: #000 !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .ws-sidebar,
+html[data-site-theme="amoled"] .ws-topbar {
+  background: #000 !important;
+  border-color: rgba(255, 255, 255, .1) !important;
+}
+html[data-site-theme="amoled"] .ws-sidebar nav a {
+  color: #b6b0c0 !important;
+}
+html[data-site-theme="amoled"] .ws-sidebar nav a:hover,
+html[data-site-theme="amoled"] .ws-sidebar nav a.active {
+  background: linear-gradient(110deg, rgba(145, 104, 214, .3), rgba(90, 59, 138, .15)) !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .ws-sidebar nav a:first-letter {
+  color: #b98ef0 !important;
+}
+html[data-site-theme="amoled"] .ws-card,
+html[data-site-theme="amoled"] .ws-entry,
+html[data-site-theme="amoled"] .ws-hero {
+  background: #0a0a0d !important;
+  background-image: none !important;
+  border-color: rgba(255, 255, 255, .1) !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .ws-hero {
+  background: radial-gradient(ellipse at 70% 20%, rgba(120, 70, 170, .16), transparent 60%), #050507 !important;
+}
+html[data-site-theme="amoled"] .ws-hero-art { opacity: .55; }
+html[data-site-theme="amoled"] .ws-hero h1,
+html[data-site-theme="amoled"] .ws-hero-copy { color: #f4f2f7 !important; }
+html[data-site-theme="amoled"] .ws-hero p:not(.ws-eyebrow) { color: #c9c2d6 !important; }
+
+/* Insights / Analytics */
+html[data-site-theme="amoled"] .an-shell {
+  --an-bg: #000;
+  --an-panel: #0a0a0d;
+  --an-panel2: #121216;
+  --an-line: rgba(255, 255, 255, .12);
+  --an-text: #f4f2f7;
+  --an-muted: #b6b0c0;
+  --an-shadow: none;
+  --an-blue: #8ed8ef;
+  --an-violet: #cdb6f2;
+  --an-green: #8fe0b4;
+  --an-gold: #e2c077;
+  --an-pink: #f2a6bd;
+  background: #000 !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .an-top {
+  background: #000 !important;
+  border-color: rgba(255, 255, 255, .1) !important;
+}
+html[data-site-theme="amoled"] .an-toolbar,
+html[data-site-theme="amoled"] .an-panel,
+html[data-site-theme="amoled"] .an-metric,
+html[data-site-theme="amoled"] .an-chart,
+html[data-site-theme="amoled"] .an-support-stat,
+html[data-site-theme="amoled"] .an-audience-stat,
+html[data-site-theme="amoled"] .an-best-chapter,
+html[data-site-theme="amoled"] .an-status,
+html[data-site-theme="amoled"] .an-notes {
+  background: #0a0a0d !important;
+  background-image: none !important;
+  border-color: rgba(255, 255, 255, .1) !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .an-bar-track,
+html[data-site-theme="amoled"] .an-rating-track {
+  background: rgba(255, 255, 255, .08) !important;
+}
+html[data-site-theme="amoled"] .an-gridline { stroke: rgba(255, 255, 255, .14); }
+
+/* ==========================================================================
+   13. Forms, controls and shared components
+   ========================================================================== */
+html[data-site-theme="amoled"] input,
+html[data-site-theme="amoled"] textarea,
+html[data-site-theme="amoled"] select,
+html[data-site-theme="amoled"] .field input,
+html[data-site-theme="amoled"] .field textarea,
+html[data-site-theme="amoled"] .field select,
+html[data-site-theme="amoled"] .editor-field input,
+html[data-site-theme="amoled"] .editor-field textarea,
+html[data-site-theme="amoled"] .ws-input,
+html[data-site-theme="amoled"] .ws-textarea,
+html[data-site-theme="amoled"] .ws-select,
+html[data-site-theme="amoled"] .gr-field input,
+html[data-site-theme="amoled"] .gr-field textarea {
+  background: #0a0a0c !important;
+  color: #f4f2f7 !important;
+  border-color: rgba(255, 255, 255, .16) !important;
+}
+html[data-site-theme="amoled"] option {
+  background: #0a0a0c;
+  color: #f4f2f7;
+}
+html[data-site-theme="amoled"] input::placeholder,
+html[data-site-theme="amoled"] textarea::placeholder {
+  color: #8d8799 !important;
+}
+html[data-site-theme="amoled"] .card,
+html[data-site-theme="amoled"] .story-card,
+html[data-site-theme="amoled"] .settings-card,
+html[data-site-theme="amoled"] .account-form,
+html[data-site-theme="amoled"] .modal,
+html[data-site-theme="amoled"] .modal-content,
+html[data-site-theme="amoled"] .auth-modal,
+html[data-site-theme="amoled"] .taxonomy-chip,
+html[data-site-theme="amoled"] .explore-filter-drawer {
+  background-color: #0d0d10 !important;
+  border-color: rgba(255, 255, 255, .12) !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .btn-ghost,
+html[data-site-theme="amoled"] .btn-outline,
+html[data-site-theme="amoled"] .button-quiet,
+html[data-site-theme="amoled"] .editor-back,
+html[data-site-theme="amoled"] .back-button,
+html[data-site-theme="amoled"] .back-btn {
+  background: #121216 !important;
+  color: #f4f2f7 !important;
+  border-color: #8f6fc0 !important;
+}
+html[data-site-theme="amoled"] .btn-primary,
+html[data-site-theme="amoled"] .gr-btn-primary,
+html[data-site-theme="amoled"] .button-dark {
+  background: linear-gradient(120deg, #b98ef0, #8f63c8) !important;
+  color: #120c1a !important;
+}
+html[data-site-theme="amoled"] .paper:not(.reader-paper) {
+  background-color: #0a0a0d !important;
+  border-color: rgba(255, 255, 255, .1) !important;
+}
+
+/* ==========================================================================
+   14. Theme toggle button (all pages)
+   ========================================================================== */
+html[data-site-theme="amoled"] .theme-toggle,
+html[data-site-theme="amoled"] .ws-top-actions .theme-toggle,
+html[data-site-theme="amoled"] .an-theme-toggle,
+html[data-site-theme="amoled"] #theme {
+  background: #0a0a0c !important;
+  color: #f4f2f7 !important;
+  border-color: rgba(255, 255, 255, .2) !important;
+}
+
+/* ==========================================================================
+   15. Bright illustration panels
+   Some guide/hero artwork is a light-background illustration (resources
+   guides, AE apply art). On OLED those read as glowing white rectangles, so
+   tone them down onto the black page while keeping the artwork recognisable.
+   ========================================================================== */
+html[data-site-theme="amoled"] .resources-visuals article {
+  background: #0a0a0d !important;
+  border-color: rgba(255, 255, 255, .1) !important;
+}
+html[data-site-theme="amoled"] .resources-visuals img {
+  filter: brightness(.5) contrast(1.08) saturate(.92);
+}
+html[data-site-theme="amoled"] .resources-visuals article:after {
+  background: linear-gradient(transparent, rgba(0, 0, 0, .96)) !important;
+}
+html[data-site-theme="amoled"] .resources-visuals span { color: #9fe3f2 !important; }
+html[data-site-theme="amoled"] .resources-visuals strong { color: #fff !important; }
+html[data-site-theme="amoled"] .ae-apply-art,
+html[data-site-theme="amoled"] .ae-hero-art > img {
+  filter: brightness(.62) contrast(1.05) saturate(.95);
+}
+html[data-site-theme="amoled"] .resources-featured {
+  background: #0a0a0d !important;
+  border-color: rgba(255, 255, 255, .1) !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .resources-categories,
+html[data-site-theme="amoled"] .resources-contact,
+html[data-site-theme="amoled"] .resource-article,
+html[data-site-theme="amoled"] .resource-article-grid .resource-card,
+html[data-site-theme="amoled"] .resources-footer {
+  background-color: #0a0a0d !important;
+  background-image: none !important;
+  border-color: rgba(255, 255, 255, .1) !important;
+  color: #f4f2f7 !important;
+}
+html[data-site-theme="amoled"] .resources-search,
+html[data-site-theme="amoled"] .resources-search input {
+  background: #0a0a0c !important;
+  color: #f4f2f7 !important;
+  border-color: rgba(255, 255, 255, .16) !important;
+}
+html[data-site-theme="amoled"] .resources-layout,
+html[data-site-theme="amoled"] .resources-main,
+html[data-site-theme="amoled"] .resources-body {
+  background: transparent !important;
+  color: #f4f2f7 !important;
+}

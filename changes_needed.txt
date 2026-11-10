@@ -1,0 +1,17 @@
+Database files to run for the community / Gathering (including community profile creator)
+
+Run in this order on the target Supabase database (review before applying; check if already applied in your environment):
+
+1. database/BUILD-05-THE-GATHERING-MIGRATION.sql
+   - Creates the core Gathering/community tables (including public.community_profiles), indexes, RLS policies, and base community RPCs.
+
+2. database/BUILD-05-THE-GATHERING-FINAL-MIGRATION.sql
+   - Repair/finalization pass: adjusts community profile/circle/prompt/feature policies and helper RPCs (rerunnable as written).
+
+3. supabase/migrations/20261103163000_gathering_workflow_completion.sql
+   - Workflow completion: staff/moderator permission handling, circle request/leave/moderation RPCs, and related policy updates (transactional/rerunnable as written).
+
+Notes:
+- These are the repo files that define the community_profiles table and the permissions/RPCs used by the community pages/profile creator.
+- Do not run migrations blindly on production if they may already be applied; verify current schema/state first (docs/GATHERING-BATCH-5-DEPLOY-AND-TEST.md notes the workflow completion migration was applied to production on 3 Nov 2026).
+- No other database files were changed as part of the js/community.js profile-save fix.

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+<title id="title">The Storyteller badge</title><desc id="desc">GidiReads author achievement badge artwork.</desc>
+<defs>
+ <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f5dfae"/><stop offset=".48" stop-color="#bd91d5"/><stop offset="1" stop-color="#8b639f"/></linearGradient>
+ <radialGradient id="field" cx="32%" cy="24%" r="82%"><stop offset="0" stop-color="#583c68"/><stop offset="1" stop-color="#21152b"/></radialGradient>
+ <filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<g stroke-linecap="round" stroke-linejoin="round">
+ <circle cx="256" cy="256" r="219" fill="none" stroke="#b992d1" stroke-opacity=".18" stroke-width="2"/>
+ <path d="M256 28 L275 53 L306 48 L321 76 L351 83 L357 114 L384 131 L380 162 L402 185 L389 214 L405 243 L386 269 L392 301 L365 321 L358 352 L327 360 L309 389 L278 384 L256 407 L234 384 L203 389 L185 360 L154 352 L147 321 L120 301 L126 269 L107 243 L125 214 L112 185 L134 162 L130 131 L157 114 L163 83 L193 76 L208 48 L237 53 Z" fill="url(#field)" stroke="url(#metal)" stroke-width="5"/>
+ <circle cx="256" cy="250" r="128" fill="none" stroke="url(#metal)" stroke-width="3"/>
+ <circle cx="256" cy="250" r="113" fill="none" stroke="#c7a4d9" stroke-opacity=".45" stroke-width="1.5" stroke-dasharray="2 9"/>
+ <g fill="none" stroke="url(#metal)" stroke-width="5" filter="url(#glow)"><path d="M170 208 Q216 185 256 211 Q296 185 342 208 V316 Q296 295 256 321 Q216 295 170 316 Z"/><path d="M256 212 V320"/><path d="M190 231 Q218 220 239 232 M190 255 Q218 244 239 256 M273 232 Q295 220 322 231 M273 256 Q295 244 322 255"/><path d="M208 176 H304"/></g>
+ <g fill="#f4dfad"><circle cx="256" cy="91" r="4"/><circle cx="256" cy="409" r="4"/><circle cx="97" cy="250" r="4"/><circle cx="415" cy="250" r="4"/></g>
+ <path d="M180 372 Q256 398 332 372" fill="none" stroke="#c6a0d8" stroke-opacity=".55" stroke-width="2"/>
+</g></svg>

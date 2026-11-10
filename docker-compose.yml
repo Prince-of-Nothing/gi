@@ -1,0 +1,13 @@
+services:
+  site:
+    build: .
+    ports:
+      - "${PORT:-8080}:8080"
+    # Bind-mount source into nginx web root so edits are reflected immediately (auto-updated)
+    volumes:
+      - .:/usr/share/nginx/html
+    restart: unless-stopped
+    # Optional: create a .env file to override PORT (e.g. PORT=3000)
+    env_file:
+      - path: .env
+        required: false

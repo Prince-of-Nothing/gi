@@ -1,0 +1,129 @@
+/* GidiReads Explore + public author profile visual correction.
+   Scoped to these pages so existing layouts and unrelated pages are untouched. */
+body.explore-page,
+body.author-page {
+  background: #100b17;
+  color: #f6efff;
+}
+body.explore-page .site-footer,
+body.author-page .site-footer {
+  position: relative;
+  margin-top: 72px;
+  padding: 38px 0 24px;
+  overflow: hidden;
+  color: #f6efff;
+  background: radial-gradient(ellipse at 18% 0%, rgba(178, 94, 231, .18), transparent 44%), linear-gradient(135deg, #1b1027 0%, #120c1b 60%, #0e0a14 100%);
+  border-top: 1px solid rgba(202, 145, 255, .28);
+  box-shadow: 0 -18px 50px rgba(126, 57, 174, .08);
+}
+body.explore-page .site-footer::before,
+body.author-page .site-footer::before {
+  content: "";
+  display: block;
+  width: min(1120px, calc(100% - 40px));
+  height: 1px;
+  margin: 0 auto 28px;
+  background: linear-gradient(90deg, transparent, rgba(226, 180, 255, .58), transparent);
+}
+body.explore-page .footer-inner,
+body.author-page .footer-inner {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding: 0 28px;
+  align-items: center;
+  gap: 30px;
+}
+body.explore-page .footer-brand,
+body.author-page .footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 470px;
+}
+body.explore-page .footer-brand .brand-mark,
+body.author-page .footer-brand .brand-mark {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 12px rgba(211, 132, 255, .3));
+}
+body.explore-page .footer-tagline,
+body.author-page .footer-tagline {
+  margin: 0;
+  max-width: 260px;
+  color: #c8b7d8;
+  font-size: .88rem;
+  line-height: 1.65;
+}
+body.explore-page .explore-footer-links,
+body.author-page .explore-footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+}
+body.explore-page .explore-footer-links a,
+body.author-page .explore-footer-links a {
+  color: #e6d7f4;
+  font-size: .88rem;
+  text-decoration: none;
+  transition: color .18s ease, text-shadow .18s ease;
+}
+body.explore-page .explore-footer-links a:hover,
+body.author-page .explore-footer-links a:hover {
+  color: #f0b7ff;
+  text-shadow: 0 0 14px rgba(220, 142, 255, .45);
+}
+body.explore-page .footer-copy,
+body.author-page .footer-copy {
+  margin: 28px 20px 0;
+  padding-top: 18px;
+  border-top: 1px solid rgba(202, 145, 255, .12);
+  color: #9f8cad;
+  font-family: var(--font-body);
+  font-size: .78rem;
+  font-style: normal;
+  text-align: center;
+}
+/* Public profile: replace the flat, ivory banner with the intended night-plum profile stage. */
+body.author-page main { min-height: 55vh; }
+body.author-page .author-profile-hero {
+  position: relative;
+  padding: clamp(48px, 8vw, 92px) 0 54px;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 20% 25%, rgba(174, 88, 222, .22), transparent 45%), radial-gradient(ellipse at 85% 0%, rgba(112, 70, 186, .17), transparent 42%), #15101e;
+  border-bottom: 1px solid rgba(202, 145, 255, .18);
+}
+body.author-page .author-profile-head { gap: 30px; align-items: center; }
+body.author-page #authorAvatarWrap { flex: 0 0 auto; }
+body.author-page #authorAvatarWrap .avatar-lg {
+  display: block;
+  width: clamp(108px, 16vw, 156px);
+  height: clamp(108px, 16vw, 156px);
+  border: 2px solid rgba(239, 190, 255, .92);
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 7px rgba(189, 119, 232, .09), 0 0 34px rgba(190, 101, 255, .35);
+}
+body.author-page #authorName { margin: 0 0 12px; color: #fff6ff; }
+body.author-page #authorBio { max-width: 660px; color: #cbbbd8; line-height: 1.8; }
+body.author-page #authorStats { color: #d9c4ed; }
+body.author-page .section { background: #100b17; }
+body.author-page .section-heading { color: #f5eaff; }
+body.author-page #authorStoriesGrid .empty-row { color: #bba9ca; }
+body.author-page .site-nav { background: var(--nav-surface); border-bottom-color: var(--line-color); }
+body.author-page .site-nav .brand-mark { filter: drop-shadow(0 0 9px rgba(211, 132, 255, .2)); }
+@media (max-width: 680px) {
+  body.explore-page .footer-inner,
+  body.author-page .footer-inner { align-items: flex-start; padding: 0 22px; }
+  body.explore-page .footer-brand,
+  body.author-page .footer-brand { align-items: flex-start; }
+  body.explore-page .explore-footer-links,
+  body.author-page .explore-footer-links { justify-content: flex-start; gap: 12px 18px; }
+  body.author-page .author-profile-head { align-items: flex-start; gap: 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.explore-page .explore-footer-links a,
+  body.author-page .explore-footer-links a { transition: none; }
+}

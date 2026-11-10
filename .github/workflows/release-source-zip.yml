@@ -1,0 +1,56 @@
+name: Release source zip
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag to attach the source zip to (must already exist)'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  package-source:
+    name: Package and publish source zip
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Determine release tag
+        id: meta
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "release" ]; then
+            TAG="${{ github.event.release.tag_name }}"
+          else
+            TAG="${{ inputs.tag }}"
+          fi
+          if [ -z "$TAG" ]; then
+            echo "No release tag available." >&2
+            exit 1
+          fi
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          SAFE_TAG="${TAG//\//-}"
+          echo "zip_name=gidiReads-source-${SAFE_TAG}.zip" >> "$GITHUB_OUTPUT"
+
+      - name: Create source zip
+        shell: bash
+        run: |
+          ZIP="${{ steps.meta.outputs.zip_name }}"
+          # Package repository contents excluding VCS metadata
+          zip -r "$ZIP" . -x ".git/*"
+          echo "Created $ZIP"
+
+      - name: Upload zip to release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          gh release upload "${{ steps.meta.outputs.tag }}" "${{ steps.meta.outputs.zip_name }}" --clobber

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html data-site-theme="plum" lang="en">
+<head>
+
+<meta charset="UTF-8" />
+<script data-gr-theme-init>(function(){try{var d=document.documentElement;var s=localStorage.getItem('gr-site-theme');var site=(s==='plum'||s==='lilac'||s==='amoled'||s==='greenbeige'||s==='bluishbeige'||s==='custom'||s==='light-mode'||s==='dark')?s:'plum';if(site==='light-mode')site='lilac';if(site==='dark')site='plum';var customMode='light';try{customMode=localStorage.getItem('gidireads-custom-mode')||'light';}catch(_){}var isLight=(site==='lilac'||site==='greenbeige'||site==='bluishbeige'||(site==='custom'&&customMode==='light'));var t=site==='plum'?'dark':(site==='lilac'?'light':(site==='amoled'?'amoled':site));d.setAttribute('data-theme',isLight?'light':'dark');d.setAttribute('data-theme-name',t);d.setAttribute('data-site-theme',site);d.style.colorScheme=t==='light'?'light':'dark';var z=localStorage.getItem('gr-text-scale');if(z)d.style.setProperty('--text-scale',z);var f=localStorage.getItem('gidireads-site-font');if(f==='editorial'||f==='classic'||f==='literary'||f==='modern')d.setAttribute('data-site-font',f);}catch(e){document.documentElement.setAttribute('data-theme','dark');document.documentElement.setAttribute('data-theme-name','dark');document.documentElement.setAttribute('data-site-theme','plum');}})();</script>
+<script src="js/theme.js" defer></script>
+<script type="module" src="js/preload.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Admin — GidiReads</title>
+<link rel="icon" type="image/png" href="assets/gidireads-logo.png" />
+<link rel="stylesheet" href="css/fonts.css" blocking="render" />
+<link rel="stylesheet" href="css/style.css" blocking="render" />
+<link rel="stylesheet" href="css/profile-redesign.css" />
+<link rel="stylesheet" href="css/admin-dashboard.css" />
+<link rel="stylesheet" href="css/admin-management.css" />
+<link rel="stylesheet" href="css/opportunities-centre.css" />
+<link rel="stylesheet" href="css/admin-staff.css?v=admin-collection-form-05" />
+<link rel="stylesheet" href="css/economy-design-system.css" />
+<link rel="stylesheet" href="css/gidireads-admin-overrides.css?v=1" />
+<link rel="manifest" href="manifest.webmanifest" />
+<meta name="theme-color" content="#100a16" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<link rel="stylesheet" href="css/theme.css" />
+<link rel="preload" href="css/fonts.css" as="style">
+<link rel="preload" href="css/style.css" as="style">
+<link rel="preload" href="css/theme.css" as="style">
+
+<link rel="stylesheet" href="css/theme-light-fixes.css">
+<link rel="stylesheet" href="css/theme-light-fixes-studio.css">
+<link rel="stylesheet" href="css/theme-amoled-fixes.css">
+<script src="js/i18n.js" defer></script><script type="module" src="js/site-header.js"></script></head>
+<body>
+
+<div id="pageTransition" class="page-transition"></div>
+
+<div id="pageTransition" class="page-transition"></div>
+
+<main role="main" id="main-content">
+  <div id="accessDenied" class="section" hidden>
+   <div class="section-inner">
+    <div class="admin-denied-card"><span class="admin-denied-icon" aria-hidden="true"></span><h1>Administrator access required</h1><p id="accessDeniedMessage">Sign in with an administrator account to open this workspace.</p><div class="admin-denied-actions"><a class="btn btn-primary" href="account.html">Go to account / sign in</a><a class="btn btn-outline" href="index.html">Return to GidiReads</a></div></div>
+   </div>
+  </div>
+
+  <div id="adminDashboard" hidden>
+   <section class="admin-hero">
+    <div class="section-inner admin-hero-inner">
+     <div class="admin-hero-copy"><p class="hero-eyebrow">GidiReads · Administrator workspace</p><h1 class="admin-hero-title">Admin Dashboard</h1><p class="admin-hero-subtitle">A clear view of your community, stories, and platform health.</p></div>
+     <div class="admin-hero-actions"><a class="btn btn-outline" id="adminPublicProfile" href="account.html">View public profile</a><a class="btn btn-primary" href="admin-economy.html">Creator economy <span aria-hidden="true">→</span></a></div>
+    </div>
+   </section>
+
+   <section class="explore-filters">
+    <div class="section-inner">
+     <div class="admin-tabs-wrap"><p class="admin-tabs-label">Workspace</p><div class="genre-list" id="adminTabs" role="tablist" aria-label="Admin dashboard sections">
+      <button class="genre-chip active" data-tab="overview" role="tab" aria-selected="true">Overview</button>
+      <button class="genre-chip" data-tab="reports" role="tab" aria-selected="false">Reports</button>
+      <button class="genre-chip" data-tab="users" role="tab" aria-selected="false">Users</button>
+      <button class="genre-chip" data-tab="staff" role="tab" aria-selected="false">Roles & permissions</button>
+      <button class="genre-chip" data-tab="aeApplications" role="tab" aria-selected="false">AE applications</button>
+      <button class="genre-chip" data-tab="stories" role="tab" aria-selected="false">Stories</button>
+      <button class="genre-chip" data-tab="homepage" role="tab" aria-selected="false">Homepage</button>
+      <button class="genre-chip" data-tab="announcements" role="tab" aria-selected="false">Announcements</button>
+      <button class="genre-chip" data-tab="opportunities" role="tab" aria-selected="false">Opportunities</button>
+      <button class="genre-chip" data-tab="resources" role="tab" aria-selected="false">Resources</button>
+      <button class="genre-chip" data-tab="pricing" role="tab" aria-selected="false">Chapter pricing</button>
+      <button class="genre-chip" data-tab="auditlog" role="tab" aria-selected="false">Audit Log</button>
+     </div></div>
+    </div>
+   </section>
+
+   <section class="section">
+    <div class="section-inner">
+     <div id="adminTabContent"><p class="empty-row">Loading…</p></div>
+    </div>
+   </section>
+  </div>
+</main>
+
+
+<div class="modal-overlay" id="reportDetailModal" hidden>
+ <div class="modal modal-wide" role="dialog" aria-modal="true">
+  <div class="modal-header">
+   <button class="modal-close" data-close="reportDetail" aria-label="Close">&times;</button>
+   <h2 class="modal-title">Report</h2>
+  </div>
+  <div class="modal-body" id="reportDetailBody"></div>
+ </div>
+</div>
+
+<nav class="bottom-nav" aria-label="Primary mobile navigation" role="navigation">
+  <a href="index.html" class="bottom-nav-item ">
+   <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+   <span>Home</span>
+  </a>
+  <a href="explore.html" class="bottom-nav-item ">
+   <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+   <span>Explore</span>
+  </a>
+  <a href="library.html" class="bottom-nav-item ">
+   <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+   <span>Library</span>
+  </a>
+  <button type="button" class="bottom-nav-item bottom-nav-write" id="writeNavBtn">
+    <span class="write-fab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></span>
+    <span>Write</span>
+  </button>
+  <a href="notifications.html" class="bottom-nav-item ">
+   <span class="nav-icon-wrap">
+    <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+    <span class="nav-badge" id="navUnreadBadge" hidden></span>
+   </span>
+   <span>Alerts</span>
+  </a>
+</nav>
+
+<div class="write-sheet-overlay" id="writeSheetOverlay" hidden>
+  <div class="write-sheet">
+   <button class="write-sheet-close" id="writeSheetClose" aria-label="Close">&times;</button>
+   <h3 class="write-sheet-title">What would you like to do?</h3>
+   <button class="write-sheet-option" id="writeNewStory"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg>Publish a new story</button>
+   <button class="write-sheet-option" id="writeManageStories"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Manage my stories</button>
+  </div>
+</div>
+<script type="module" src="js/admin.js?v=admin-collection-form-04"></script>
+<script type="module" src="js/profile-nav.js"></script>
+
+<script type="module" src="js/admin.js"></script>
+<script type="module" src="js/site-footer.js"></script>
+<script type="module" src="js/theme-sync.js"></script>
+</body>
+</html>

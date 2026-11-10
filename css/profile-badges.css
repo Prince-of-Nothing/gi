@@ -1,0 +1,10 @@
+.gr-public-badges{margin-top:28px;padding:26px;border:1px solid rgba(198,164,220,.18);border-radius:20px;background:linear-gradient(145deg,rgba(77,49,91,.2),rgba(25,16,32,.38))}
+.gr-public-badges-intro{color:var(--text-muted,#bbaec4);font-size:13px;line-height:1.6;margin:-7px 0 18px}
+.gr-public-badge-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.gr-public-badge{display:flex;align-items:center;gap:12px;min-width:0;padding:13px;border:1px solid rgba(198,164,220,.18);border-radius:15px;background:rgba(18,10,24,.3)}
+.gr-public-badge img{width:58px;height:58px;object-fit:contain;flex:0 0 58px}
+.gr-public-badge>div{min-width:0}
+.gr-public-badge strong{display:block;font-size:12px;line-height:1.45;color:var(--text-primary,#f4edf8)}
+.gr-public-badge p{font-size:10px;line-height:1.55;color:var(--text-muted,#bbaec4);margin:5px 0 0}
+@media(max-width:760px){.gr-public-badge-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.gr-public-badges{padding:19px}}
+@media(max-width:500px){.gr-public-badge-grid{grid-template-columns:1fr}.gr-public-badge{padding:11px}.gr-public-badge img{width:52px;height:52px;flex-basis:52px}}

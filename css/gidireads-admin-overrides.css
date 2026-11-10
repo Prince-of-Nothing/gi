@@ -1,0 +1,90 @@
+/* Final, high-contrast GidiReads Admin surface — dark theme forced on all admin surfaces.
+   Loaded after legacy styles on purpose. Uses #adminDashboard prefix to match
+   admin-management.css specificity so dark mode actually wins. */
+
+/* Root dark tokens */
+:root{color-scheme:dark;--adm-bg:#160d1d;--adm-panel:#21142b;--adm-panel2:#291936;--adm-line:#49345a;--adm-text:#f7f1ff;--adm-muted:#c7b9d6;--adm-accent:#a88aff}
+html{font-size:16px!important}body{background:radial-gradient(ellipse at 80% -10%,#352044 0,transparent 44%),var(--adm-bg)!important;color:var(--adm-text)!important;font:400 16px/1.6 var(--font-body)!important;overflow-x:hidden}
+
+/* Site nav dark */
+.site-nav{background:var(--nav-surface)!important;border-bottom:1px solid var(--line-color)!important}
+.site-nav,.admin-hero-inner,.section-inner{width:min(100% - 36px,1320px);max-width:1320px;margin-inline:auto}
+.site-nav a,.site-nav button{color:var(--adm-text)!important}
+
+/* Admin hero dark */
+.admin-hero{padding:clamp(30px,5vw,58px) 0 34px!important;background:linear-gradient(125deg,#24142f,#30203f 65%,#1b1024)!important;border-bottom:1px solid var(--adm-line)!important}
+.admin-hero-inner{display:flex;align-items:flex-end;justify-content:space-between;gap:28px}
+.admin-hero .hero-eyebrow{color:#c6b5ff!important;font-size:.75rem;letter-spacing:.13em;text-transform:uppercase}
+.admin-hero-title{max-width:760px;margin:0;color:#fff!important;font:500 clamp(2.3rem,5vw,4rem)/1.08 var(--font-display);letter-spacing:-.025em}
+.admin-hero-subtitle{max-width:650px;margin:14px 0 0;color:#d1c3df!important;line-height:1.75}
+
+/* Admin hero actions */
+.admin-hero-actions{display:flex;flex-wrap:wrap;gap:10px}
+.admin-hero-actions .btn,.admin-denied-actions .btn{min-height:42px;padding:11px 15px;border:1px solid #59456f!important;border-radius:10px;background:#2a1a36!important;color:#f7f1ff!important;text-decoration:none}
+.admin-hero-actions .btn-primary,.admin-denied-actions .btn-primary{border-color:#a88aff!important;background:#a88aff!important;color:#1d1128!important}
+.admin-hero-actions .btn:hover,.admin-denied-actions .btn:hover{filter:brightness(1.08)}
+
+/* Explore filters — DARK, not light */
+#adminDashboard .explore-filters{background:#160d1d!important;border-color:var(--adm-line)!important;border-bottom:1px solid var(--adm-line)!important;padding:12px 0 0}
+#adminDashboard .explore-filters *{color:var(--adm-text)!important}
+
+/* Admin tabs wrap — dark */
+#adminDashboard .admin-tabs-wrap{padding:20px 0 0!important;border:0!important;border-radius:0!important;background:transparent!important}
+#adminDashboard .admin-tabs-label{margin:0 0 10px;color:#c7b9d6!important;font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+#adminDashboard #adminTabs{gap:8px!important;flex-wrap:wrap!important;padding-top:12px;padding-bottom:12px}
+#adminDashboard #adminTabs .genre-chip{background:#2a1a36!important;color:#c7b9d6!important;border:1px solid var(--adm-line)!important;font-weight:650!important;min-height:40px}
+#adminDashboard #adminTabs .genre-chip:hover{background:#352044!important;color:#fff!important;border-color:#a88aff!important}
+#adminDashboard #adminTabs .genre-chip.active{background:#a88aff!important;color:#1d1128!important;border-color:#a88aff!important;box-shadow:0 5px 14px #a88aff2b!important}
+#adminDashboard #adminTabs .genre-chip:focus-visible{outline:3px solid #b783dc!important;outline-offset:2px!important}
+
+/* Admin tab content — DARK */
+#adminDashboard #adminTabContent{min-height:300px;min-width:0;padding:28px 0 56px;color:#f7f1ff!important;font-family:var(--font-body);font-size:.94rem;line-height:1.7;overflow-wrap:anywhere;background:transparent!important}
+#adminDashboard #adminTabContent *{min-width:0}
+#adminDashboard #adminTabContent p,#adminDashboard #adminTabContent td,#adminDashboard #adminTabContent th,#adminDashboard #adminTabContent label,#adminDashboard #adminTabContent small{overflow-wrap:anywhere;word-break:normal;color:var(--adm-text)!important}
+
+/* Admin section headings dark */
+#adminDashboard .admin-section-heading{color:#fff!important;font:600 1.45rem var(--font-display)!important;margin:26px 0 14px!important}
+#adminDashboard .admin-section-heading:after{background:linear-gradient(90deg,#a88aff,.32,transparent)!important}
+
+/* Admin stat cards dark */
+#adminDashboard .admin-stat-card{background:#21142b!important;border:1px solid var(--adm-line)!important;box-shadow:0 10px 26px rgba(0,0,0,.16)!important;color:#f7f1ff!important}
+#adminDashboard .admin-stat-value{color:#fff!important}
+#adminDashboard .admin-stat-label{color:#c7b9d6!important}
+
+/* Admin tables dark */
+#adminDashboard .admin-table{background:#21142b!important;border:1px solid var(--adm-line)!important;border-radius:14px;overflow:hidden;color:#f7f1ff!important}
+#adminDashboard .admin-table th{background:#301333!important;color:#fff!important;font-weight:800!important}
+#adminDashboard .admin-table td{color:#e3d9f2!important;border-color:#49345a!important}
+#adminDashboard .admin-table tr:nth-child(even) td{background:#291936!important}
+#adminDashboard .admin-table .btn{white-space:nowrap}
+
+/* Admin stat cards general */
+#adminDashboard .admin-stat-card{background:#21142b!important;border:1px solid var(--adm-line)!important;box-shadow:0 10px 26px rgba(0,0,0,.16)!important;color:#f7f1ff!important}
+
+/* Admin denied card */
+#adminDashboard .admin-denied-card{background:radial-gradient(ellipse at 90% 0%,rgba(255,107,157,.11),transparent 42%),linear-gradient(145deg,#2A082C,#160817)!important;border:1px solid var(--gr-line)!important;color:#FFF5F0!important}
+
+/* AMOLED theme — pure black */
+html[data-site-theme="amoled"] #adminDashboard{background:#000000!important;color:#f5f5f5!important}
+html[data-site-theme="amoled"] #adminDashboard .explore-filters{background:#000000!important}
+html[data-site-theme="amoled"] #adminDashboard .admin-tabs-wrap{background:#000000!important}
+html[data-site-theme="amoled"] #adminDashboard #adminTabs .genre-chip{background:#0a0a0a!important;color:#f5f5f5!important;border-color:#333333!important}
+html[data-site-theme="amoled"] #adminDashboard #adminTabs .genre-chip.active{background:#a88aff!important;color:#000000!important}
+html[data-site-theme="amoled"] #adminDashboard #adminTabContent{background:#000000!important;color:#f5f5f5!important}
+html[data-site-theme="amoled"] #adminDashboard .admin-stat-card{background:#0a0a0a!important;border-color:#333333!important;color:#f5f5f5!important}
+html[data-site-theme="amoled"] #adminDashboard .admin-table{background:#000000!important;border-color:#333333!important;color:#f5f5f5!important}
+html[data-site-theme="amoled"] #adminDashboard .admin-table th{background:#0a0a0a!important;color:#f5f5f5!important}
+html[data-site-theme="amoled"] #adminDashboard .admin-table td{color:#e3d9f2!important;border-color:#333333!important}
+html[data-site-theme="amoled"] #adminDashboard .admin-table tr:nth-child(even) td{background:#0a0a0a!important}
+
+/* Report modal dark */
+#reportDetailModal .modal{background:#241027!important;color:#FFF5F0!important;border:1px solid var(--gr-line)!important;box-shadow:0 28px 80px rgba(0,0,0,.55)}
+#reportDetailModal .modal-header,#reportDetailModal .modal-body{background:transparent!important;color:#FFF5F0!important}
+#reportDetailModal .modal-title{color:#FFF0F5!important}
+
+/* Focus indicators */
+#adminDashboard button:focus-visible,#adminDashboard a:focus-visible,#adminDashboard input:focus-visible,#adminDashboard textarea:focus-visible,#adminDashboard select:focus-visible{outline:2px solid #FF6B9D!important;outline-offset:3px}
+
+/* Form inputs dark */
+#adminDashboard input,#adminDashboard textarea,#adminDashboard select{background:#160817!important;color:#FFF5F0!important;border-color:rgba(255,107,157,.28)!important}
+#adminDashboard input::placeholder,#adminDashboard textarea::placeholder{color:#BBA6BB!important}

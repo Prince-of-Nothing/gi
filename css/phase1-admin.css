@@ -1,0 +1,32 @@
+.ce-phase1-form{margin:16px 0 22px;padding:22px;display:grid;gap:14px}
+.ce-phase1-form h3{font-size:16px;margin:0 0 3px;color:var(--ce-text,#f5eef8)}
+.ce-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.ce-phase1-form label{display:flex;flex-direction:column;gap:7px;min-width:0}
+.ce-phase1-form input,.ce-phase1-form select,.ce-phase1-form textarea{box-sizing:border-box;width:100%;min-height:42px;padding:11px 12px;border:1px solid var(--ce-line,rgba(206,174,222,.25));border-radius:10px;background:rgba(17,10,23,.62);color:var(--ce-text,#f5eef8);font:inherit;font-size:12px}
+.ce-phase1-form textarea{min-height:84px;resize:vertical;line-height:1.55}
+.ce-phase1-form input[type=file]{padding:9px}
+.ce-phase1-form input[type=checkbox]{width:16px;min-height:16px;accent-color:#c9a7df}
+.ce-phase1-form .ce-muted{margin:0;font-size:11px;line-height:1.6;color:var(--ce-muted,#c1b1cb)}
+.ce-inline-badge{display:grid;gap:13px;border:1px solid var(--ce-line,rgba(206,174,222,.25));border-radius:13px;padding:15px;margin:0}
+.ce-inline-badge legend{padding:0 7px;font-size:12px;color:#e1c7f0}
+.ce-inline-badge>label.ce-check-label{display:flex;flex-direction:row;align-items:center;gap:9px}
+.ce-inline-badge #inlineBadgeFields{display:grid;gap:12px}
+.ce-inline-badge #inlineBadgeFields[hidden]{display:none}
+.ce-phase1-catalog-item{align-items:center}
+.ce-catalog-art{width:58px;height:58px;object-fit:contain;flex:0 0 58px}
+.ce-phase1-milestone-item{align-items:center}
+.ce-phase1-milestone-item .ce-item-main{min-width:0}
+.ce-phase1-milestone-item .ce-item-main small{display:block;line-height:1.6;margin-top:6px}
+.ce-phase1-milestone-item .ce-actions{display:flex;flex-wrap:wrap;gap:7px;justify-content:flex-end}
+.ce-btn.danger{border:1px solid rgba(229,145,157,.35);background:rgba(151,49,67,.16);color:#f2c6ce}
+@media(max-width:700px){.ce-form-grid{grid-template-columns:1fr}.ce-phase1-form{padding:16px}.ce-phase1-catalog-item,.ce-phase1-milestone-item{align-items:flex-start;flex-wrap:wrap}.ce-phase1-milestone-item .ce-actions{width:100%;justify-content:flex-start}.ce-catalog-art{width:48px;height:48px;flex-basis:48px}}
+.ce-upload-preview{display:block;width:112px;height:112px;object-fit:contain;padding:7px;border:1px solid var(--ce-line,rgba(206,174,222,.25));border-radius:14px;background:rgba(17,10,23,.5)}
+.ce-upload-preview[hidden]{display:none}
+.ce-milestone-preview{padding:16px;border:1px solid rgba(198,164,220,.35);border-radius:14px;background:linear-gradient(145deg,rgba(100,70,119,.2),rgba(25,16,32,.68))}
+.ce-milestone-preview[hidden]{display:none}
+.ce-milestone-preview-main{display:flex;align-items:center;gap:13px;margin:10px 0}
+.ce-milestone-preview-main img{width:64px;height:64px;object-fit:contain;flex:0 0 64px}
+.ce-milestone-preview-main>div{min-width:0}
+.ce-milestone-preview-main h3{margin:0 0 5px}
+.ce-milestone-preview-main p{font-size:12px;line-height:1.6;color:var(--ce-muted,#c1b1cb);margin:0 0 6px}
+.ce-milestone-preview-main small{font-size:10px;color:#ddc4e9;line-height:1.5}

@@ -1,0 +1,28 @@
+/* GidiReads reader-facing platform announcements — dark-plum brand system */
+.announcement-feed-panel{margin:0 0 30px;padding:clamp(18px,3vw,28px);border:1px solid rgba(255,107,157,.24);border-radius:20px;background:linear-gradient(145deg,#2A082C,#211024 72%,#190B1B);box-shadow:0 16px 42px rgba(0,0,0,.2),0 0 24px rgba(255,107,157,.035);color:#FFF5F0}
+.announcement-feed-panel[hidden]{display:none!important}
+.announcement-feed-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px;padding-bottom:16px;border-bottom:1px solid rgba(255,107,157,.17)}
+.announcement-feed-head h2{font:600 clamp(1.3rem,2.5vw,1.7rem) var(--font-display);margin:0;color:#FFF0F5;line-height:1.25}
+.announcement-feed-count{background:rgba(255,107,157,.12);color:#FFD6E2;border:1px solid rgba(255,107,157,.26);padding:7px 11px;border-radius:999px;font-size:.75rem;font-weight:800;white-space:nowrap}
+.announcement-feed-item{display:flex;align-items:flex-start;gap:16px;padding:20px 0;border-top:1px solid rgba(255,107,157,.14);min-width:0}
+.announcement-feed-item:first-child{border-top:0}
+.announcement-feed-mark{display:grid;place-items:center;flex:0 0 42px;width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,#4A154B,#7A204E);border:1px solid rgba(255,107,157,.28);color:#FFF5F0;font:700 1rem var(--font-display);box-shadow:0 0 18px rgba(255,107,157,.10)}
+.announcement-feed-copy{min-width:0;flex:1}
+.announcement-feed-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 9px;font-size:.72rem;line-height:1.5}
+.announcement-feed-category{text-transform:uppercase;letter-spacing:.09em;font-weight:800;color:#FF9DBB}
+.announcement-feed-meta time{color:#D7C5D8;margin-left:auto}
+.announcement-priority{font-size:.66rem;text-transform:uppercase;letter-spacing:.05em;font-weight:800;border-radius:999px;padding:4px 8px;background:rgba(255,210,63,.12);border:1px solid rgba(255,210,63,.25);color:#FFE6A0}
+.announcement-priority.priority-urgent{background:rgba(255,107,157,.13);border:1px solid rgba(255,107,157,.28);color:#FFB5C9}
+.announcement-feed-copy h3{font:600 1.15rem/1.35 var(--font-display);color:#FFF0F5;margin:0 0 9px;overflow-wrap:break-word;word-break:normal}
+.announcement-feed-copy p{color:#E0D2DF;line-height:1.75;margin:0;white-space:pre-wrap;overflow-wrap:break-word;word-break:normal}
+.announcement-feed-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:16px}
+.announcement-feed-actions a{color:#FF9DBB;font-weight:800;text-decoration:none;text-underline-offset:3px}
+.announcement-feed-actions a:hover{text-decoration:underline;text-shadow:0 0 12px rgba(255,107,157,.22)}
+.announcement-feed-actions button{border:1px solid rgba(255,107,157,.32);background:#4A154B;color:#FFF5F0;border-radius:10px;padding:9px 13px;min-height:40px;font:700 .78rem var(--font-body);cursor:pointer;transition:background .18s,border-color .18s,box-shadow .18s}
+.announcement-feed-actions button:hover:not(:disabled){background:#61204F;border-color:#FF6B9D;box-shadow:0 0 0 3px rgba(255,107,157,.10)}
+.announcement-feed-actions button:focus-visible{outline:2px solid #FF6B9D;outline-offset:3px}
+.announcement-feed-actions button:disabled{background:#342036;color:#BBA6BB;border-color:#4A354B;cursor:default;opacity:1}
+.announcement-feed-item.is-unread{margin:8px -10px;padding:18px 10px;border:1px solid rgba(255,107,157,.25);border-radius:14px;background:rgba(255,107,157,.055)}
+.announcement-feed-item.is-unread .announcement-feed-copy h3:after{content:"NEW";display:inline-block;vertical-align:middle;margin-left:9px;border-radius:5px;padding:3px 6px;background:rgba(255,107,157,.14);border:1px solid rgba(255,107,157,.28);color:#FFB5C9;font:800 .58rem var(--font-body);letter-spacing:.06em}
+.announcement-feed-item.is-read .announcement-feed-mark{background:#342036;border-color:rgba(255,255,255,.08);box-shadow:none;color:#D7C5D8}
+@media(max-width:540px){.announcement-feed-panel{padding:16px;border-radius:16px}.announcement-feed-head{align-items:flex-start}.announcement-feed-item{gap:11px;padding:16px 0}.announcement-feed-mark{flex-basis:34px;width:34px;height:34px;border-radius:10px}.announcement-feed-meta time{margin-left:0;width:100%}.announcement-feed-item.is-unread{margin-inline:-5px;padding:14px 5px}.announcement-feed-actions{gap:9px}}

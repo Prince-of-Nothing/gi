@@ -1,0 +1,1919 @@
+/* GidiReads - Beige-theme repairs for the public site.
+ *
+ * Scope: EVERY rule below is guarded by html[data-theme="light"], so dark
+ * mode (html[data-site-theme="plum"]) and AMOLED (html[data-site-theme="amoled"])
+ * are completely untouched.
+ *
+ * Loaded after theme.css and after each page's own stylesheets on every themed
+ * page, so these declarations win the cascade. The Beige theme must be *fully*
+ * beige: chrome, heroes, section bands, cards and panels are warm paper
+ * surfaces with ink text. Only genuinely photographic content (book covers,
+ * illustrations, avatars) keeps its own pixels.
+ *
+ * Strategy:
+ *   - Re-point the per-page dark design tokens (--nav-*, --gp-*, --ex-*,
+ *     --story-*, --oc-*, --lib-*, --mgr-*, --ce-*, --ae-*, --gr-* ...) at the
+ *     warm paper palette so type and surfaces follow the Beige theme.
+ *   - Convert every dark hero / banner / section band / card / control to a
+ *     warm beige gradient or flat paper surface with dark, readable copy.
+ *   - Fix hard-coded light text/control colours one component at a time.
+ *
+ * Warm paper palette: #fdfbf6 page, #faf5ec surface, #fffcf7 raised paper,
+ * #f2ece0 / #f2ece0 bands, #8c639f / #63428a accents, #8a6420 gold.
+ */
+
+/* ==========================================================================
+   0. Beige chrome tokens
+   theme.css hands the Beige theme a *dark* --nav-surface/--nav-text pair (the
+   old "dark chrome" treatment). Re-point them at paper so every nav, footer
+   and bottom bar that reads these tokens goes warm automatically.
+   ========================================================================== */
+html[data-site-theme="lilac"] {
+  --nav-surface: #fffcf7;
+  --nav-text: #30243a;
+  --nav-accent: #63428a;
+  --line-color: rgba(48, 36, 58, .18);
+}
+html[data-site-theme="greenbeige"] {
+  --nav-surface: #fbfdf7;
+  --nav-text: #1a2416;
+  --nav-accent: #3f6b40;
+  --line-color: rgba(26, 36, 22, .18);
+}
+html[data-site-theme="bluishbeige"] {
+  --nav-surface: #fafcff;
+  --nav-text: #161e2a;
+  --nav-accent: #3f5f8a;
+  --line-color: rgba(22, 30, 42, .18);
+}
+
+/* ==========================================================================
+   1. Shared chrome: sticky nav, footer, mobile bottom nav
+   Warm paper bars, 1px warm rules, ink text.
+   ========================================================================== */
+html[data-theme="light"] .site-nav,
+html[data-theme="light"] .home-page .site-nav,
+html[data-theme="light"] .explore-page .site-nav,
+html[data-theme="light"] .library-page .site-nav,
+html[data-theme="light"] .story-nav-v2,
+html[data-theme="light"] .gathering-top {
+  background: var(--nav-surface) !important;
+  border-bottom: 1px solid var(--line-color) !important;
+  box-shadow: 0 10px 30px rgba(48, 36, 58, .07) !important;
+  backdrop-filter: none !important;
+}
+html[data-theme="light"] .site-nav,
+html[data-theme="light"] .footer-inner,
+html[data-theme="light"] .gr-footer-inner {
+  background-color: transparent !important;
+}
+html[data-theme="light"] .site-nav .nav-links a,
+html[data-theme="light"] .site-nav .home-desktop-links a,
+html[data-theme="light"] .site-nav .explore-main-links a,
+html[data-theme="light"] .site-nav .collection-nav-links a,
+html[data-theme="light"] .site-nav .mgr-top-link,
+html[data-theme="light"] .site-nav .ce-nav-link,
+html[data-theme="light"] .site-nav .brand,
+html[data-theme="light"] .site-nav .brand span {
+  color: #3d3148 !important;
+}
+html[data-theme="light"] .site-nav .nav-links a:hover,
+html[data-theme="light"] .site-nav .nav-links a.active,
+html[data-theme="light"] .site-nav .home-desktop-links a:hover,
+html[data-theme="light"] .site-nav .home-desktop-links a.is-active,
+html[data-theme="light"] .site-nav .explore-main-links a:hover,
+html[data-theme="light"] .site-nav .explore-main-links a.active,
+html[data-theme="light"] .site-nav .collection-nav-links a:hover,
+html[data-theme="light"] .site-nav .collection-nav-links a.active,
+html[data-theme="light"] .site-nav .mgr-top-link:hover,
+html[data-theme="light"] .site-nav .ce-nav-link:hover {
+  color: #63428a !important;
+}
+html[data-theme="light"] .site-nav .home-nav-search,
+html[data-theme="light"] .site-nav .nav-search-btn,
+html[data-theme="light"] .site-nav .top-icon-btn,
+html[data-theme="light"] .site-nav .top-profile-btn {
+  color: #4b3c57 !important;
+}
+html[data-theme="light"] .site-nav .home-nav-search {
+  border-color: #e7d7b8 !important;
+  background: rgba(255, 253, 251, .6) !important;
+}
+html[data-theme="light"] .site-nav .home-nav-search:hover,
+html[data-theme="light"] .site-nav .nav-search-btn:hover,
+html[data-theme="light"] .site-nav .top-icon-btn:hover,
+html[data-theme="light"] .site-nav .top-profile-btn:hover {
+  color: #63428a !important;
+}
+/* Nav buttons: raised paper pills with ink labels (theme.css made them dark). */
+html[data-theme="light"] .site-nav .nav-actions > .gr-btn,
+html[data-theme="light"] .site-nav .btn-ghost {
+  color: #3d3148 !important;
+  background: #fffcf7 !important;
+  border: 1px solid #e7d7b8 !important;
+}
+html[data-theme="light"] .site-nav .nav-actions > .gr-btn:hover,
+html[data-theme="light"] .site-nav .btn-ghost:hover {
+  background: #faf5ec !important;
+  color: #63428a !important;
+  border-color: #ddcec2 !important;
+}
+html[data-theme="light"] .site-nav .btn-primary {
+  color: #fffcf7 !important;
+  background-color: #63428a !important;
+  background-image: linear-gradient(120deg, #8c639f, #63428a) !important;
+  border: 1px solid transparent !important;
+}
+html[data-theme="light"] .site-nav .nav-links a::after,
+html[data-theme="light"] .site-nav .home-desktop-links a::after,
+html[data-theme="light"] .site-nav .explore-main-links a::after {
+  background: #8c639f !important;
+}
+/* Mobile bottom navigation: paper bar, ink labels, accent active state. */
+html[data-theme="light"] .bottom-nav {
+  background: linear-gradient(180deg, #fffcf7, #faf5ec) !important;
+  border-top: 1px solid #e7d7b8 !important;
+  box-shadow: 0 -10px 30px rgba(48, 36, 58, .08) !important;
+}
+html[data-theme="light"] .bottom-nav-item { color: #5c4b66 !important; }
+html[data-theme="light"] .bottom-nav-item.active,
+html[data-theme="light"] .bottom-nav-item:hover { color: #63428a !important; }
+html[data-theme="light"] .bottom-nav-item .write-fab {
+  background: linear-gradient(135deg, #8c639f, #63428a) !important;
+  color: #fffcf7 !important;
+  width: 22px !important;
+  height: 22px !important;
+}
+html[data-theme="light"] .nav-badge { border-color: #fffcf7 !important; }
+
+/* Footer: warm paper footer with ink headings and muted warm links.
+   footer-redesign.css hard-codes its own dark footer tokens. */
+html[data-theme="light"] .site-footer {
+  background: linear-gradient(180deg, #fdfbf6, #faf5ec) !important;
+  color: #30243a !important;
+  border-top: 1px solid #e7d7b8 !important;
+}
+html[data-theme="light"] .site-footer.gr-site-footer {
+  --gr-footer-bg: #fdfbf6;
+  --gr-footer-text: #30243a;
+  --gr-footer-muted: #65596b;
+  --gr-footer-faint: #65596b;
+  --gr-footer-line: #e7d7b8;
+  background: linear-gradient(180deg, #fdfbf6, #faf5ec) !important;
+  color: #30243a !important;
+  border-top: 1px solid #e7d7b8 !important;
+}
+html[data-theme="light"] .site-footer .footer-col h3 { color: #30243a !important; }
+html[data-theme="light"] .site-footer .footer-col a { color: #65596b !important; }
+html[data-theme="light"] .site-footer .footer-col a:hover { color: #63428a !important; }
+html[data-theme="light"] .site-footer .footer-tagline,
+html[data-theme="light"] .site-footer .footer-origin,
+html[data-theme="light"] .site-footer .footer-copy,
+html[data-theme="light"] .site-footer .footer-bottom,
+html[data-theme="light"] .site-footer .footer-bottom p,
+html[data-theme="light"] .site-footer .footer-bottom span { color: #65596b !important; }
+html[data-theme="light"] .site-footer.gr-site-footer .footer-col a:hover { color: #63428a !important; }
+
+/* ==========================================================================
+   2. Home page (index.html) - home design tokens were dark-only
+   ========================================================================== */
+html[data-theme="light"] .home-page {
+  --home-bg: var(--page-bg);
+  --home-surface: var(--surface);
+  --home-surface-2: var(--surface-2);
+  --home-surface-3: var(--surface-3);
+  --home-text: var(--text);
+  --home-muted: var(--muted);
+  --home-faint: #65596b;
+  --home-lilac: var(--accent);
+  --home-lilac-bright: var(--accent-strong);
+  --home-gold: #8a6a2f;
+  --home-line: var(--line-color);
+  background: var(--page-bg);
+  color: var(--text);
+}
+/* The opening hero is a warm paper stage with ink copy. */
+html[data-theme="light"] .home-hero {
+  --home-text: #30243a;
+  --home-muted: #65596b;
+  --home-faint: #65596b;
+  --home-lilac: #63428a;
+  --home-lilac-bright: #63428a;
+  --home-gold: #8a6420;
+  --home-line: rgba(48, 36, 58, .18);
+  background:
+    radial-gradient(circle at 78% 22%, rgba(142, 111, 176, .14), transparent 42%),
+    radial-gradient(circle at 10% 88%, rgba(210, 170, 110, .13), transparent 46%),
+    linear-gradient(135deg, #fffcf7 0%, #fdfbf6 46%, #faf5ec 100%) !important;
+  border-bottom: 1px solid #e7d7b8 !important;
+}
+html[data-theme="light"] .home-hero h1 { font-style: italic !important; }
+html[data-theme="light"] .home-hero::before {
+  border-color: rgba(142, 111, 176, .16) !important;
+  box-shadow: 0 0 0 90px rgba(142, 111, 176, .045), 0 0 0 180px rgba(142, 111, 176, .03) !important;
+}
+html[data-theme="light"] .home-page .home-kicker,
+html[data-theme="light"] .home-page .home-section-kicker { color: #63428a !important; }
+html[data-theme="light"] .home-page .home-hero-sub { color: #65596b !important; }
+html[data-theme="light"] .home-page .home-search {
+  background: #fffcf7 !important;
+  border-color: #e7d7b8 !important;
+  box-shadow: 0 16px 40px rgba(48, 36, 58, .10) !important;
+}
+html[data-theme="light"] .home-page .home-search input { color: #30243a !important; }
+html[data-theme="light"] .home-page .home-search input::placeholder { color: #65596b !important; }
+html[data-theme="light"] .home-page .home-search button {
+  background-color: #63428a !important;
+  background-image: linear-gradient(120deg, #8c639f, #63428a) !important;
+  color: #fffcf7 !important;
+}
+html[data-theme="light"] .home-page .home-primary-btn {
+  background: #8c639f !important;
+  color: #fffcf7 !important;
+  border-color: #8c639f !important;
+}
+html[data-theme="light"] .home-page .home-primary-btn:hover { background: #63428a !important; }
+html[data-theme="light"] .home-page .home-secondary-btn {
+  background: #fffcf7 !important;
+  color: #3d3148 !important;
+  border-color: #e7d7b8 !important;
+}
+html[data-theme="light"] .home-page .home-secondary-btn:hover {
+  background: #faf5ec !important;
+  border-color: #ddcec2 !important;
+  color: #63428a !important;
+}
+html[data-theme="light"] .home-page .home-card-badge {
+  background: rgba(255, 253, 251, .92) !important;
+  color: #3d3148 !important;
+  border-color: #e7d7b8 !important;
+}
+/* The hero art callout used a dark glass panel; make it warm paper with ink copy. */
+html[data-theme="light"] .home-art-note {
+  background: #fffcf7 !important;
+  border-color: #e7d7b8 !important;
+  box-shadow: 0 18px 40px rgba(48, 36, 58, .14) !important;
+  color: #30243a !important;
+}
+html[data-theme="light"] .home-art-note-label { color: #8a6420 !important; }
+html[data-theme="light"] .home-art-note strong { color: #30243a !important; }
+/* Hero story stack card title badge: white box with black text in light mode. */
+html[data-theme="light"] .home-stack-card span {
+  background: #fffcf7 !important;
+  color: #30243a !important;
+  border-color: #e7d7b8 !important;
+}
+/* Stack card itself: warm paper surface in light mode. */
+html[data-theme="light"] .home-stack-card {
+  background: #fffcf7 !important;
+  border-color: #e7d7b8 !important;
+  color: #30243a !important;
+}
+/* Seasonal collection band (Holiday Hearts) used a plum/rose gradient. */
+html[data-theme="light"] .home-page .home-custom-section {
+  background:
+    radial-gradient(ellipse at 12% 0%, rgba(210, 170, 110, .17), transparent 52%),
+    linear-gradient(125deg, #fffcf7, #faf5ec 78%) !important;
+  border-color: #e7d7b8 !important;
+  color: #30243a !important;
+  box-shadow: 0 16px 40px rgba(48, 36, 58, .09) !important;
+}
+html[data-theme="light"] .home-page .home-custom-copy h2 { color: #30243a !important; }
+html[data-theme="light"] .home-page .home-custom-body { color: #65596b !important; }
+html[data-theme="light"] .home-page .home-custom-copy .home-section-kicker { color: #8a6420 !important; }
+html[data-theme="light"] .home-page .home-custom-cta {
+  background: #8c639f !important;
+  color: #fffcf7 !important;
+}
+html[data-theme="light"] .home-page .home-custom-cta:hover { background: #63428a !important; color: #fffcf7 !important; }
+html[data-theme="light"] .home-page .home-custom-footer { border-top-color: #e7d7b8 !important; }
+html[data-theme="light"] .home-page .home-custom-image {
+  background: #f2ece0 !important;
+  border-color: #e7d7b8 !important;
+}
+html[data-theme="light"] .home-page .home-custom-stories .home-cover-wrap,
+html[data-theme="light"] .home-page .home-custom-stories .home-cover-wrap img { background: #f2ece0 !important; }
+/* Surfaces that used literal dark colours instead of tokens. */
+html[data-theme="light"] .home-page .home-featured { background: var(--page-bg) !important; }
+html[data-theme="light"] .home-page .home-featured-card {
+  background: linear-gradient(125deg, var(--surface-2), var(--surface)) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .home-page .home-featured-cover { background: var(--surface-2); }
+html[data-theme="light"] .home-page .home-cover-wrap {
+  background: var(--surface-2);
+  border-color: var(--line-color);
+}
+html[data-theme="light"] .home-page .home-cover-wrap .cover-placeholder {
+  background: linear-gradient(145deg, var(--surface-3), var(--surface-2));
+  color: var(--accent);
+}
+html[data-theme="light"] .home-page .home-echo-section {
+  background: var(--surface) !important;
+  border-top-color: var(--line-color) !important;
+}
+/* Two home shelf variants still used literal dark backgrounds. */
+html[data-theme="light"] .home-page .home-soft-section { background: var(--surface) !important; }
+html[data-theme="light"] .home-page .home-taxonomy-section { background: var(--page-bg) !important; }
+html[data-theme="light"] .home-page .home-author-cta {
+  background: var(--surface-2) !important;
+  border-top-color: var(--line-color) !important;
+}
+html[data-theme="light"] .home-page .home-footer {
+  background: var(--page-bg) !important;
+  border-top-color: var(--line-color) !important;
+}
+html[data-theme="light"] .home-page .home-custom-section .home-custom-footer {
+  border-top-color: var(--line-color) !important;
+}
+/* ==========================================================================
+   3. Explore (explore.html) - dark design system
+   ========================================================================== */
+html[data-theme="light"] .explore-page {
+  --ex-bg: var(--page-bg);
+  --ex-surface: var(--surface);
+  --ex-surface2: var(--surface-2);
+  --ex-line: var(--line-color);
+  --ex-lilac: var(--accent);
+  --ex-soft: var(--muted);
+  --ex-gold: #8a6a2f;
+  --ex-pink: var(--accent-strong);
+  background: var(--page-bg) !important;
+  color: var(--text);
+}
+/* Discover hero: warm paper stage with ink copy. */
+html[data-theme="light"] .explore-hero {
+  background:
+    radial-gradient(ellipse at 78% 26%, rgba(142, 111, 176, .16), transparent 46%),
+    radial-gradient(ellipse at 26% 92%, rgba(210, 170, 110, .14), transparent 50%),
+    linear-gradient(135deg, #fffcf7 0%, #fdfbf6 52%, #faf5ec 100%) !important;
+  border-bottom: 1px solid #e7d7b8 !important;
+}
+html[data-theme="light"] .explore-hero-copy h1,
+html[data-theme="light"] .explore-hero h1 { color: #30243a !important; }
+html[data-theme="light"] .explore-hero-copy h1 em { color: #63428a !important; }
+html[data-theme="light"] .explore-hero-copy > p { color: #65596b !important; }
+html[data-theme="light"] .explore-hero-caption { color: #65596b !important; }
+html[data-theme="light"] .explore-hero .explore-search {
+  background: #fffcf7 !important;
+  border-color: #e7d7b8 !important;
+  box-shadow: 0 16px 40px rgba(48, 36, 58, .10) !important;
+}
+html[data-theme="light"] .explore-hero .explore-search input {
+  color: #30243a !important;
+  background: transparent !important;
+}
+html[data-theme="light"] .explore-hero .explore-search input::placeholder { color: #65596b !important; }
+html[data-theme="light"] .explore-hero .explore-search button {
+  background: #8c639f !important;
+  color: #fffcf7 !important;
+}
+/* Discovery bar, tabs and filter controls. */
+html[data-theme="light"] .explore-discovery-bar {
+  background: var(--surface) !important;
+  border-bottom-color: var(--line-color) !important;
+}
+html[data-theme="light"] .explore-tab {
+  color: var(--muted) !important;
+  background: transparent !important;
+}
+html[data-theme="light"] .explore-tab:hover { color: var(--text) !important; }
+html[data-theme="light"] .explore-tab.active {
+  color: var(--accent-strong) !important;
+  background: var(--accent-soft) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .explore-filter-btn {
+  background: var(--surface-2) !important;
+  color: var(--text) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .explore-filter-btn:hover { background: var(--surface-3) !important; }
+html[data-theme="light"] .explore-section-heading h2,
+html[data-theme="light"] #modeTitle,
+html[data-theme="light"] #taxonomyShowcaseTitle { color: var(--text) !important; }
+html[data-theme="light"] .explore-kicker,
+html[data-theme="light"] .explore-section-kicker { color: var(--accent-strong) !important; }
+html[data-theme="light"] .explore-see-all { color: var(--accent-strong) !important; }
+/* Featured + story cards. */
+html[data-theme="light"] .explore-featured-section { background: var(--page-bg) !important; }
+html[data-theme="light"] .explore-featured-card {
+  background: linear-gradient(135deg, var(--surface-2), var(--surface)) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .featured-copy h3 { color: var(--text) !important; }
+html[data-theme="light"] .featured-genre { color: var(--accent-strong) !important; }
+html[data-theme="light"] .featured-author,
+html[data-theme="light"] .featured-copy > p:not(.featured-genre):not(.featured-author),
+html[data-theme="light"] .featured-stats { color: var(--muted) !important; }
+html[data-theme="light"] .featured-read { color: var(--accent-strong) !important; }
+html[data-theme="light"] .explore-badge {
+  background: var(--surface-3) !important;
+  color: var(--accent-strong) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .explore-story-card {
+  background: var(--surface-2) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .explore-card-copy h3 { color: var(--text) !important; }
+html[data-theme="light"] .explore-card-copy > p,
+html[data-theme="light"] .explore-card-meta { color: var(--muted) !important; }
+html[data-theme="light"] .explore-card-meta span:first-child { color: var(--accent-strong) !important; }
+html[data-theme="light"] .explore-card-echo { color: #8a6a2f !important; }
+html[data-theme="light"] .explore-save {
+  background: rgba(255, 253, 251, .92) !important;
+  color: var(--text) !important;
+  border-color: var(--line-color) !important;
+}
+/* Discovery / taxonomy tiles. */
+html[data-theme="light"] .explore-discovery-grid button,
+html[data-theme="light"] .explore-taxonomy-card {
+  background: var(--surface) !important;
+  color: var(--text) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .explore-discovery-grid button:hover,
+html[data-theme="light"] .explore-taxonomy-card:hover { background: var(--surface-2) !important; }
+html[data-theme="light"] .explore-discovery-grid small,
+html[data-theme="light"] .explore-taxonomy-card small,
+html[data-theme="light"] .explore-taxonomy-card .tax-number,
+html[data-theme="light"] .results-count { color: var(--muted) !important; }
+html[data-theme="light"] .explore-discovery-grid i,
+html[data-theme="light"] .explore-taxonomy-card strong { color: var(--text) !important; }
+html[data-theme="light"] .compact-section,
+html[data-theme="light"] .taxonomy-showcase,
+html[data-theme="light"] .because-section,
+html[data-theme="light"] .explore-results-section { background: var(--page-bg) !important; }
+html[data-theme="light"] .explore-empty,
+html[data-theme="light"] .explore-loading {
+  background: var(--surface) !important;
+  color: var(--muted) !important;
+  border-color: var(--line-color) !important;
+}
+/* Filter drawer. */
+html[data-theme="light"] .explore-filter-panel {
+  background: var(--surface-2) !important;
+  border-left-color: var(--line-color) !important;
+}
+html[data-theme="light"] .filter-panel-body label,
+html[data-theme="light"] .filter-panel-head button { color: var(--muted) !important; }
+html[data-theme="light"] .filter-panel-body select {
+  background: var(--input-surface) !important;
+  color: var(--text) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .filter-clear {
+  background: var(--surface-3) !important;
+  color: var(--text) !important;
+  border-color: var(--line-color) !important;
+}
+
+/* ==========================================================================
+   4. Story detail (story.html) - dark design system
+   ========================================================================== */
+html[data-theme="light"] .story-page {
+  --story-bg: var(--page-bg);
+  --story-surface: var(--surface);
+  --story-surface-2: var(--surface-2);
+  --story-line: var(--line-color);
+  --story-text: var(--text);
+  --story-muted: var(--muted);
+  --story-lilac: var(--accent);
+  --story-purple: var(--accent-strong);
+  --story-pink: var(--accent-strong);
+  background: var(--page-bg) !important;
+  color: var(--text);
+}
+/* The cover hero is a warm paper stage with ink copy. */
+html[data-theme="light"] .story-hero-v2 {
+  background:
+    radial-gradient(circle at 72% 26%, rgba(142, 111, 176, .16), transparent 40%),
+    radial-gradient(circle at 18% 72%, rgba(210, 170, 110, .13), transparent 36%),
+    linear-gradient(135deg, #fffcf7 0%, #fdfbf6 52%, #faf5ec 100%) !important;
+  border-bottom: 1px solid #e7d7b8 !important;
+}
+html[data-theme="light"] .story-hero-v2 .story-hero-atmosphere { opacity: .35 !important; }
+html[data-theme="light"] .story-hero-content,
+html[data-theme="light"] .story-hero-content h1,
+html[data-theme="light"] .story-detail-title-v2 { color: #30243a !important; }
+html[data-theme="light"] .story-hero-content .story-detail-author-wrap-v2,
+html[data-theme="light"] .story-hero-content .story-link { color: #65596b !important; }
+html[data-theme="light"] .story-hero-content .story-detail-meta-v2,
+html[data-theme="light"] .story-hero-content .story-update-line-v2 { color: #65596b !important; }
+html[data-theme="light"] .story-hero-content .story-secondary-btn,
+html[data-theme="light"] .story-hero-content .story-icon-btn {
+  background: #fffcf7 !important;
+  color: #3d3148 !important;
+  border-color: #e7d7b8 !important;
+}
+html[data-theme="light"] .story-hero-content .story-secondary-btn:hover,
+html[data-theme="light"] .story-hero-content .story-icon-btn:hover {
+  background: #faf5ec !important;
+  color: #63428a !important;
+  border-color: #ddcec2 !important;
+}
+html[data-theme="light"] .story-hero-content .story-read-btn {
+  background-color: #63428a !important;
+  background-image: linear-gradient(120deg, #8c639f, #63428a) !important;
+  color: #fffcf7 !important;
+  text-shadow: none !important;
+}
+html[data-theme="light"] .story-hero-content .story-status-badge {
+  background: rgba(255, 253, 251, .92) !important;
+  color: #3d3148 !important;
+  border-color: #e7d7b8 !important;
+}
+html[data-theme="light"] .story-cover-glow { opacity: .45 !important; }
+/* Content sections become light surfaces. */
+html[data-theme="light"] .story-intro-section,
+html[data-theme="light"] .story-taxonomy-section-v2,
+html[data-theme="light"] .story-chapters-section-v2,
+html[data-theme="light"] .story-reviews-section-v2,
+html[data-theme="light"] .story-echo-section-v2,
+html[data-theme="light"] .story-author-section-v2,
+html[data-theme="light"] .story-related-section-v2,
+html[data-theme="light"] .story-adaptation-section-v2 {
+  background: var(--page-bg) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .story-intro-main h2,
+html[data-theme="light"] .story-at-a-glance h2,
+html[data-theme="light"] .story-section-title-v2 h2,
+html[data-theme="light"] .story-section-title-row-v2 h2,
+html[data-theme="light"] .story-echo-inner-v2 h2,
+html[data-theme="light"] .story-adaptation-section-v2 h2,
+html[data-theme="light"] .story-author-copy-v2 h3,
+html[data-theme="light"] .reviews-subheading,
+html[data-theme="light"] .story-chapter-title-v2,
+html[data-theme="light"] .story-recommend-title { color: var(--text) !important; }
+html[data-theme="light"] .story-synopsis-text-v2,
+html[data-theme="light"] .story-quick-facts-v2 > div,
+html[data-theme="light"] .story-section-note-v2,
+html[data-theme="light"] .story-chapter-meta-v2,
+html[data-theme="light"] .story-chapter-number-v2,
+html[data-theme="light"] .story-recommend-meta,
+html[data-theme="light"] .reviews-hint,
+html[data-theme="light"] .story-adaptation-section-v2 p,
+html[data-theme="light"] .story-author-copy-v2 p,
+html[data-theme="light"] .story-section-title-v2 p,
+html[data-theme="light"] .story-echo-inner-v2 p { color: var(--muted) !important; }
+html[data-theme="light"] .story-quick-facts-v2 strong { color: var(--text) !important; }
+html[data-theme="light"] .story-kicker,
+html[data-theme="light"] .story-eyebrow,
+html[data-theme="light"] .story-text-link,
+html[data-theme="light"] .story-see-all-v2 { color: var(--accent-strong) !important; }
+/* Kickers inside the cover hero follow the accent, not white-on-beige. */
+html[data-theme="light"] .story-hero-v2 .story-eyebrow,
+html[data-theme="light"] .story-hero-v2 .story-kicker { color: #63428a !important; }
+html[data-theme="light"] .story-page .empty-row,
+html[data-theme="light"] .story-page .empty-body {
+  background: var(--surface) !important;
+  color: var(--muted) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .story-page .taxonomy-label-v2 { color: var(--muted) !important; }
+html[data-theme="light"] .taxonomy-chip-v2 {
+  background: var(--surface-3) !important;
+  color: var(--text) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .taxonomy-group-v2,
+html[data-theme="light"] .story-latest-chapters,
+html[data-theme="light"] .story-latest-chapter,
+html[data-theme="light"] .story-full-chapter-row { border-color: var(--line-color) !important; }
+html[data-theme="light"] .story-full-chapter-list,
+html[data-theme="light"] .story-echo-section-v2 { background: var(--surface) !important; }
+html[data-theme="light"] .story-full-chapter-row a { color: var(--text) !important; }
+html[data-theme="light"] .story-full-chapter-row small { color: var(--muted) !important; }
+html[data-theme="light"] .story-view-all-btn,
+html[data-theme="light"] .story-author-actions-v2 a {
+  background: var(--surface-3) !important;
+  color: var(--text) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .story-author-card-v2 {
+  background: linear-gradient(135deg, var(--surface-2), var(--surface)) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .story-recommend-cover {
+  background: var(--surface-2) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .story-echo-section-v2 { border-top-color: var(--line-color) !important; border-bottom-color: var(--line-color) !important; }
+html[data-theme="light"] .story-echo-inner-v2 h2,
+html[data-theme="light"] .story-echo-inner-v2 strong { color: #8a6a2f !important; }
+html[data-theme="light"] .echo-mark-large { color: #8a6a2f; }
+/* Reviews furniture. */
+html[data-theme="light"] .story-reviews-section-v2 .review-form-box,
+html[data-theme="light"] .story-reviews-section-v2 .review-submitted-box,
+html[data-theme="light"] .story-reviews-section-v2 .review-card {
+  background: var(--surface) !important;
+  color: var(--text) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .story-reviews-section-v2 .review-profile-copy strong,
+html[data-theme="light"] .story-reviews-section-v2 .review-text { color: var(--text) !important; }
+html[data-theme="light"] .story-reviews-section-v2 .review-meta,
+html[data-theme="light"] .story-reviews-section-v2 .review-reply-meta,
+html[data-theme="light"] .rating-count,
+html[data-theme="light"] .rating-breakdown span { color: var(--muted) !important; }
+html[data-theme="light"] .story-reviews-section-v2 textarea {
+  background: var(--input-surface) !important;
+  color: var(--text) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .story-reviews-section-v2 .review-card:hover { border-color: var(--accent) !important; }
+/* Story footer stays in the light chrome treatment. */
+html[data-theme="light"] .story-footer-v2 {
+  background: var(--page-bg) !important;
+  color: var(--text) !important;
+  border-top-color: var(--line-color) !important;
+}
+html[data-theme="light"] .story-footer-v2 .footer-tagline,
+html[data-theme="light"] .story-footer-v2 .footer-copy { color: var(--muted) !important; }
+html[data-theme="light"] .story-footer-links a { color: var(--muted) !important; }
+html[data-theme="light"] .story-footer-links a:hover { color: var(--accent-strong) !important; }
+
+/* ==========================================================================
+   5. Library (library.html)
+   ========================================================================== */
+html[data-theme="light"] .library-page {
+  --lib-bg: var(--page-bg);
+  --lib-bg2: var(--surface);
+  --lib-surface: var(--surface);
+  --lib-surface2: var(--surface-2);
+  --lib-border: var(--line-color);
+  --lib-text: var(--text);
+  --lib-muted: var(--muted);
+  --lib-soft: var(--muted);
+  --lib-lilac: var(--accent);
+  --lib-plum: var(--accent-strong);
+  --lib-gold: #8a6a2f;
+  --lib-shadow: 0 22px 60px rgba(60, 40, 80, .12);
+  background: var(--page-bg) !important;
+  color: var(--text);
+}
+html[data-theme="light"] .library-page .shelf-heading span,
+html[data-theme="light"] .library-page .section-kicker { color: var(--accent-strong) !important; }
+html[data-theme="light"] .library-page .card-meta,
+html[data-theme="light"] .library-page .progress-line,
+html[data-theme="light"] .library-page .bookmark-author,
+html[data-theme="light"] .library-page .library-loading { color: var(--muted) !important; }
+html[data-theme="light"] .library-page .story-menu-item { color: var(--text) !important; }
+html[data-theme="light"] .library-page .story-menu-head,
+html[data-theme="light"] .library-page .story-menu-head button { color: var(--muted) !important; }
+html[data-theme="light"] .library-page .progress-track { background: rgba(28, 20, 32, .1) !important; }
+html[data-theme="light"] .library-page .site-footer { color: var(--text) !important; }
+
+/* ==========================================================================
+   6. Profile pages - account.html (edit), people.html, author.html
+   ========================================================================== */
+html[data-theme="light"] .gr-edit-page,
+html[data-theme="light"] .gr-profile-page,
+html[data-theme="light"] .gr-people-page {
+  --gp-bg: var(--page-bg);
+  --gp-panel: var(--surface);
+  --gp-panel2: var(--surface-2);
+  --gp-line: var(--line-color);
+  --gp-text: var(--text);
+  --gp-muted: var(--muted);
+  --gp-lilac: var(--accent);
+  --gp-pink: var(--accent-strong);
+  --gp-gold: #8a6a2f;
+  background: var(--page-bg) !important;
+  color: var(--text) !important;
+}
+html[data-theme="light"] .gr-profile-card,
+html[data-theme="light"] .gr-panel,
+html[data-theme="light"] .gr-header-option,
+html[data-theme="light"] .gr-story-card {
+  background: var(--surface) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .gr-profile-card,
+html[data-theme="light"] .gr-panel { box-shadow: 0 22px 60px rgba(60, 40, 80, .1) !important; }
+html[data-theme="light"] .gr-profile-names h1,
+html[data-theme="light"] .gr-editor-head h1,
+html[data-theme="light"] .gr-panel h2,
+html[data-theme="light"] .gr-section-title,
+html[data-theme="light"] .gr-story-copy strong,
+html[data-theme="light"] .gr-people-copy strong { color: var(--text) !important; }
+/* The profile name overlaps the cover artwork; a white outline keeps it legible. */
+html[data-theme="light"] .gr-profile-names h1 {
+  -webkit-text-stroke: 1.5px #fff;
+  paint-order: stroke fill;
+  text-shadow: 0 0 2px rgba(255, 255, 255, .95);
+}
+html[data-theme="light"] .gr-bio,
+html[data-theme="light"] .gr-joined,
+html[data-theme="light"] .gr-editor-head p,
+html[data-theme="light"] .gr-story-copy span,
+html[data-theme="light"] .gr-people-bio,
+html[data-theme="light"] .gr-people-arrow,
+html[data-theme="light"] .gr-empty,
+html[data-theme="light"] .gr-status,
+html[data-theme="light"] .gr-follow-empty,
+html[data-theme="light"] .gr-follow-row small { color: var(--muted) !important; }
+html[data-theme="light"] .gr-section-kicker,
+html[data-theme="light"] .gr-handle,
+html[data-theme="light"] .gr-people-copy small { color: var(--accent-strong) !important; }
+html[data-theme="light"] .gr-field > span { color: var(--text) !important; }
+html[data-theme="light"] .gr-field input,
+html[data-theme="light"] .gr-field textarea {
+  background: var(--input-surface) !important;
+  color: var(--text) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .gr-btn {
+  background: var(--surface-3) !important;
+  color: var(--text) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .gr-btn-primary {
+  background: linear-gradient(120deg, #8c639f, var(--accent-strong)) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+}
+html[data-theme="light"] .gr-btn-danger {
+  background: var(--danger-soft) !important;
+  color: var(--danger) !important;
+  border-color: var(--danger) !important;
+}
+html[data-theme="light"] .gr-stat,
+html[data-theme="light"] .gr-stat:hover { color: var(--muted) !important; }
+html[data-theme="light"] .gr-stat strong { color: var(--text) !important; }
+html[data-theme="light"] .gr-cover { background: var(--surface-3); border-color: var(--line-color); }
+html[data-theme="light"] .gr-follow-modal {
+  background: var(--surface-2) !important;
+  border-color: var(--line-color) !important;
+  color: var(--text) !important;
+}
+html[data-theme="light"] .gr-modal-head h2,
+html[data-theme="light"] .gr-follow-row strong { color: var(--text) !important; }
+html[data-theme="light"] .gr-modal-close {
+  background: var(--surface-3) !important;
+  color: var(--text) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .gr-follow-row { color: var(--text) !important; border-bottom-color: var(--line-color) !important; }
+html[data-theme="light"] .gr-preview-body h2,
+html[data-theme="light"] .gr-preview-bio,
+html[data-theme="light"] #previewHandle { color: var(--muted) !important; }
+html[data-theme="light"] .people-page .site-nav .nav-actions .gr-btn,
+html[data-theme="light"] .people-page .site-nav .nav-actions a.gr-btn {
+  color: #30243a !important;
+  background: #30243a !important;
+  border-color: rgba(205, 165, 241, .55) !important;
+}
+
+/* ==========================================================================
+   7. Community / The Gathering (community.html)
+   ========================================================================== */
+html[data-theme="light"] .gathering-page {
+  background: var(--page-bg) !important;
+  color: var(--text) !important;
+}
+html[data-theme="light"] .gathering-page .site-nav,
+html[data-theme="light"] .gathering-top {
+  background: var(--nav-surface) !important;
+  border-bottom-color: var(--line-color) !important;
+}
+html[data-theme="light"] .gathering-brand,
+html[data-theme="light"] .gathering-top a { color: var(--nav-text) !important; }
+html[data-theme="light"] .gathering-top a:hover { color: var(--nav-accent) !important; }
+/* The portal hero is a warm paper card; only the portal illustration keeps
+   its own artwork. */
+html[data-theme="light"] .gathering-hero {
+  background:
+    radial-gradient(ellipse at 78% 40%, rgba(142, 111, 176, .18), transparent 46%),
+    linear-gradient(112deg, #fffcf7 0%, #fdfbf6 58%, #f2ece0 100%) !important;
+  border-color: #e7d7b8 !important;
+  box-shadow: 0 18px 46px rgba(48, 36, 58, .10) !important;
+}
+html[data-theme="light"] .hero-copy h1 { color: #30243a !important; }
+html[data-theme="light"] .hero-copy h1 em { color: #63428a !important; }
+html[data-theme="light"] .hero-copy p { color: #65596b !important; }
+html[data-theme="light"] .gathering-hero .eyebrow { color: #63428a !important; }
+html[data-theme="light"] .gathering-hero .portal-caption { color: #3d3148 !important; text-shadow: 0 1px 10px rgba(255, 253, 251, .95) !important; }
+html[data-theme="light"] .gathering-hero .gathering-cta,
+html[data-theme="light"] .gathering-hero .community-button {
+  background: linear-gradient(125deg, #8c639f, #63428a) !important;
+  color: #fffcf7 !important;
+}
+/* Light content areas below the hero. */
+html[data-theme="light"] .community-sidebar,
+html[data-theme="light"] .community-content {
+  background: linear-gradient(145deg, #fffcf7, #faf5ec) !important;
+  border-color: #e7d7b8 !important;
+  box-shadow: 0 16px 40px rgba(48, 36, 58, .08) !important;
+}
+html[data-theme="light"] .community-content { color: var(--text) !important; }
+html[data-theme="light"] .community-content h2,
+html[data-theme="light"] .community-view-heading h2,
+html[data-theme="light"] .community-home-columns h3,
+html[data-theme="light"] .community-card h3 { color: var(--text) !important; }
+html[data-theme="light"] .community-tab {
+  color: var(--muted) !important;
+  background: transparent !important;
+}
+html[data-theme="light"] .community-tab:hover,
+html[data-theme="light"] .community-tab.active {
+  color: var(--accent-strong) !important;
+  background: var(--accent-soft) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .eyebrow,
+html[data-theme="light"] .community-tour-link { color: var(--accent-strong) !important; }
+html[data-theme="light"] .gathering-welcome p,
+html[data-theme="light"] .community-stat,
+html[data-theme="light"] .community-muted,
+html[data-theme="light"] .community-card p,
+html[data-theme="light"] .community-meta,
+html[data-theme="light"] .community-empty,
+html[data-theme="light"] .community-footer,
+html[data-theme="light"] .gathering-footer,
+html[data-theme="light"] .gathering-footer a,
+html[data-theme="light"] .community-notice { color: var(--muted) !important; }
+html[data-theme="light"] .community-stat strong { color: var(--accent-strong) !important; }
+html[data-theme="light"] .gathering-footer a:hover { color: var(--accent-strong) !important; }
+html[data-theme="light"] .community-card,
+html[data-theme="light"] .gathering-destination,
+html[data-theme="light"] .gathering-tour-card,
+html[data-theme="light"] .gathering-image-tile {
+  background: var(--surface) !important;
+  border-color: var(--line-color) !important;
+  color: var(--text) !important;
+}
+html[data-theme="light"] .gathering-image-tile:before {
+  background: linear-gradient(180deg, rgba(255, 253, 251, 0) 18%, rgba(243, 235, 225, .95)) !important;
+}
+html[data-theme="light"] .gathering-image-tile {
+  box-shadow: inset 0 -90px 70px -35px rgba(243, 235, 225, .92), 0 10px 26px rgba(48, 36, 58, .08) !important;
+}
+html[data-theme="light"] .gathering-destination small,
+html[data-theme="light"] .gathering-tour-card p,
+html[data-theme="light"] .gathering-home-shortcuts small { color: var(--muted) !important; }
+html[data-theme="light"] .gathering-destination span,
+html[data-theme="light"] .gathering-shortcut-icon,
+html[data-theme="light"] .gathering-image-tile span { color: var(--accent-strong) !important; }
+html[data-theme="light"] .gathering-home-shortcuts a {
+  background: var(--surface-2) !important;
+  border-color: var(--line-color) !important;
+  color: var(--text) !important;
+}
+html[data-theme="light"] .community-form label { color: var(--text) !important; }
+html[data-theme="light"] .community-form input,
+html[data-theme="light"] .community-form textarea,
+html[data-theme="light"] .community-form select {
+  background: var(--input-surface) !important;
+  color: var(--text) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .community-empty { background: var(--surface) !important; border-color: var(--line-color) !important; }
+html[data-theme="light"] .community-button {
+  background: var(--accent-strong) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+}
+html[data-theme="light"] .community-button.secondary {
+  background: var(--surface-3) !important;
+  color: var(--text) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .community-notice {
+  background: var(--surface-3) !important;
+  border-color: var(--line-color) !important;
+}
+
+/* ==========================================================================
+   8. Collection pages (collection.html) - dark plum design system
+   ========================================================================== */
+html[data-theme="light"] .collection-page {
+  background: var(--page-bg) !important;
+  color: var(--text) !important;
+}
+html[data-theme="light"] .collection-hero {
+  background: radial-gradient(ellipse at 80% 0%, var(--accent-soft), transparent 45%), linear-gradient(145deg, var(--surface), var(--surface-2)) !important;
+  border-bottom-color: var(--line-color) !important;
+}
+html[data-theme="light"] .collection-hero h1,
+html[data-theme="light"] .collection-toolbar h2,
+html[data-theme="light"] .collection-empty h3,
+html[data-theme="light"] .collection-taxonomy h2,
+html[data-theme="light"] .collection-story-copy h3,
+html[data-theme="light"] .collection-story-copy h3 a { color: var(--text) !important; }
+html[data-theme="light"] .collection-hero > div > p:not(.collection-kicker),
+html[data-theme="light"] .collection-meta,
+html[data-theme="light"] .collection-sort,
+html[data-theme="light"] .collection-empty,
+html[data-theme="light"] .collection-story-synopsis,
+html[data-theme="light"] .collection-story-author,
+html[data-theme="light"] .collection-story-stats { color: var(--muted) !important; }
+html[data-theme="light"] .collection-kicker,
+html[data-theme="light"] .collection-eyebrow,
+html[data-theme="light"] .collection-story-genre { color: var(--accent-strong) !important; }
+html[data-theme="light"] .collection-story-author span,
+html[data-theme="light"] .collection-story-stats strong { color: var(--text) !important; }
+html[data-theme="light"] .collection-taxonomy a { color: var(--text) !important; }
+html[data-theme="light"] .collection-taxonomy a:hover { color: var(--accent-strong) !important; }
+html[data-theme="light"] .collection-story-badge {
+  background: var(--accent-soft) !important;
+  color: var(--accent-strong) !important;
+}
+html[data-theme="light"] .collection-story-stats .collection-echo-count,
+html[data-theme="light"] .collection-story-stats .collection-echo-count strong { color: var(--accent-strong) !important; }
+html[data-theme="light"] .collection-sort select,
+html[data-theme="light"] .collection-story-card,
+html[data-theme="light"] .collection-story-row,
+html[data-theme="light"] .collection-empty {
+  background: var(--surface) !important;
+  color: var(--text) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .collection-meta span { background: var(--surface-3) !important; }
+
+/* ==========================================================================
+   9. Auth pages (auth.html, reset-password.html, holiday-hearts-entry.html)
+   ========================================================================== */
+html[data-theme="light"] body.gr-auth-page { background: var(--page-bg) !important; color: var(--text) !important; }
+html[data-theme="light"] .gr-auth-brand,
+html[data-theme="light"] .gr-auth-brand span { color: var(--text) !important; }
+html[data-theme="light"] .gr-auth-eyebrow { color: var(--accent-strong) !important; }
+html[data-theme="light"] .gr-auth-aside h1 em { color: var(--accent-strong) !important; }
+html[data-theme="light"] .gr-auth-aside > p:not(.gr-auth-eyebrow),
+html[data-theme="light"] .gr-auth-aside .gr-auth-aside-note { color: var(--muted) !important; }
+html[data-theme="light"] .gr-auth-footer,
+html[data-theme="light"] .gr-auth-footer a { color: var(--muted) !important; }
+html[data-theme="light"] .gr-auth-footer a:hover { color: var(--accent-strong) !important; }
+html[data-theme="light"] .gr-text-button,
+html[data-theme="light"] .gr-auth-switch button { color: var(--accent-strong) !important; }
+/* The sign-in card is a warm paper panel with ink copy.
+   These rules are scoped to the auth shell only - the account/profile editor
+   reuses .gr-field on light surfaces and must keep dark labels. */
+html[data-theme="light"] .gr-auth-page .gr-auth-panel {
+  background:
+    radial-gradient(ellipse at 92% 0%, rgba(142, 111, 176, .12), transparent 55%),
+    linear-gradient(145deg, #fffcf7, #faf5ec) !important;
+  border: 1px solid #e7d7b8 !important;
+  color: #30243a !important;
+  box-shadow: 0 24px 70px rgba(48, 36, 58, .12) !important;
+}
+html[data-theme="light"] .gr-auth-page .gr-auth-panel-head h2 { color: #30243a !important; }
+html[data-theme="light"] .gr-auth-page .gr-auth-panel-head > p:last-child,
+html[data-theme="light"] .gr-auth-page .gr-auth-switch,
+html[data-theme="light"] .gr-auth-page .gr-step-line span,
+html[data-theme="light"] .gr-auth-page .gr-step-desc,
+html[data-theme="light"] .gr-auth-page .gr-role-option small,
+html[data-theme="light"] .gr-auth-page .gr-role-disabled,
+html[data-theme="light"] .gr-auth-page .gr-auth-small-note { color: #65596b !important; }
+html[data-theme="light"] .gr-auth-page .gr-field > span { color: #3d3148 !important; }
+html[data-theme="light"] .gr-auth-page .gr-field small,
+html[data-theme="light"] .gr-auth-page .gr-avatar-upload small { color: #65596b !important; }
+html[data-theme="light"] .gr-auth-page .gr-show-password { color: #63428a !important; }
+html[data-theme="light"] .gr-auth-page .gr-field input,
+html[data-theme="light"] .gr-auth-page .gr-field select {
+  background: #fffcf7 !important;
+  color: #30243a !important;
+  border-color: #e7d7b8 !important;
+}
+html[data-theme="light"] .gr-auth-page .gr-show-password {
+  background: #f2ece0 !important;
+  border-color: #e7d7b8 !important;
+}
+html[data-theme="light"] .gr-auth-page .gr-role-option {
+  background: #fffcf7 !important;
+  border-color: #e7d7b8 !important;
+  color: #3d3148 !important;
+}
+html[data-theme="light"] .gr-auth-page .gr-step-line i,
+html[data-theme="light"] .gr-auth-page .gr-auth-divider { background: #e7d7b8 !important; }
+html[data-theme="light"] .gr-auth-page .gr-auth-or { color: #65596b !important; }
+/* Light form controls where the card is light (reset-password card). */
+html[data-theme="light"] .wrap .gr-field > span,
+html[data-theme="light"] .wrap label > span { color: var(--text) !important; }
+
+/* ==========================================================================
+   10. Welcome (welcome.html)
+   ========================================================================== */
+html[data-theme="light"] body.gr-welcome-page {
+  --gr-bg: var(--page-bg);
+  --gr-surface: var(--surface);
+  --gr-surface-2: var(--surface-2);
+  --gr-line: var(--line-color);
+  --gr-accent: var(--accent);
+  --gr-accent-strong: var(--accent-strong);
+  --gr-text: var(--text);
+  --gr-muted: var(--muted);
+  background: var(--page-bg) !important;
+  color: var(--text) !important;
+}
+html[data-theme="light"] .gr-welcome-header > a { color: var(--text) !important; }
+html[data-theme="light"] .gr-welcome-header-note,
+html[data-theme="light"] .gr-welcome-footer,
+html[data-theme="light"] .gr-welcome-footer a,
+html[data-theme="light"] .gr-welcome-intro > p:not(.gr-welcome-eyebrow),
+html[data-theme="light"] .gr-daily-description,
+html[data-theme="light"] .gr-daily-meta,
+html[data-theme="light"] .gr-daily-footnote { color: var(--muted) !important; }
+html[data-theme="light"] .gr-welcome-footer a:hover { color: var(--accent-strong) !important; }
+html[data-theme="light"] .gr-welcome-eyebrow,
+html[data-theme="light"] .gr-welcome-intro h1 em,
+html[data-theme="light"] .gr-daily-mark,
+html[data-theme="light"] .gr-daily-kicker { color: var(--accent-strong) !important; }
+/* The daily-story card is a dark panel in the base CSS: make it warm paper
+   with ink copy (it previously rendered dark-on-dark). */
+html[data-theme="light"] .gr-daily-card {
+  background: linear-gradient(145deg, #fffcf7, #faf5ec) !important;
+  border-color: #e7d7b8 !important;
+  color: #30243a !important;
+}
+html[data-theme="light"] .gr-daily-card h2,
+html[data-theme="light"] .gr-daily-title,
+html[data-theme="light"] .gr-daily-author,
+html[data-theme="light"] .gr-daily-copy { color: #30243a !important; }
+html[data-theme="light"] .gr-daily-description,
+html[data-theme="light"] .gr-daily-meta,
+html[data-theme="light"] .gr-daily-footnote { color: #65596b !important; }
+html[data-theme="light"] .gr-daily-read {
+  background: #8c639f !important;
+  color: #fffcf7 !important;
+  border-color: transparent !important;
+}
+html[data-theme="light"] .gr-welcome-secondary {
+  color: var(--accent-strong) !important;
+  border-color: var(--accent) !important;
+  background: var(--surface-2) !important;
+}
+html[data-theme="light"] .gr-welcome-primary { background: var(--accent) !important; color: #fff !important; }
+
+/* ==========================================================================
+   11. Store (store.html) - dark token set
+   ========================================================================== */
+/* The store header and tab strip, on warm paper. */
+html[data-theme="light"] .top {
+  background: linear-gradient(180deg, #fffcf7, #fdfbf6) !important;
+  border-bottom: 1px solid #e7d7b8 !important;
+  backdrop-filter: none !important;
+}
+html[data-theme="light"] .top .brand span,
+html[data-theme="light"] .top .brand { color: #30243a !important; }
+html[data-theme="light"] .top .brand small { color: #65596b !important; }
+html[data-theme="light"] .top .back { color: #63428a !important; }
+html[data-theme="light"] .balance span { color: var(--muted) !important; }
+html[data-theme="light"] .balance strong { color: var(--text) !important; }
+html[data-theme="light"] .eyebrow { color: var(--accent-strong) !important; }
+html[data-theme="light"] .field,
+html[data-theme="light"] .selection,
+html[data-theme="light"] .pricing-panel { color: var(--text) !important; }
+html[data-theme="light"] .tab { color: #65596b !important; }
+html[data-theme="light"] .tab.active { color: #fffcf7 !important; }
+html[data-theme="light"] .activity .section-head a { color: var(--accent-strong) !important; }
+html[data-theme="light"] .package,
+html[data-theme="light"] .gift,
+html[data-theme="light"] .activity-list,
+html[data-theme="light"] .pricing-panel,
+html[data-theme="light"] .selection { background: var(--surface) !important; border-color: var(--line-color) !important; }
+html[data-theme="light"] .package .bonus { color: #f0c987 !important; }
+
+/* ==========================================================================
+   12. Resources page shell
+   ========================================================================== */
+html[data-theme="light"] .resources-page {
+  --res-bg: var(--page-bg);
+  --res-panel: var(--surface);
+  --res-panel2: var(--surface-2);
+  --res-line: var(--line-color);
+  --res-text: var(--text);
+  --res-muted: var(--muted);
+  --res-accent: var(--accent);
+  --res-glow: var(--accent-soft);
+  background: var(--page-bg) !important;
+  color: var(--text) !important;
+}
+html[data-theme="light"] .resources-eyebrow,
+html[data-theme="light"] .resources-side-label { color: var(--accent-strong) !important; }
+/* The resources top bar, on warm paper. */
+html[data-theme="light"] .resources-topbar {
+  background: linear-gradient(180deg, #fffcf7, #fdfbf6) !important;
+  border-bottom: 1px solid #e7d7b8 !important;
+}
+html[data-theme="light"] .resources-topbar .resources-brand,
+html[data-theme="light"] .resources-topbar .resources-back,
+html[data-theme="light"] .resources-topbar .resources-back span { color: #30243a !important; }
+html[data-theme="light"] .resources-topbar .resources-top-note { color: #65596b !important; }
+html[data-theme="light"] .resources-topbar .resources-back:hover,
+html[data-theme="light"] .resources-topbar .resources-back:hover span { color: #63428a !important; }
+html[data-theme="light"] .resources-intro p:not(.resources-eyebrow) { color: var(--muted) !important; }
+html[data-theme="light"] .resources-page .resource-category {
+  color: var(--muted) !important;
+  background: transparent !important;
+}
+html[data-theme="light"] .resources-page .resource-category:hover { background: var(--surface-3) !important; color: var(--text) !important; }
+html[data-theme="light"] .resources-page .resource-category.active {
+  color: var(--accent-strong) !important;
+  background: var(--accent-soft) !important;
+  border-color: var(--accent) !important;
+}
+html[data-theme="light"] .resources-page .resource-category span { color: var(--muted) !important; }
+html[data-theme="light"] .resources-page .resource-category.active span { color: var(--accent-strong) !important; }
+html[data-theme="light"] .resources-contact {
+  background: var(--surface) !important;
+  color: var(--text) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .resources-contact a,
+html[data-theme="light"] .resource-back,
+html[data-theme="light"] .resources-footer a { color: var(--accent-strong) !important; }
+html[data-theme="light"] .resources-footer,
+html[data-theme="light"] .resource-updated,
+html[data-theme="light"] .resources-search input::placeholder { color: var(--muted) !important; }
+html[data-theme="light"] .resources-page .resource-card {
+  background: var(--surface) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .resources-page .resource-card-category,
+html[data-theme="light"] .resources-page .resource-card i { color: var(--accent-strong) !important; }
+html[data-theme="light"] .resources-page .resource-card h3,
+html[data-theme="light"] .resources-page .resource-prose h2,
+html[data-theme="light"] .resources-page .resource-prose { color: var(--text) !important; }
+html[data-theme="light"] .resources-page .resource-prose a { color: var(--accent-strong) !important; }
+html[data-theme="light"] .resources-page .resource-next button,
+html[data-theme="light"] .resources-page .resource-feedback button {
+  background: var(--surface-3) !important;
+  color: var(--text) !important;
+  border-color: var(--line-color) !important;
+}
+
+/* ==========================================================================
+   13. Opportunities centre (opportunities.html, opportunity.html,
+       holiday-hearts.html, holiday-hearts-entry.html)
+   ========================================================================== */
+html[data-theme="light"] body.oc-body {
+  --oc-bg: var(--page-bg);
+  --oc-surface: var(--surface);
+  --oc-surface-2: var(--surface-2);
+  --oc-line: var(--line-color);
+  --oc-ink: var(--text);
+  --oc-soft: var(--muted);
+  --oc-muted: #65596b;
+  --oc-lilac: var(--accent-strong);
+  --oc-pink: var(--accent-strong);
+  background: var(--page-bg) !important;
+  color: var(--text) !important;
+}
+/* Featured promo heroes are warm paper panels with ink copy. */
+html[data-theme="light"] .hh-hero,
+html[data-theme="light"] .oc-hero {
+  --oc-surface: #f2ece0;
+  --oc-surface-2: #faf5ec;
+  --oc-line: #e7d7b8;
+  --oc-ink: #30243a;
+  --oc-soft: #65596b;
+  --oc-muted: #65596b;
+  --oc-lilac: #8c639f;
+  --oc-pink: #a4538a;
+  background: linear-gradient(120deg, #fffcf7, #faf5ec 72%) !important;
+  border-color: #e7d7b8 !important;
+  color: #30243a !important;
+}
+html[data-theme="light"] .hh-hero-poster,
+html[data-theme="light"] .hh-prompt-poster,
+html[data-theme="light"] .hh-prize-poster,
+html[data-theme="light"] .oc-slide-bg {
+  background: #f2ece0 !important;
+}
+html[data-theme="light"] .oc-eyebrow,
+html[data-theme="light"] .oc-type,
+html[data-theme="light"] .hh-prompt-n { color: var(--accent-strong) !important; }
+html[data-theme="light"] .oc-intro p:not(.oc-eyebrow),
+html[data-theme="light"] .oc-card-text,
+html[data-theme="light"] .oc-note,
+html[data-theme="light"] .oc-count,
+html[data-theme="light"] .oc-card-date,
+html[data-theme="light"] .hh-sub,
+html[data-theme="light"] .hh-fine,
+html[data-theme="light"] .od-back a,
+html[data-theme="light"] .od-state,
+html[data-theme="light"] .od-state a,
+html[data-theme="light"] .hh-back a { color: var(--muted) !important; }
+html[data-theme="light"] .oc-note strong,
+html[data-theme="light"] .oc-intro h2,
+html[data-theme="light"] .oc-card h2,
+html[data-theme="light"] .oc-card h3,
+html[data-theme="light"] .hh-section h2,
+html[data-theme="light"] .hh-section h3,
+html[data-theme="light"] .hh-section strong { color: var(--text) !important; }
+html[data-theme="light"] .oc-card,
+html[data-theme="light"] .oc-list-head,
+html[data-theme="light"] .oc-note,
+html[data-theme="light"] .hh-prize,
+html[data-theme="light"] .hh-prompt,
+html[data-theme="light"] .hh-rules,
+html[data-theme="light"] .hh-stage,
+html[data-theme="light"] .hh-prize-row {
+  background: var(--surface) !important;
+  border-color: var(--line-color) !important;
+  color: var(--text) !important;
+}
+html[data-theme="light"] .oc-chip-upcoming,
+html[data-theme="light"] .oc-chip-closing,
+html[data-theme="light"] .oc-chip-voting,
+html[data-theme="light"] .oc-chip-closed,
+html[data-theme="light"] .oc-chip-results {
+  color: var(--accent-strong) !important;
+  background: var(--accent-soft) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .oc-chip-open { color: #2f7d5c !important; }
+html[data-theme="light"] .oc-chip-closing,
+html[data-theme="light"] .oc-chip-results { color: #8a5d0e !important; }
+html[data-theme="light"] .oc-chip strong { color: inherit !important; }
+/* Status strip + timeline inside the light section. */
+html[data-theme="light"] .hh-stage strong,
+html[data-theme="light"] .hh-timeline strong { color: var(--text) !important; }
+html[data-theme="light"] .hh-stage span,
+html[data-theme="light"] .hh-timeline span { color: var(--muted) !important; }
+/* Prompt + prize copy sits on light cards. */
+html[data-theme="light"] .hh-prompt p,
+html[data-theme="light"] .hh-prize-row span,
+html[data-theme="light"] .hh-prize-row p,
+html[data-theme="light"] .hh-rules li,
+html[data-theme="light"] .hh-section p:not(.oc-eyebrow),
+html[data-theme="light"] .hh-fine,
+html[data-theme="light"] .oc-state { color: var(--muted) !important; }
+html[data-theme="light"] .hh-hero,
+html[data-theme="light"] .oc-hero { border-color: #e7d7b8 !important; }
+html[data-theme="light"] .oc-hero .oc-eyebrow,
+html[data-theme="light"] .hh-hero .oc-eyebrow,
+html[data-theme="light"] .hh-hero .hh-prompt-n { color: #63428a !important; }
+html[data-theme="light"] .hh-hero h1,
+html[data-theme="light"] .oc-hero h1 { color: #30243a !important; }
+html[data-theme="light"] .hh-hero .oc-btn,
+html[data-theme="light"] .oc-hero .oc-btn { color: #fffcf7 !important; }
+html[data-theme="light"] .hh-hero p,
+html[data-theme="light"] .oc-hero p { color: #65596b !important; }
+
+/* ==========================================================================
+   14. Creator economy family (contract-center.html, creator-earnings.html,
+       admin-economy.html)
+   ========================================================================== */
+html[data-theme="light"] .ce-wrap { color: var(--text) !important; }
+html[data-theme="light"] .ce-hero { border-color: var(--line-color) !important; }
+html[data-theme="light"] .ce-eyebrow { color: var(--accent-strong) !important; }
+html[data-theme="light"] .ce-nav-link { color: var(--nav-text) !important; }
+html[data-theme="light"] .ce-notice {
+  background: var(--surface-3) !important;
+  border-color: var(--line-color) !important;
+  color: var(--text) !important;
+}
+html[data-theme="light"] .ce-notice.error { color: var(--danger) !important; }
+html[data-theme="light"] .ce-notice.success { color: #2f7d5c !important; }
+html[data-theme="light"] .ce-heading p:not(.ce-eyebrow),
+html[data-theme="light"] .ce-item p,
+html[data-theme="light"] .ce-item small,
+html[data-theme="light"] .ce-muted,
+html[data-theme="light"] .ce-stat span,
+html[data-theme="light"] .ce-stat small,
+html[data-theme="light"] .ce-disclaimer p,
+html[data-theme="light"] .ce-empty { color: var(--muted) !important; }
+/* The creator-economy hero is a warm paper banner with ink copy. */
+html[data-theme="light"] .ce-hero {
+  background: linear-gradient(120deg, #fffcf7, #faf5ec 72%) !important;
+  border-color: #e7d7b8 !important;
+  color: #30243a !important;
+}
+html[data-theme="light"] .ce-hero p:not(.ce-eyebrow) { color: #65596b !important; }
+html[data-theme="light"] .ce-hero .ce-eyebrow { color: #8c639f !important; }
+html[data-theme="light"] .ce-form label { color: var(--text) !important; }
+html[data-theme="light"] .ce-form input,
+html[data-theme="light"] .ce-form select,
+html[data-theme="light"] .ce-form textarea,
+html[data-theme="light"] .ce-inline-form select,
+html[data-theme="light"] .ce-inline-form input,
+html[data-theme="light"] .ce-inline-form textarea {
+  background: var(--input-surface) !important;
+  color: var(--text) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .ce-item,
+html[data-theme="light"] .ce-card,
+html[data-theme="light"] .ce-stat,
+html[data-theme="light"] .ce-application-summary {
+  background: var(--surface) !important;
+  border-color: var(--line-color) !important;
+  color: var(--text) !important;
+}
+html[data-theme="light"] .ce-btn {
+  background: linear-gradient(120deg, #8c639f, var(--accent-strong)) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+}
+html[data-theme="light"] .ce-btn.secondary {
+  background: var(--surface-3) !important;
+  color: var(--text) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .ce-status { color: var(--accent-strong) !important; }
+/* Headings/copy inside light creator-economy cards (the hero keeps its own). */
+html[data-theme="light"] .ce-card h1,
+html[data-theme="light"] .ce-card h2,
+html[data-theme="light"] .ce-card h3,
+html[data-theme="light"] .ce-item h2,
+html[data-theme="light"] .ce-item h3,
+html[data-theme="light"] .ce-empty h2,
+html[data-theme="light"] .ce-application-summary h2,
+html[data-theme="light"] .ce-application-summary h3 { color: var(--text) !important; }
+html[data-theme="light"] .ce-card p,
+html[data-theme="light"] .ce-card small,
+html[data-theme="light"] .ce-empty p { color: var(--muted) !important; }
+
+/* ==========================================================================
+   15. AE workspace (ae.html, ae-review.html, ae-author-feedback.html,
+       ae-apply.html)
+   ========================================================================== */
+html[data-theme="light"] .ae-shell,
+html[data-theme="light"] .ae-public-wrap { color: var(--text); }
+html[data-theme="light"] .ae-header,
+html[data-theme="light"] .ae-footer { border-color: var(--line-color) !important; background: var(--page-bg) !important; }
+html[data-theme="light"] .ae-header a,
+html[data-theme="light"] .ae-header span,
+html[data-theme="light"] .ae-footer a { color: var(--accent-strong) !important; }
+html[data-theme="light"] .ae-header a:hover,
+html[data-theme="light"] .ae-footer a:hover { color: var(--accent) !important; }
+/* AE hero artwork panel: warm paper, dark copy. */
+html[data-theme="light"] .ae-hero-art {
+  background: linear-gradient(120deg, #fffcf7, #faf5ec 72%) !important;
+  border-color: #e7d7b8 !important;
+  border-color: #e7d7b8 !important;
+}
+html[data-theme="light"] .ae-hero-copy h1,
+html[data-theme="light"] .ae-hero-art h1 { color: #30243a !important; }
+html[data-theme="light"] .ae-hero-copy > p:not(.ae-kicker) { color: #65596b !important; }
+html[data-theme="light"] .ae-kicker { color: #63428a !important; }
+html[data-theme="light"] .ae-hero-tags span {
+  color: #4a3f57 !important;
+  border-color: #e0d6e6 !important;
+  background: #faf5ec !important;
+}
+/* Plain .ae-hero sections (review / author feedback / apply) are light. */
+html[data-theme="light"] .ae-hero:not(.ae-hero-art) h1,
+html[data-theme="light"] .ae-panel h1 { color: var(--text) !important; }
+html[data-theme="light"] .ae-hero:not(.ae-hero-art) p:not(.ae-kicker),
+html[data-theme="light"] .ae-panel .ae-lead { color: var(--muted) !important; }
+html[data-theme="light"] .ae-panel small { color: var(--muted) !important; }
+html[data-theme="light"] .ae-small { color: var(--muted) !important; }
+html[data-theme="light"] .ae-public-wrap .ae-back,
+html[data-theme="light"] .ae-public-wrap .ae-back:visited { color: var(--accent-strong) !important; }
+/* Rest of the workspace is light. */
+html[data-theme="light"] .ae-tabs button {
+  background: transparent !important;
+  color: var(--muted) !important;
+  border-color: transparent !important;
+}
+html[data-theme="light"] .ae-tabs button:hover { color: var(--text) !important; }
+html[data-theme="light"] .ae-tabs button.active {
+  color: var(--accent-strong) !important;
+  background: var(--surface-3) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .ae-notice {
+  background: var(--surface-3) !important;
+  border-color: var(--line-color) !important;
+  color: var(--text) !important;
+}
+html[data-theme="light"] .ae-notice p,
+html[data-theme="light"] .ae-notice span,
+html[data-theme="light"] .ae-notice strong { color: var(--text) !important; }
+html[data-theme="light"] .ae-footer { color: var(--muted) !important; }
+html[data-theme="light"] .ae-pane,
+html[data-theme="light"] .ae-panel,
+html[data-theme="light"] .ae-card,
+html[data-theme="light"] .ae-application-state,
+html[data-theme="light"] .ae-appointment-card,
+html[data-theme="light"] .ae-bonus-card,
+html[data-theme="light"] .ae-admin-note {
+  background: var(--surface) !important;
+  border-color: var(--line-color) !important;
+  color: var(--text) !important;
+}
+html[data-theme="light"] .ae-pane h2,
+html[data-theme="light"] .ae-pane h3,
+html[data-theme="light"] .ae-application-state h2,
+html[data-theme="light"] .ae-approved-details h3,
+html[data-theme="light"] .ae-bonus-card h3,
+html[data-theme="light"] .ae-card strong { color: var(--text) !important; }
+html[data-theme="light"] .ae-card span:first-child,
+html[data-theme="light"] .ae-state-copy,
+html[data-theme="light"] .ae-approved-details p,
+html[data-theme="light"] .ae-status-line,
+html[data-theme="light"] .ae-appointment-card p,
+html[data-theme="light"] .ae-bonus-card p,
+html[data-theme="light"] .ae-admin-note p { color: var(--muted) !important; }
+html[data-theme="light"] .ae-status-line strong,
+html[data-theme="light"] .ae-admin-note span,
+html[data-theme="light"] .ae-appointment-card p strong,
+html[data-theme="light"] .ae-bonus-card strong { color: var(--accent-strong) !important; }
+html[data-theme="light"] .ae-state-mark,
+html[data-theme="light"] .ae-appointment-check { color: #2f7d5c !important; }
+html[data-theme="light"] .ae-form label,
+html[data-theme="light"] .ae-check { color: var(--text) !important; }
+html[data-theme="light"] .ae-form input,
+html[data-theme="light"] .ae-form textarea,
+html[data-theme="light"] .ae-form select {
+  background: var(--input-surface) !important;
+  color: var(--text) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .ae-button {
+  background: linear-gradient(120deg, #8c639f, var(--accent-strong)) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+}
+
+/* ==========================================================================
+   16. Admin family (admin.html)
+   admin.css + gidireads-admin-overrides.css hard-code a dark workspace with
+   !important. Keep the workspace dark (it is a separate tool), but force the
+   page chrome and the public footer to match so the cream body no longer leaks
+   through behind light copy.
+   ========================================================================== */
+html[data-theme="light"] body:has(#adminDashboard) {
+  background: var(--adm-bg, #160d1d) !important;
+  color: var(--adm-text, #f7f1ff) !important;
+}
+html[data-theme="light"] body:has(#adminDashboard) .site-footer {
+  background: #160d1d !important;
+  color: var(--adm-muted, #c7b9d6) !important;
+  border-top-color: var(--adm-line, #49345a) !important;
+}
+html[data-theme="light"] body:has(#adminDashboard) .footer-inner { background: transparent !important; }
+html[data-theme="light"] body:has(#adminDashboard) .footer-col h3 { color: var(--adm-text, #f7f1ff) !important; }
+html[data-theme="light"] body:has(#adminDashboard) .footer-col a,
+html[data-theme="light"] body:has(#adminDashboard) .footer-tagline,
+html[data-theme="light"] body:has(#adminDashboard) .footer-origin,
+html[data-theme="light"] body:has(#adminDashboard) .footer-copy,
+html[data-theme="light"] body:has(#adminDashboard) .footer-bottom { color: var(--adm-muted, #c7b9d6) !important; }
+
+/* ==========================================================================
+   17. Moderator centre (moderator.html)
+   The whole hero area is light in lilac mode, so its copy must go dark.
+   ========================================================================== */
+html[data-theme="light"] .mod-hero {
+  background: linear-gradient(145deg, var(--surface), var(--surface-2)) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .mod-denied,
+html[data-theme="light"] .mod-panel,
+html[data-theme="light"] .mod-card { background: var(--surface) !important; border-color: var(--line-color) !important; color: var(--text) !important; }
+html[data-theme="light"] .mod-hero h1,
+html[data-theme="light"] .mod-denied h1,
+html[data-theme="light"] .mod-panel h1,
+html[data-theme="light"] .mod-panel h2 { color: var(--text) !important; }
+html[data-theme="light"] .mod-hero p,
+html[data-theme="light"] .mod-denied p { color: var(--muted) !important; }
+html[data-theme="light"] .mod-hero .hero-eyebrow,
+html[data-theme="light"] .mod-denied .mod-kicker,
+html[data-theme="light"] .mod-kicker { color: var(--accent-strong) !important; }
+html[data-theme="light"] .mod-denied .btn-primary {
+  background: linear-gradient(120deg, #8c639f, var(--accent-strong)) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+}
+html[data-theme="light"] .mod-scope-note { background: var(--surface-3) !important; }
+
+/* ==========================================================================
+   18. My GidiReads (my-gidireads.html)
+   ========================================================================== */
+html[data-theme="light"] .mgr-page { color: var(--text) !important; }
+html[data-theme="light"] .mgr-eyebrow { color: var(--accent-strong) !important; }
+/* The welcome hero is a soft lilac panel in light mode. */
+html[data-theme="light"] .mgr-hero {
+  background: linear-gradient(145deg, var(--surface-2), var(--surface)) !important;
+  border-color: var(--line-color) !important;
+  color: var(--text) !important;
+}
+html[data-theme="light"] .mgr-hero h1,
+html[data-theme="light"] .mgr-hero h2,
+html[data-theme="light"] .mgr-hero p { color: var(--text) !important; }
+html[data-theme="light"] .mgr-hero .mgr-eyebrow { color: var(--accent-strong) !important; }
+html[data-theme="light"] .mgr-hero .mgr-button-outline {
+  color: var(--text) !important;
+  border-color: var(--accent) !important;
+  background: var(--surface) !important;
+}
+/* Everything after the hero is a normal light surface. */
+html[data-theme="light"] .mgr-login-note h2 { color: var(--text) !important; }
+html[data-theme="light"] .mgr-login-note p,
+html[data-theme="light"] .mgr-muted,
+html[data-theme="light"] .mgr-card small,
+html[data-theme="light"] .mgr-section-heading > a,
+html[data-theme="light"] .mgr-text-button,
+html[data-theme="light"] .mgr-top-link { color: var(--muted) !important; }
+html[data-theme="light"] .mgr-section-heading > a:hover,
+html[data-theme="light"] .mgr-text-button:hover,
+html[data-theme="light"] .mgr-top-link:hover { color: var(--accent-strong) !important; }
+html[data-theme="light"] .mgr-card,
+html[data-theme="light"] .mgr-link-grid a,
+html[data-theme="light"] .mgr-stat,
+html[data-theme="light"] .mgr-task,
+html[data-theme="light"] .mgr-badge-card,
+html[data-theme="light"] .mgr-wallet-card,
+html[data-theme="light"] .mgr-history-item,
+html[data-theme="light"] .mgr-login-note {
+  background: var(--surface) !important;
+  border-color: var(--line-color) !important;
+  color: var(--text) !important;
+}
+html[data-theme="light"] .mgr-stat strong,
+html[data-theme="light"] .mgr-link-grid b,
+html[data-theme="light"] .mgr-badge-card strong { color: var(--text) !important; }
+html[data-theme="light"] .mgr-button,
+html[data-theme="light"] .mgr-button-light,
+html[data-theme="light"] .mgr-tab {
+  background: var(--surface-3) !important;
+  color: var(--text) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .mgr-tab.active { color: var(--accent-strong) !important; }
+html[data-theme="light"] .mgr-button-primary,
+html[data-theme="light"] .mgr-button.mgr-button-primary {
+  background: linear-gradient(120deg, #8c639f, var(--accent-strong)) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+}
+
+/* ==========================================================================
+   19. Reading list (reading-list.html)
+   ========================================================================== */
+html[data-theme="light"] .rlp { color: var(--text) !important; }
+html[data-theme="light"] .rlp-back a,
+html[data-theme="light"] .rlp-state a { color: var(--accent-strong) !important; }
+html[data-theme="light"] .rlp-state,
+html[data-theme="light"] .rlp-meta,
+html[data-theme="light"] .rlp-desc,
+html[data-theme="light"] .rlp-item p,
+html[data-theme="light"] .rl-muted,
+html[data-theme="light"] .rl-card-body small { color: var(--muted) !important; }
+html[data-theme="light"] .rl-head h2,
+html[data-theme="light"] .rl-card,
+html[data-theme="light"] .rlp-item { color: var(--text) !important; }
+html[data-theme="light"] .rl-kicker,
+html[data-theme="light"] .rlp-chip { color: var(--accent-strong) !important; }
+html[data-theme="light"] .rl-card,
+html[data-theme="light"] .rl-modal {
+  background: var(--surface) !important;
+  border-color: var(--line-color) !important;
+}
+html[data-theme="light"] .rl-card-body em,
+html[data-theme="light"] .rlp-desc { color: var(--muted) !important; }
+html[data-theme="light"] .rl-btn-quiet { color: var(--text) !important; }
+html[data-theme="light"] .rl-btn-danger,
+html[data-theme="light"] .rlp-remove,
+html[data-theme="light"] .rl-error { color: var(--danger) !important; }
+html[data-theme="light"] .rl-x { background: var(--surface-3) !important; color: var(--text) !important; }
+
+/* ==========================================================================
+   20. Small shared fixes for remaining light-on-cream utility styles
+   ========================================================================== */
+html[data-theme="light"] .gr-text-muted,
+html[data-theme="light"] .muted-text { color: var(--muted) !important; }
+
+
+/* --------------------------------------------------------------------------
+   Lead follow-up: controls that stay on intentionally dark artwork.
+   (The hero/art backgrounds are preserved; only their copy/actions need to
+   stay light so they remain readable in lilac mode.)
+   -------------------------------------------------------------------------- */
+html[data-theme="light"] .ae-hero-art .ae-kicker {
+  color: #e7d4ff !important;
+}
+html[data-theme="light"] .hh-hero .oc-btn-quiet,
+html[data-theme="light"] .oc-hero .oc-btn-quiet {
+  color: #f6ecff !important;
+  border-color: rgba(233, 214, 255, 0.55) !important;
+}
+html[data-theme="light"] .hh-hero .oc-btn-quiet:hover,
+html[data-theme="light"] .oc-hero .oc-btn-quiet:hover,
+html[data-theme="light"] .hh-hero .oc-btn-quiet:focus-visible,
+html[data-theme="light"] .oc-hero .oc-btn-quiet:focus-visible {
+  background: rgba(246, 236, 255, 0.12) !important;
+  color: #ffffff !important;
+}
+
+/* --------------------------------------------------------------------------
+   Holiday Hearts hero: the base CSS paints `.hh-facts strong` white and the
+   poster keeps a dark shadow ring. On the beige panel these must be ink.
+   -------------------------------------------------------------------------- */
+html[data-theme="light"] .hh-hero .hh-facts,
+html[data-theme="light"] .hh-hero .hh-facts strong {
+  color: #30243a !important;
+}
+html[data-theme="light"] .hh-hero .hh-facts strong { color: #63428a !important; }
+html[data-theme="light"] .hh-hero .hh-tagline { color: #8a6420 !important; }
+html[data-theme="light"] .hh-hero .hh-lead { color: #65596b !important; }
+html[data-theme="light"] .hh-hero .hh-stage {
+  background: #f2ece0 !important;
+  border-color: #e7d7b8 !important;
+  color: #30243a !important;
+}
+html[data-theme="light"] .hh-hero .hh-stage strong,
+html[data-theme="light"] .hh-hero .hh-stage span { color: #30243a !important; }
+html[data-theme="light"] .hh-hero .hh-hero-poster {
+  box-shadow: 0 0 0 1px #e7d7b8, 0 18px 40px rgba(48, 36, 58, .16) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Platform announcements (notifications.html): the feed belongs to the light
+   purple surface family in Beige mode, not the dark plum brand panel.
+   -------------------------------------------------------------------------- */
+html[data-theme="light"] .announcement-feed-panel {
+  background: linear-gradient(145deg, #f8f0fc, #f2e7fa 72%, #fcf7ff) !important;
+  border-color: #ddc8ee !important;
+  box-shadow: 0 16px 42px rgba(80, 50, 100, .10), 0 0 24px rgba(140, 99, 159, .05) !important;
+  color: #30243a !important;
+}
+html[data-theme="light"] .announcement-feed-head { border-bottom-color: #e3d3f0 !important; }
+html[data-theme="light"] .announcement-feed-head h2 { color: #30243a !important; }
+html[data-theme="light"] .announcement-feed-count {
+  background: rgba(140, 99, 159, .12) !important;
+  color: #63428a !important;
+  border-color: #d9c2ea !important;
+}
+html[data-theme="light"] .announcement-feed-item { border-top-color: #e7d9f2 !important; }
+html[data-theme="light"] .announcement-feed-mark {
+  background: linear-gradient(135deg, #e9d9f5, #dcc6ee) !important;
+  border-color: #d4bce8 !important;
+  color: #63428a !important;
+  box-shadow: 0 0 18px rgba(140, 99, 159, .10) !important;
+}
+html[data-theme="light"] .announcement-feed-category { color: #8c639f !important; }
+html[data-theme="light"] .announcement-feed-meta time { color: #65596b !important; }
+html[data-theme="light"] .announcement-priority {
+  background: rgba(138, 100, 32, .12) !important;
+  border-color: rgba(138, 100, 32, .26) !important;
+  color: #7a5a17 !important;
+}
+html[data-theme="light"] .announcement-priority.priority-urgent {
+  background: rgba(140, 99, 159, .13) !important;
+  border-color: #d4bce8 !important;
+  color: #8c3f6a !important;
+}
+html[data-theme="light"] .announcement-feed-copy h3 { color: #30243a !important; }
+html[data-theme="light"] .announcement-feed-copy p { color: #65596b !important; }
+html[data-theme="light"] .announcement-feed-actions a { color: #63428a !important; }
+html[data-theme="light"] .announcement-feed-actions a:hover { text-shadow: none !important; }
+html[data-theme="light"] .announcement-feed-actions button {
+  background: #fffcf7 !important;
+  border-color: #d9c2ea !important;
+  color: #63428a !important;
+}
+html[data-theme="light"] .announcement-feed-actions button:hover:not(:disabled) {
+  background: #f3e8fb !important;
+  border-color: #8c639f !important;
+  box-shadow: 0 0 0 3px rgba(140, 99, 159, .10) !important;
+}
+html[data-theme="light"] .announcement-feed-actions button:disabled {
+  background: #f3ecf9 !important;
+  color: #8a7d8f !important;
+  border-color: #e2d4ee !important;
+}
+html[data-theme="light"] .announcement-feed-actions button:focus-visible { outline-color: #8c639f !important; }
+html[data-theme="light"] .announcement-feed-item.is-unread {
+  background: rgba(140, 99, 159, .07) !important;
+  border-color: #dcc6ea !important;
+}
+html[data-theme="light"] .announcement-feed-item.is-unread .announcement-feed-copy h3:after {
+  background: rgba(140, 99, 159, .14) !important;
+  border-color: #d7bde9 !important;
+  color: #63428a !important;
+}
+html[data-theme="light"] .announcement-feed-item.is-read .announcement-feed-mark {
+  background: #f1e8f8 !important;
+  border-color: #e2d4ee !important;
+  color: #8a7d8f !important;
+  box-shadow: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   My GidiReads / manager page (my-gidireads.html): the dark plum brand
+   surfaces belong to Dark mode; in Beige they become light paper surfaces
+   with ink copy so nothing disappears.
+   -------------------------------------------------------------------------- */
+html[data-theme="light"] .mgr-page,
+html[data-theme="light"] .mgr-hero {
+  color: var(--text) !important;
+}
+html[data-theme="light"] .mgr-hero {
+  background: var(--surface-2) !important;
+  border-color: var(--line-color) !important;
+  box-shadow: none !important;
+}
+html[data-theme="light"] .mgr-hero h1,
+html[data-theme="light"] .mgr-hero p:not(.mgr-eyebrow),
+html[data-theme="light"] .mgr-eyebrow { color: var(--text) !important; }
+html[data-theme="light"] #managerContent h2,
+html[data-theme="light"] #milestoneHeading,
+html[data-theme="light"] #badgeHeading,
+html[data-theme="light"] .mgr-card h2,
+html[data-theme="light"] .mgr-section-heading h2,
+html[data-theme="light"] .mgr-hero h1 { color: var(--text) !important; }
+html[data-theme="light"] .mgr-section-heading p:not(.mgr-eyebrow),
+html[data-theme="light"] .mgr-eyebrow { color: var(--muted) !important; }
+html[data-theme="light"] #badgeCount,
+html[data-theme="light"] #milestoneCount { color: var(--muted) !important; }
+
+html[data-theme="light"] .mgr-milestone-card,
+html[data-theme="light"] .mgr-milestone-card.is-complete,
+html[data-theme="light"] .mgr-milestone-card.is-locked {
+  background: var(--surface) !important;
+  border-color: var(--line-color) !important;
+  color: var(--text) !important;
+  opacity: 1 !important;
+}
+html[data-theme="light"] .mgr-milestone-card h3 { color: var(--text) !important; }
+html[data-theme="light"] .mgr-milestone-category { color: #63428a !important; }
+html[data-theme="light"] .mgr-milestone-description,
+html[data-theme="light"] .mgr-milestone-state,
+html[data-theme="light"] .mgr-milestone-reward { color: var(--muted) !important; }
+html[data-theme="light"] .mgr-progress-meta strong { color: var(--text) !important; }
+html[data-theme="light"] .mgr-progress-track {
+  background: rgba(48, 36, 58, .12) !important;
+  border-color: rgba(48, 36, 58, .24) !important;
+}
+html[data-theme="light"] .mgr-badge-card h3 { color: var(--text) !important; }
+html[data-theme="light"] .mgr-badge-card.unearned .mgr-badge-details small { color: var(--muted) !important; }
+
+html[data-theme="light"] .mgr-gift-item {
+  background: var(--surface-2) !important;
+  border-color: var(--line-color) !important;
+  color: var(--text) !important;
+}
+html[data-theme="light"] .mgr-gift-item span { color: var(--muted) !important; }
+
+html[data-site-theme="plum"] .mgr-wallet-card {
+  background: #21142b !important;
+  border-color: #49345a !important;
+  color: #f4eff8 !important;
+}
+html[data-site-theme="amoled"] .mgr-wallet-card {
+  background: #0a0a0a !important;
+  border-color: #333333 !important;
+  color: #f5f5f5 !important;
+}
+
+/* Creator earnings payout button: green outline in dark modes */
+html[data-site-theme="plum"] #payoutSubmit,
+html[data-site-theme="plum"] .ce-btn#payoutSubmit {
+  background: transparent !important;
+  border: 2px solid #2f7d5c !important;
+  color: #2f7d5c !important;
+}
+html[data-site-theme="amoled"] #payoutSubmit,
+html[data-site-theme="amoled"] .ce-btn#payoutSubmit {
+  border-color: #2e8b57 !important;
+  color: #2e8b57 !important;
+}
+
+html[data-theme="light"] .daily-echo-card {
+  background: var(--surface) !important;
+  border-color: var(--line-color) !important;
+  color: var(--text) !important;
+}
+html[data-theme="light"] .daily-echo-card #dailyEchoStreak { color: var(--text) !important; }
+
+html[data-theme="light"] .mgr-task-categories > * {
+  color: var(--muted) !important;
+}
+
+/* ==========================================================================
+   My GidiReads (my-gidireads.html): role chip and link-grid icon vividness.
+   ========================================================================== */
+html[data-theme="light"] #mgrRole.mgr-role-chip {
+  background: #63428a !important;
+  color: #fff !important;
+  border-color: #63428a !important;
+}
+html[data-theme="light"] .mgr-link-grid svg,
+html[data-theme="light"] .mgr-link-grid img {
+  color: #8c639f !important;
+  fill: #8c639f !important;
+  stroke: #8c639f !important;
+}
+
+/* ==========================================================================
+   Contract Centre (contract-center.html): headings must be ink in light mode.
+   ========================================================================== */
+html[data-theme="light"] #main-content > section:nth-of-type(1) > h1,
+html[data-theme="light"] .ce-hero h1,
+html[data-theme="light"] #ceMain h2,
+html[data-theme="light"] .ce-section h2,
+html[data-theme="light"] .ce-heading h2 { color: var(--text) !important; }
+
+/* ==========================================================================
+   Notifications push-optin panel: pinkish instead of purple, h2 in ink.
+   ========================================================================== */
+html[data-theme="light"] #pushOptinPanel {
+  background: linear-gradient(125deg, rgba(232, 163, 210, .16), rgba(255, 255, 255, .04)) !important;
+  border-color: rgba(232, 163, 210, .36) !important;
+  box-shadow: 0 0 32px rgba(232, 163, 210, .09) !important;
+}
+html[data-theme="light"] #pushOptinPanel > div > h2 { color: #30243a !important; }
+
+/* ==========================================================================
+   Story page (story.html): rating summary and review form in light mode.
+   ========================================================================== */
+html[data-theme="light"] .rating-overall { color: #30243a !important; text-shadow: none !important; }
+html[data-theme="light"] .rating-summary-v2 { background: #faf5ec !important; color: #30243a !important; }
+html[data-theme="light"] .rating-breakdown>div { background: #fffcf7 !important; color: #30243a !important; border-color: var(--line-color) !important; }
+html[data-theme="light"] .rating-breakdown strong { color: #63428a !important; }
+html[data-theme="light"] .rating-breakdown>div>span:first-child { color: #30243a !important; }
+html[data-theme="light"] .story-reviews-section-v2 .review-form-box { background: #fffcf7 !important; color: #30243a !important; }
+html[data-theme="light"] .story-reviews-section-v2 .review-form-box::before { display: none !important; }
+html[data-theme="light"] .story-reviews-section-v2 #reviewTextInput { background: #fff !important; color: #30243a !important; border-color: var(--line-color) !important; }
+html[data-theme="light"] .story-reviews-section-v2 .review-form-heading .reviews-subheading { color: #30243a !important; }
+html[data-theme="light"] .story-reviews-section-v2 .review-profile-copy strong { color: #30243a !important; }
+html[data-theme="light"] .story-reviews-section-v2 .review-text { color: #30243a !important; }
+html[data-theme="light"] .story-reviews-section-v2 .review-profile-copy span { color: #65596b !important; }
+html[data-theme="light"] .story-stat-reads-v2 { color: #30243a !important; }
+html[data-theme="light"] .story-stat-v2:nth-of-type(3) { color: #2f7d5c !important; }
+html[data-theme="light"] .story-stat-v2:nth-of-type(4) { color: #30243a !important; }
+
+/* ==========================================================================
+   Library (library.html): card-body beige, text black.
+   ========================================================================== */
+html[data-theme="light"] .library-page .story-card { background: var(--surface) !important; border-color: var(--line-color) !important; }
+html[data-theme="light"] .library-page .card-body { background: transparent !important; }
+html[data-theme="light"] .library-page .card-title { color: var(--text) !important; }
+html[data-theme="light"] .library-page .card-author { color: var(--muted) !important; }
+html[data-theme="light"] .library-page .card-meta { color: var(--muted) !important; }
+html[data-theme="light"] .library-page .card-meta .echo { color: #8a6420 !important; }
+html[data-theme="light"] .library-page .progress-track { background: rgba(28, 20, 32, .08) !important; }
+
+/* ==========================================================================
+   Author page public badges: beige box, white boxes, black/purple text.
+   ========================================================================== */
+html[data-theme="light"] #publicBadgesSection { background: var(--surface) !important; border-color: var(--line-color) !important; color: var(--text) !important; }
+html[data-theme="light"] #publicBadgesSection h2 { color: var(--text) !important; }
+html[data-theme="light"] #publicBadgesSection .gr-panel,
+html[data-theme="light"] #publicBadgesSection .mgr-badge-card,
+html[data-theme="light"] #publicBadgesSection .mgr-milestone-card { background: #fffcf7 !important; border-color: var(--line-color) !important; color: var(--text) !important; }
+html[data-theme="light"] #publicBadgesSection .mgr-badge-card h3 { color: #30243a !important; }
+html[data-theme="light"] #publicBadgesSection .mgr-badge-card strong { color: #63428a !important; }
+html[data-theme="light"] #publicBadgesSection .mgr-badge-details small { color: #65596b !important; }
+html[data-theme="light"] #publicBadgesSection .mgr-milestone-card h3 { color: #30243a !important; }
+
+/* Settings danger zone: red outline so it pops like the profile editor. */
+html[data-theme="light"] #dangerZone { outline: 2px solid #9c3f45 !important; outline-offset: 2px !important; }
+
+/* Author page public badges: white boxes, black title text, dark purple description text. */
+html[data-theme="light"] #publicBadgesSection .gr-public-badge {
+  background: #fff !important;
+  border-color: var(--line-color) !important;
+  color: #30243a !important;
+}
+html[data-theme="light"] #publicBadgesSection .gr-public-badge strong { color: #30243a !important; }
+html[data-theme="light"] #publicBadgesSection .gr-public-badge p { color: #63428a !important; }
+
+/* ==========================================================================
+   Opportunities Centre (opportunities.html): beige slide, white nav, ink text.
+   ========================================================================== */
+html[data-theme="light"] .oc-slide-inner { background: #fffcf7 !important; color: #30243a !important; }
+html[data-theme="light"] .oc-slide-inner h2 { color: #30243a !important; }
+html[data-theme="light"] .oc-slide-text { color: #65596b !important; }
+html[data-theme="light"] .oc-slide-copy h2 { color: #30243a !important; }
+html[data-theme="light"] .oc-nav { background: #fffcf7 !important; color: #63428a !important; border-color: var(--line-color) !important; }
+html[data-theme="light"] .oc-nav:hover { background: #f3e8fb !important; color: #8c639f !important; }
+html[data-theme="light"] .oc-dots button { background: rgba(140, 99, 159, .4) !important; }
+html[data-theme="light"] .oc-dots button[aria-selected="true"] { background: #8c639f !important; }
+html[data-theme="light"] .oc-card { background: var(--surface-2) !important; border-color: var(--line-color) !important; color: var(--text) !important; }
+html[data-theme="light"] .oc-card h3 { color: var(--text) !important; }
+html[data-theme="light"] .oc-card-text { color: #65596b !important; }
+html[data-theme="light"] .oc-card-date { color: var(--muted) !important; }
+html[data-theme="light"] .oc-chip-open { color: #2f7d5c !important; background: rgba(80, 200, 140, .12) !important; }
+html[data-theme="light"] .oc-chip-closing { color: #8a6a20 !important; background: rgba(255, 190, 90, .12) !important; }
+html[data-theme="light"] .oc-chip-upcoming { color: #8c639f !important; background: rgba(140, 99, 159, .14) !important; }
+
+/* ==========================================================================
+   Story Workspace bulk chapter importer: clean beige surfaces that fit the
+   light-mode workspace vibe.
+   ========================================================================== */
+html[data-theme="light"] .bulk-import-panel { background: #fffcf7 !important; border-color: var(--line-color) !important; color: #30243a !important; border-radius: 20px !important; padding: 26px !important; }
+html[data-theme="light"] .bulk-import-panel h3 { color: #30243a !important; }
+html[data-theme="light"] .bulk-import-panel p { color: #65596b !important; }
+html[data-theme="light"] .bulk-import-heading { border-bottom-color: var(--line-color) !important; }
+html[data-theme="light"] .google-docs-import { background: #faf5ec !important; border-color: var(--line-color) !important; border-radius: 16px !important; padding: 20px !important; }
+html[data-theme="light"] .google-docs-import h4 { color: #30243a !important; }
+html[data-theme="light"] .google-docs-mark { background: #8c639f !important; color: #fff !important; }
+html[data-theme="light"] .bulk-import-upload { background: #fffcf7 !important; border-color: var(--line-color) !important; border-radius: 12px !important; color: #30243a !important; }
+html[data-theme="light"] .bulk-import-upload small { color: #65596b !important; }
+html[data-theme="light"] .bulk-import-paste { background: #fffcf7 !important; border-color: var(--line-color) !important; border-radius: 12px !important; color: #30243a !important; }
+html[data-theme="light"] .bulk-import-paste textarea { background: #fff !important; color: #30243a !important; border-color: var(--line-color) !important; }
+html[data-theme="light"] .bulk-import-paste label { color: #30243a !important; }
+html[data-theme="light"] .google-docs-controls input { background: #fff !important; color: #30243a !important; border-color: var(--line-color) !important; }
+html[data-theme="light"] .bulk-import-help { color: #65596b !important; }
+html[data-theme="light"] .bulk-import-footer { background: #faf5ec !important; border-color: var(--line-color) !important; border-radius: 12px !important; padding: 16px !important; color: #30243a !important; border-top: 1px solid var(--line-color) !important; }
+html[data-theme="light"] .bulk-import-footer span { color: #65596b !important; }
+html[data-theme="light"] .google-docs-tab-picker { background: #fffcf7 !important; border-color: var(--line-color) !important; border-radius: 12px !important; }
+html[data-theme="light"] .google-docs-tab-picker-head strong { color: #30243a !important; }
+html[data-theme="light"] .bulk-import-message { color: #30243a !important; }

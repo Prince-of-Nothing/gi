@@ -1,0 +1,82 @@
+  <!DOCTYPE html>
+<html data-site-theme="plum" lang="en">
+<head>
+
+<meta charset="UTF-8">
+<script data-gr-theme-init>(function(){try{var d=document.documentElement;var s=localStorage.getItem('gr-site-theme');var site=(s==='plum'||s==='lilac'||s==='amoled'||s==='greenbeige'||s==='bluishbeige'||s==='custom'||s==='light-mode'||s==='dark')?s:'plum';if(site==='light-mode')site='lilac';if(site==='dark')site='plum';var customMode='light';try{customMode=localStorage.getItem('gidireads-custom-mode')||'light';}catch(_){}var isLight=(site==='lilac'||site==='greenbeige'||site==='bluishbeige'||(site==='custom'&&customMode==='light'));var t=site==='plum'?'dark':(site==='lilac'?'light':(site==='amoled'?'amoled':site));d.setAttribute('data-theme',isLight?'light':'dark');d.setAttribute('data-theme-name',t);d.setAttribute('data-site-theme',site);d.style.colorScheme=t==='light'?'light':'dark';var z=localStorage.getItem('gr-text-scale');if(z)d.style.setProperty('--text-scale',z);var f=localStorage.getItem('gidireads-site-font');if(f==='editorial'||f==='classic'||f==='literary'||f==='modern')d.setAttribute('data-site-font',f);}catch(e){document.documentElement.setAttribute('data-theme','dark');document.documentElement.setAttribute('data-theme-name','dark');document.documentElement.setAttribute('data-site-theme','plum');}})();</script>
+<script src="js/theme.js" defer></script><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="theme-color" content="#100a16" id="themeColorMeta">
+
+<title>Publishing — GidiReads Authors Studio</title>
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/authors-studio.css"><link rel="stylesheet" href="css/story-publishing.css">
+
+<link rel="stylesheet" href="css/authors-studio-theme-fix.css" />
+<link rel="manifest" href="manifest.webmanifest" />
+<meta name="theme-color" content="#100a16" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<script type="module" src="js/preload.js"></script>
+
+<link rel="stylesheet" href="css/theme.css" />
+<link rel="preload" href="css/fonts.css" as="style">
+<link rel="preload" href="css/style.css" as="style">
+<link rel="preload" href="css/theme.css" as="style">
+
+<link rel="stylesheet" href="css/theme-light-fixes.css">
+<link rel="stylesheet" href="css/theme-light-fixes-studio.css">
+<link rel="stylesheet" href="css/theme-amoled-fixes.css">
+<script src="js/i18n.js" defer></script><script type="module" src="js/site-header.js"></script></head>
+<body>
+
+<div id="pageTransition" class="page-transition"></div>
+
+<div class="studio-shell">
+<aside class="studio-sidebar" id="studioSidebar" aria-label="Authors Studio navigation">
+ <div><div class="studio-brand-block"><a class="studio-brand" href="index.html"><span class="brand-monogram" aria-hidden="true"><span>G</span><span>R</span></span><span class="brand-word">GidiReads</span></a><div class="studio-label">AUTHORS STUDIO</div><button class="sidebar-close" id="sidebarClose" type="button">×</button></div>
+ <nav class="studio-nav" role="navigation"><a class="studio-nav-item" href="authors-studio.html"><span class="nav-mark">01</span><span>Home</span></a><a class="studio-nav-item active" href="my-stories.html"><span class="nav-mark">02</span><span>My Stories</span></a><a class="studio-nav-item" href="create-story.html"><span class="nav-mark">03</span><span>Create Story</span></a><button class="studio-nav-item" data-coming="Contract Center" type="button"><span class="nav-mark">04</span><span>Contract Center</span></button><button class="studio-nav-item" data-coming="Earnings" type="button"><span class="nav-mark">05</span><span>Earnings</span></button><button class="studio-nav-item" data-coming="Insights" type="button"><span class="nav-mark">06</span><span>Insights</span></button><div class="nav-divider"></div><a class="studio-nav-item" href="opportunities.html"><span class="nav-mark">07</span><span>Opportunities</span></a><button class="studio-nav-item" data-coming="Resources" type="button"><span class="nav-mark">08</span><span>Resources</span></button><a class="studio-nav-item" href="notifications.html"><span class="nav-mark">09</span><span>Notifications</span></a><a class="studio-nav-item" href="account.html"><span class="nav-mark">10</span><span>Author Profile</span></a></nav></div>
+ <div class="sidebar-bottom"><div class="sidebar-note"><span class="note-line"></span><p>Make room for the story.</p></div><a class="back-to-gidi" href="index.html">    Back to GidiReads</a></div>
+</aside>
+<div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+<main role="main" class="studio-main" id="main-content">
+<header role="banner" class="studio-topbar"><button class="menu-button" id="menuButton" type="button"></button><div class="topbar-context"><span>GidiReads</span><i>/</i><strong>Authors Studio</strong><i>/</i><strong>Publishing</strong></div><div class="topbar-actions"><a href="notifications.html" class="top-icon" aria-label="Notifications"><span></span></a><button class="theme-toggle" id="themeToggle" type="button"><span class="theme-icon" aria-hidden="true">☀</span><span class="theme-label">Beige</span></button><a href="account.html" class="profile-link">Profile</a></div></header>
+<div class="studio-content publishing-page">
+ <a class="publishing-back" id="workspaceLink" href="my-stories.html">    Story Workspace</a>
+ <section class="publishing-intro"><div><p class="eyebrow">THE PUBLICATION DESK</p><h1 id="pageTitle">Publishing</h1><p id="storyLead">Loading your story's publication controls…</p></div><div class="story-status-mark" id="storyStatusMark">DRAFT</div></section>
+ <div id="pageMessage" class="page-message" hidden></div>
+ <section class="publication-overview" id="overview" hidden>
+  <div class="overview-cover" id="overviewCover"></div>
+  <div class="overview-copy"><p class="eyebrow">CURRENT STORY</p><h2 id="storyTitle">—</h2><p id="storyDescription"></p><div class="overview-meta" id="storyMeta"></div></div>
+ </section>
+ <section class="publication-grid" id="publicationGrid" hidden>
+  <article class="publication-section story-release">
+   <div class="section-head"><div><p class="eyebrow">01</p><h2>Story release</h2><p>Control whether the story itself is visible as a published work.</p></div></div>
+   <div class="release-status"><span class="status-dot" id="statusDot"></span><div><strong id="statusLabel">Draft</strong><small id="statusDescription">This story is private to its author.</small></div></div>
+   <div class="release-actions"><button class="publish-button" id="publishStoryButton" type="button">Publish story →</button><button class="quiet-button" id="unpublishStoryButton" type="button" hidden>Unpublish story</button></div>
+   <p class="action-note" id="storyActionNote">Publishing makes the story eligible for readers once at least one section is published.</p>
+  </article>
+  <article class="publication-section publication-order">
+   <div class="section-head"><div><p class="eyebrow">02</p><h2>Manuscript order</h2><p>Review what readers will see and control which sections are public.</p></div><span class="count-label" id="chapterCount">0 sections</span></div>
+   <div class="section-list" id="sectionList"><div class="empty-state">No manuscript sections yet.</div></div>
+  </article>
+  <article class="publication-section danger-zone">
+   <div class="section-head"><div><p class="eyebrow">03</p><h2>Story controls</h2><p>These actions affect the entire story.</p></div></div>
+   <div class="danger-action"><div><strong>Unpublish everything</strong><small>Move the story back to draft and make all published sections private.</small></div><button class="danger-quiet" id="unpublishAllButton" type="button">Unpublish all</button></div>
+   <div class="danger-action delete-action"><div><strong>Delete story</strong><small>Permanently deletes the story, its manuscript sections, taxonomy selections and related reader records. This cannot be undone.</small></div><button class="danger-button" id="deleteStoryButton" type="button">Delete story</button></div>
+  </article>
+ </section>
+ <section class="publishing-footer" id="publishingFooter" hidden><a id="footerWorkspace" href="my-stories.html">    Return to Story Workspace</a><span>Publishing changes are saved immediately.</span></section>
+</div>
+
+</main></div>
+<script type="module" src="js/story-publishing.js"></script>
+
+<script type="module" src="js/site-footer.js"></script>
+<script type="module" src="js/theme-sync.js"></script>
+</body></html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,5589 @@
+{
+  "baseUrl": "http://localhost:3001",
+  "checkedAt": "2026-11-10T19:16:16.484Z",
+  "pages": [
+    {
+      "page": "account.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/gidireads-logo.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/profile-redesign.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "explore.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "rankings.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "library.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "community.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "admin.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "notifications.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/profile-headers/shadow-prince.webp",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/profile-headers/starweaver.webp",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/profile-headers/nightguard.webp",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/profile-headers/enchanted-forest.webp",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/profile-headers/royal-library.webp",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/profile-headers/ice-profile-companion.jpg",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/profile-headers/cat-profile-companion.jpg",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "my-gidireads.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "author.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "my-stories.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/account.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/profile-nav.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "admin-economy.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/fonts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/gidireads-logo.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/creator-economy.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/phase1-admin.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/economy-design-system.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/preload.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "admin.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "explore.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "library.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "notifications.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/js/admin-economy.js",
+          "status": 404,
+          "ok": false
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": [
+        "js/js/admin-economy.js"
+      ]
+    },
+    {
+      "page": "admin.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/preload.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/gidireads-logo.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/fonts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/profile-redesign.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/admin-dashboard.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/admin-management.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/opportunities-centre.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/admin-staff.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/economy-design-system.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/gidireads-admin-overrides.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "moderator.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "admin-economy.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "explore.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "library.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "notifications.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/admin.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/profile-nav.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "ae-apply.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/fonts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/ae-workspace.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/preload.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "authors-studio.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/ae/ae-editor-hero.jpg",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/ae-apply.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "ae-author-feedback.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/ae-workspace.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "authors-studio.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "my-stories.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/ae-author-feedback.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "ae-draft-review.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/ae-workspace.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "ae.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/ae-draft-review.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "ae-review.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/fonts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/ae-workspace.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/preload.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "ae.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/ae-review.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "ae.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/ae-workspace.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "authors-studio.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/ae/ae-editor-hero.jpg",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/ae.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "analytics.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/fonts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/economy-design-system.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/analytics.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "authors-studio.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "notifications.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/analytics.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "auth.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/fonts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/gidireads-logo.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/auth.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/auth.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "author-notes.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/fonts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/authors-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/authors-studio-theme-fix.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/studio-workspaces.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/preload.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "authors-studio.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "my-stories.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "create-story.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "story-bible.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "author-notes.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "story-metadata.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/author-studio-characters/cat-profile-companion.jpg",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/author-studio-characters/author-notes-character.jpg",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/author-studio-characters/writing-companion.jpg",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/author-notes.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "author.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/preload.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/gidireads-logo.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/fonts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/profile-redesign.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/profile-badges.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/footer-redesign.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/rankings.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "explore.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "rankings.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "library.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "community.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "admin.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "notifications.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "my-gidireads.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/author.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/profile-nav.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "authors-studio.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "css/authors-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/authors-studio-theme-fix.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/economy-design-system.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "authors-studio.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "my-stories.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "create-story.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "story-bible.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "author-notes.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "story-metadata.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "contract-center.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "creator-earnings.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "analytics.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "opportunities.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "ae-apply.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "ae-author-feedback.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "ae.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "notifications.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/authors-studio-editorial.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/authors-studio.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "chapter-editor.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/fonts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/authors-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/chapter-editor.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/authors-studio-theme-fix.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/preload.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "authors-studio.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "my-stories.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "opportunities.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "notifications.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/chapter-editor.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "chapter-pricing.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/fonts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/authors-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/story-workspace.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/authors-studio-theme-fix.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/chapter-pricing.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "authors-studio.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "my-stories.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "contract-center.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "analytics.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "notifications.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/chapter-pricing.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "collection.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/fonts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/preload.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/gidireads-logo.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/profile-redesign.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/footer-redesign.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/collection.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/rankings.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "explore.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "rankings.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "library.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "community.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "admin.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "notifications.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/collection.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "community-space.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/community.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/rankings.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "explore.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "rankings.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "authors-studio.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/community.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "community.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/fonts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/preload.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/community.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/rankings.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "explore.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "rankings.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "authors-studio.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "community.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/community.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "contract-center.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "assets/gidireads-logo.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/creator-economy.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/economy-design-system.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "my-gidireads.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "creator-earnings.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "explore.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "library.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "notifications.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/js/contract-center.js",
+          "status": 404,
+          "ok": false
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": [
+        "js/js/contract-center.js"
+      ]
+    },
+    {
+      "page": "create-story.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "css/create-story-step1.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/authors-studio-theme-fix.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "authors-studio.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "my-stories.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "create-story.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "contract-center.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "creator-earnings.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "analytics.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "opportunities.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "notifications.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/create-story-step1.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "creator-earnings.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/fonts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/gidireads-logo.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/creator-economy.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/preload.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "explore.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "rankings.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "library.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "community.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "admin.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "notifications.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/js/creator-earnings.js",
+          "status": 404,
+          "ok": false
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": [
+        "js/js/creator-earnings.js"
+      ]
+    },
+    {
+      "page": "explore.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "assets/gidireads-logo.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/profile-redesign.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/taxonomy.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/explore-reading-lists.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/holiday-rail.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/footer-redesign.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/rankings.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "explore.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "rankings.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "library.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "community.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "admin.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "notifications.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/profile-nav.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "holiday-hearts-entry.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/gidireads-logo.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/fonts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/opportunities-centre.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/holiday-hearts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/holiday-hearts-entry.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/preload.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "explore.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "rankings.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "library.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "community.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "admin.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "notifications.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "holiday-hearts.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/holiday-hearts-entry.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "holiday-hearts.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/gidireads-logo.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/fonts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/opportunities-centre.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/holiday-hearts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/preload.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "explore.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "rankings.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "library.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "community.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "admin.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "notifications.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "opportunities.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/Opportunities/holiday-hearts-main.jpg",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/Opportunities/holiday-hearts-contest.jpg",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/holiday-hearts.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "index.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/preload.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/gidireads-logo.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/fonts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/taxonomy.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/homepage-collections.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/holiday-rail.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/home-redesign.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/community.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/rankings.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "explore.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "community.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "library.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "collection.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "notifications.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/app.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/onboarding-tour.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/index.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/profile-nav.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "library.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/gidireads-logo.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/reading-lists.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/profile-redesign.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/library.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/rankings.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/mobile-responsiveness.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "explore.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "library.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "notifications.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/library.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/profile-nav.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "moderator.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "assets/gidireads-logo.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/moderator.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/economy-design-system.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "explore.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "rankings.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "library.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "community.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "admin.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "notifications.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/moderator.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "my-gidireads.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/preload.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/gidireads-logo.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/fonts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/profile-redesign.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/my-gidireads.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/economy-design-system.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "explore.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "rankings.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "library.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "community.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "admin.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "notifications.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "author.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "creator-earnings.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "my-stories.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "settings.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "contract-center.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "store.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/my-gidireads.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/bottom-nav.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "my-stories.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/authors-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/my-stories-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/authors-studio-theme-fix.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "authors-studio.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "my-stories.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "create-story.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "contract-center.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "creator-earnings.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "analytics.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "opportunities.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "notifications.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/my-stories.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "notifications.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/preload.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/gidireads-logo.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/fonts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/announcement-feed.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/push-notifications.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/economy-design-system.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "explore.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "rankings.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "library.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "community.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "admin.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "notifications.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/notifications.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/profile-nav.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "opportunities.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/gidireads-logo.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/fonts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/opportunities-centre.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/preload.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "authors-studio.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/opportunities.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "opportunity.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/gidireads-logo.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/fonts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/opportunities-centre.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/preload.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "opportunities.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/opportunity.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "people.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/fonts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/gidireads-logo.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/profile-redesign.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/preload.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "explore.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "rankings.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "library.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "community.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "admin.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "notifications.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/people.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/profile-nav.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "rankings.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/gidireads-logo.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/rankings.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/mobile-responsiveness.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "explore.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "rankings.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "library.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "notifications.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/profile-nav.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/rankings.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "reader.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/reader.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/reader.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "reading-list.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/gidireads-logo.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/fonts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/reading-lists.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/rankings.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "explore.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "rankings.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "library.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "community.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "admin.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "notifications.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/reading-list.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "reset-password.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/fonts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/preload.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/reset-password.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "settings.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/preload.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/fonts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/profile-redesign.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "my-gidireads.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/gidireads-logo.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "notifications.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/settings.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "store.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/fonts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/store.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/preload.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "my-gidireads.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/store.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "story-bible.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/fonts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/authors-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/authors-studio-theme-fix.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/studio-workspaces.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/preload.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "authors-studio.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "my-stories.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "create-story.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "story-bible.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "author-notes.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "story-metadata.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/author-studio-characters/ice-profile-companion.jpg",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/author-studio-characters/story-bible-character.jpg",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/story-bible.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "story-metadata.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/fonts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/authors-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/authors-studio-theme-fix.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/studio-workspaces.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/preload.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "authors-studio.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "my-stories.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "create-story.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "story-bible.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "author-notes.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "story-metadata.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/author-studio-characters/ice-profile-companion.jpg",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/author-studio-characters/writing-companion.jpg",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/story-metadata.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "story-publishing.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/fonts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/authors-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/story-publishing.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/authors-studio-theme-fix.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/preload.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "authors-studio.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "my-stories.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "create-story.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "opportunities.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "notifications.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/story-publishing.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "story-workspace.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "css/authors-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/story-workspace.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/reading-lists.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/authors-studio-theme-fix.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "authors-studio.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "my-stories.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "create-story.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "story-bible.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "author-notes.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "story-metadata.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "contract-center.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "creator-earnings.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "analytics.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "opportunities.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "ae-apply.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "ae-author-feedback.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "ae.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "notifications.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "story-publishing.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "chapter-pricing.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/story-workspace.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/bulk-chapter-import.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "story.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/preload.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/gidireads-logo.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/fonts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/profile-redesign.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/story-reviews.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/taxonomy.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/rankings.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "explore.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "rankings.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "library.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "community.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "admin.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "notifications.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/story.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/profile-nav.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "terms.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/gidireads-logo.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/fonts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "explore.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "rankings.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "library.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "community.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "admin.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "notifications.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "account.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "test.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "test.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    },
+    {
+      "page": "welcome.html",
+      "status": 200,
+      "ok": true,
+      "assets": [
+        {
+          "ref": "js/theme.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/gidireads-logo.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/fonts.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/welcome.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "manifest.webmanifest",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "assets/apple-touch-icon.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/preload.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/style.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-light-fixes-studio.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "css/theme-amoled-fixes.css",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/i18n.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-header.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "index.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "auth.html",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/welcome.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/site-footer.js",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "ref": "js/theme-sync.js",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "missingAssets": []
+    }
+  ],
+  "summary": {
+    "pages": 47,
+    "ok": 44,
+    "failed": 3,
+    "missingAssets": 3
+  }
+}

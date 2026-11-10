@@ -1,0 +1,17 @@
+/* Batch 5 refinement: keep GidiReads' desktop visual language on phones.
+   Only prevent overflow and make genuinely narrow controls fit; avoid global padding,
+   oversized touch typography, forced single-column cards, or blanket text wrapping. */
+html,body{max-width:100%;overflow-x:clip;-webkit-text-size-adjust:100%}
+img,video,canvas,iframe{max-width:100%}
+input,select,textarea,button{max-width:100%}
+pre,table{max-width:100%}
+pre{overflow-x:auto}
+@media(max-width:760px){
+  .section-inner,.container,.page-shell,.content-wrap{max-width:100%;}
+  .modal,.dialog{max-height:calc(100dvh - 20px);overflow-y:auto}
+}
+@media(max-width:520px){
+  .form-grid,.field-grid,.settings-grid,.two-column-grid{grid-template-columns:minmax(0,1fr)}
+  .form-actions,.action-row,.toolbar-row{flex-wrap:wrap}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}

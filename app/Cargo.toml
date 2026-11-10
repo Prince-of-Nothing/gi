@@ -1,0 +1,23 @@
+[package]
+name = "gidireads"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+eframe = { version = "0.29", features = ["persistence", "accesskit", "wgpu", "winit"] }
+egui = { version = "0.29", features = ["accesskit", "persistence"] }
+tokio = { version = "1.38", features = ["full"] }
+reqwest = { version = "0.12", features = ["json", "rustls-tls", "stream"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+url = "2.5"
+dirs = "5.0"
+image = { version = "0.25", features = ["png", "jpeg"] }
+egui_extras = "0.29"
+once_cell = "1.19"
+uuid = { version = "1.7", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+base64 = "0.22"
+rmp-serde = "1.1"
+anyhow = "1.0"
+thiserror = "1.0"

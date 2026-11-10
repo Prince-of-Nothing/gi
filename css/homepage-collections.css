@@ -1,0 +1,9 @@
+.home-custom-section .home-custom-stories{grid-column:1/-1;width:100%;align-self:stretch;min-width:0}.home-custom-section .home-custom-footer{grid-column:1/-1;display:flex;justify-content:flex-end;align-items:center;border-top:1px solid rgba(255,255,255,.12);padding-top:12px}.home-custom-section .home-custom-see-all{margin-top:0}.home-custom-section .home-custom-stories:empty{display:none}.home-custom-section .home-custom-stories .home-story-card{min-width:0}@media(max-width:720px){.home-custom-section .home-custom-stories{grid-column:1}.home-custom-section .home-custom-footer{grid-column:1;justify-content:flex-start}}
+
+.home-custom-section{background:linear-gradient(145deg,#2A082C,#351039)!important;border-color:rgba(255,107,157,.2)!important}.home-custom-copy .home-section-kicker{color:#FF6B9D!important}.home-custom-cta{background:#FF6B9D!important;color:#2A082C!important;border-color:rgba(255,107,157,.8)!important}.home-custom-cta:hover{background:#ff8bb2!important;color:#2A082C!important}.home-custom-section .home-custom-footer{border-top-color:rgba(255,255,255,.12)}
+
+/* Preserve the full book-cover artwork in custom homepage shelves. */
+.home-custom-stories .home-cover-wrap{aspect-ratio:2/3;height:auto;overflow:hidden;background:#1a0b20;border-radius:8px}
+.home-custom-stories .home-cover-wrap img,.home-custom-stories .home-cover-wrap .home-stack-cover,.home-custom-stories .home-cover-wrap .home-cover{width:100%;height:100%;object-fit:contain;object-position:center;background:#1a0b20}
+.home-custom-image{display:flex;align-items:center;justify-content:center;min-height:0;max-height:420px;background:#1a0b20;border-radius:12px;overflow:hidden}
+.home-custom-image img{display:block;width:100%;height:200%;max-height:1000px;object-fit:contain;object-position:center;background:#1a0b20}
