@@ -2,11 +2,6 @@ import React from 'react';
 
 const HTML = `
 
-
-<div id="pageTransition" class="page-transition"></div>
-
-<div id="pageTransition" class="page-transition"></div>
-
 <main role="main" id="main-content">
   <div id="accessDenied" class="section" hidden>
    <div class="section-inner">

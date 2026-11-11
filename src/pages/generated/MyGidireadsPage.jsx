@@ -2,9 +2,6 @@ import React from 'react';
 
 const HTML = `
 
-
-<div id="pageTransition" class="page-transition"></div>
-
 <main role="main" class="mgr-page" id="main-content">
  <section class="mgr-hero"><div class="mgr-hero-copy"><p class="mgr-eyebrow">YOUR GIDIREADS</p><h1 id="welcomeTitle">Your reading and writing life, in one place.</h1><p id="welcomeText">Your profile, achievements, rewards, and account activity.</p></div><div class="mgr-hero-actions"><a class="mgr-button mgr-button-light" href="account.html">Edit profile</a><a class="mgr-button mgr-button-outline" href="author.html" id="publicProfileLink">View profile</a></div></section>
  <div class="mgr-login-note" id="loginNote" hidden><h2>Log in to see your GidiReads</h2><p>Your achievements, wallet, and personal activity are private to your account.</p><button class="mgr-button mgr-button-light" id="openLoginBtn" type="button">Log in</button></div>

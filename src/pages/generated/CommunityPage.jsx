@@ -2,9 +2,6 @@ import React from 'react';
 
 const HTML = `
 
-
-<div id="pageTransition" class="page-transition"></div>
-
 <header role="banner" class="gathering-top"><a href="index.html" class="gathering-brand">GidiReads</a><nav role="navigation"><a href="index.html">Home</a><a href="explore.html">Explore</a><a href="rankings.html">Rankings</a><a href="authors-studio.html">Authors Studio</a></nav><a class="gathering-account" href="account.html">My account</a></header>
 <main role="main" class="gathering-shell" id="main-content"><section class="gathering-hero"><div class="hero-copy"><span class="eyebrow">THE GIDIREADS COMMUNITY</span><h1>Step into <em>The Gathering</em></h1><p>A place to talk about stories, share ideas, meet readers and writers, and take part in creative challenges.</p><a href="#communitySpaces" class="gathering-cta">Explore the community</a></div><div class="portal-art" role="img" aria-label="The Gathering portal"><div class="portal-ring"></div><div class="portal-core"></div><span class="portal-caption">ENTER THE GATHERING</span></div></section>
 <div class="gathering-welcome"><div><span class="eyebrow">WELCOME IN</span><h2>Good stories bring people together.</h2><p>Be kind, stay curious and give everyone room to take part.</p></div><div class="community-stat"><strong id="communityMemberCount">    </strong><span>community members</span><button class="community-button secondary" id="startCommunityTour" type="button">Get started · Take a tour</button><button class="community-tour-link" id="restartCommunityTour" type="button">Show me around again</button></div></div>

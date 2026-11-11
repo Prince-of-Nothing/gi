@@ -2,9 +2,6 @@ import React from 'react';
 
 const HTML = `
 
-
-<div id="pageTransition" class="page-transition"></div>
-
 <main role="main" class="story-page" id="main-content">
  <section class="story-hero-v2">
   <div class="story-hero-atmosphere" aria-hidden="true"></div>

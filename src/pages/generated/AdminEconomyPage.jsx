@@ -2,9 +2,6 @@ import React from 'react';
 
 const HTML = `
 
-
-<div id="pageTransition" class="page-transition"></div>
-
 <main role="main" class="ce-wrap" id="main-content"><section class="ce-hero"><p class="ce-eyebrow">RESTRICTED ADMIN AREA</p><h1>Creator Economy Controls</h1><p>Review contract applications, issue offers, process payout requests, and manage badge, task, and gift catalogues. Actions are checked against the admin role in Supabase.</p></section><div id="adminEcoNotice" class="ce-notice" role="status">Checking administrator access…</div><section id="adminEcoDenied" class="ce-card" hidden><h2>Access restricted</h2><p>This area is available to approved GidiReads administrators only.</p><a class="ce-btn" href="admin.html">Return to Admin Dashboard</a></section><section id="adminEcoMain" hidden>
 <section class="ce-section"><div class="ce-heading"><div><p class="ce-eyebrow">CONTRACT CENTER</p><h2>Applications awaiting review</h2></div></div><div id="adminContractQueue" class="ce-list"></div></section>
 <section class="ce-section"><div class="ce-heading"><div><p class="ce-eyebrow">PAYOUTS</p><h2>Creator payout requests</h2></div></div><div id="adminPayoutQueue" class="ce-list"></div></section>

@@ -2,9 +2,6 @@ import React from 'react';
 
 const HTML = `
 
-
-<div id="pageTransition" class="page-transition"></div>
-
 <main role="main" class="oc" id="main-content">
  <section class="oc-hero" id="ocHero" aria-label="Featured opportunities" aria-roledescription="carousel">
   <div class="oc-hero-loading">Loading featured opportunities…</div>

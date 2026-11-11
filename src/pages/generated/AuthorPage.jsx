@@ -2,9 +2,6 @@ import React from 'react';
 
 const HTML = `
 
-
-<div id="pageTransition" class="page-transition"></div>
-
 <header role="banner" class="site-nav explore-nav">
  <div class="nav-inner">
   <a class="brand" href="index.html">

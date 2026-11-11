@@ -2,9 +2,6 @@ import React from 'react';
 
 const HTML = `
 
-
-<div id="pageTransition" class="page-transition"></div>
-
 <main role="main" class="he" id="heMain" id="main-content">
  <p class="hh-back"><a href="holiday-hearts.html">    Holiday Hearts</a></p>
  <div id="heBody"><p class="oc-state">Loading your entry…</p></div>

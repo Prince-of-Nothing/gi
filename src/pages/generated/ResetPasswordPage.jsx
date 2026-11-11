@@ -2,9 +2,6 @@ import React from 'react';
 
 const HTML = `
 
-
-<div id="pageTransition" class="page-transition"></div>
-
  <main role="main" class="wrap" id="main-content">
   <div class="brand">GidiReads</div>
   <section class="card" id="loading"><div class="spinner">Checking your recovery link…</div></section>

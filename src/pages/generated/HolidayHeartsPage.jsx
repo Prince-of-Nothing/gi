@@ -2,9 +2,6 @@ import React from 'react';
 
 const HTML = `
 
-
-<div id="pageTransition" class="page-transition"></div>
-
 <main role="main" class="hh" id="hhMain" id="main-content">
  <p class="hh-back"><a href="opportunities.html">    All opportunities</a></p>
 

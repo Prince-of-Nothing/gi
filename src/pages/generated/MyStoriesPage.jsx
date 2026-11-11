@@ -81,21 +81,7 @@ const HTML = `
   </main>
 </div>
 
-<div class="modal-overlay" id="editStoryModal" hidden>
-  <div class="modal modal-wide" role="dialog" aria-modal="true" aria-labelledby="editStoryTitleHeading">
-    <div class="modal-header"><button class="modal-close" data-close="editStory" aria-label="Close">&times;</button><h2 id="editStoryTitleHeading" class="modal-title">Edit story</h2><p class="modal-sub">Update the story details currently supported by GidiReads.</p></div>
-    <div class="modal-body"><form id="editStoryForm" class="modal-form">
-      <input type="hidden" id="editStoryId" />
-      <label class="field"><span>Cover</span><input type="file" id="editStoryCover" accept="image/*" /><img id="editCoverPreview" class="cover-preview" hidden /></label>
-      <label class="field"><span>Title</span><input type="text" id="editStoryTitle" required /></label>
-      <label class="field"><span>Description</span><textarea id="editStoryDescription" rows="4" required></textarea></label>
-      <div class="field-row"><label class="field"><span>Primary genre</span><select id="editStoryPrimaryGenre" required><option value="">Select a genre</option><option>Romance</option><option>Fantasy</option><option>Dark Fantasy</option><option>Mystery</option><option>Thriller</option><option>Horror</option><option>Science Fiction</option><option>Comedy</option><option>Historical</option><option>Young Adult</option><option>Adventure</option><option>Drama</option></select></label><label class="field"><span>Secondary genre</span><select id="editStorySecondaryGenre"><option value="">None</option><option>Romance</option><option>Fantasy</option><option>Dark Fantasy</option><option>Mystery</option><option>Thriller</option><option>Horror</option><option>Science Fiction</option><option>Comedy</option><option>Historical</option><option>Young Adult</option><option>Adventure</option><option>Drama</option></select></label></div>
-      <div class="field-row"><label class="field"><span>Content rating</span><select id="editStoryRating"><option>General</option><option>Teen</option><option>Mature</option></select></label><label class="field"><span>Language</span><select id="editStoryLanguage"><option>English</option><option>French</option><option>Yoruba</option><option>Igbo</option><option>Hausa</option><option>Swahili</option><option>Other</option></select></label></div>
-      <label class="field"><span>Status</span><select id="editStoryStatus"><option value="ongoing">Ongoing</option><option value="completed">Completed</option><option value="draft">Draft</option></select></label>
-      <p class="form-error" id="editStoryError" hidden></p><button type="submit" class="btn btn-primary btn-block" id="editStorySubmitBtn">Save changes</button>
-    </form></div>
-  </div>
-</div>
+
 <div class="modal-overlay" id="aeDraftShareModal" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="aeDraftShareTitle"><div class="modal-header"><button class="modal-close" type="button" data-close="aeDraftShare" aria-label="Close">×</button><h2 class="modal-title" id="aeDraftShareTitle">Share a draft</h2><p class="modal-sub">Your assigned Acquisition Editor can read this draft privately.</p></div><div class="modal-body"><form id="aeDraftShareForm" class="modal-form"><label class="field"><span>Assigned editor</span><select id="aeDraftShareEditor" required><option value="">Loading…</option></select></label><p id="aeDraftShareStatus" class="form-error" role="status" aria-live="polite"></p><button type="submit" class="btn btn-primary btn-block" id="aeDraftShareSubmit" disabled>Share draft</button></form></div></div></div>
 
 

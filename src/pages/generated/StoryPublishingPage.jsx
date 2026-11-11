@@ -2,9 +2,6 @@ import React from 'react';
 
 const HTML = `
 
-
-<div id="pageTransition" class="page-transition"></div>
-
 <div class="studio-shell">
 <aside class="studio-sidebar" id="studioSidebar" aria-label="Authors Studio navigation">
  <div><div class="studio-brand-block"><a class="studio-brand" href="index.html"><span class="brand-monogram" aria-hidden="true"><span>G</span><span>R</span></span><span class="brand-word">GidiReads</span></a><div class="studio-label">AUTHORS STUDIO</div><button class="sidebar-close" id="sidebarClose" type="button">×</button></div>

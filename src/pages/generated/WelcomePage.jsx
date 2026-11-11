@@ -2,9 +2,6 @@ import React from 'react';
 
 const HTML = `
 
-
-<div id="pageTransition" class="page-transition"></div>
-
 <main role="main" class="gr-welcome-shell" id="main-content">
  <header role="banner" class="gr-welcome-header"><a href="index.html" aria-label="GidiReads home"><img src="assets/gidireads-logo.png" alt="GidiReads logo"><span>GidiReads</span></a><span class="gr-welcome-header-note">Stories begin here.</span></header>
  <section class="gr-welcome-intro" aria-labelledby="welcomeTitle"><p class="gr-welcome-eyebrow">A WORLD OF YOUR OWN</p><h1 id="welcomeTitle">Every story opens<br><em>another world.</em></h1><p>Find your next obsession. Follow a new voice. Make room for a story that stays with you.</p><div class="gr-welcome-actions"><a class="gr-welcome-primary" href="index.html" id="enterGidiReads">Enter GidiReads <span aria-hidden="true">→</span></a><a class="gr-welcome-secondary" href="auth.html?mode=signup">Create an account</a></div></section>
