@@ -39,7 +39,8 @@ export default function SiteHeader() {
       await supabase.auth.signOut();
       return;
     }
-    window.location.href = 'auth.html?mode=login';
+    const returnTo = location.pathname + location.search + location.hash;
+    window.location.href = `auth.html?mode=login&returnTo=${encodeURIComponent(returnTo)}`;
   };
 
   return (

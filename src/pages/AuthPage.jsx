@@ -28,6 +28,7 @@ export default function AuthPage() {
     const rt = params.get('returnTo');
     return rt && /^[\w.\-]+(\?[^#]*)?(#.*)?$/.test(rt) ? rt : '/';
   })();
+  const goHome = () => navigate('/', { replace: true });
 
   React.useEffect(() => {
     const prevClass = document.body.className;
@@ -40,7 +41,7 @@ export default function AuthPage() {
         if (pending || params.get('verified') === '1') {
           localStorage.removeItem('gr-onboarding-pending');
           sessionStorage.removeItem('gr-verifyEmail');
-          navigate('/', { replace: true });
+          goHome();
         }
       } else if (params.has('verified')) {
         setNotice('Email confirmed. Welcome back.', 'info');
@@ -170,7 +171,7 @@ export default function AuthPage() {
       if (mode === 'verify') {
         localStorage.removeItem('gr-onboarding-pending');
         sessionStorage.removeItem('gr-verifyEmail');
-        window.location.href = returnTo;
+        goHome();
         return;
       }
       if (mode === 'login') {
@@ -186,7 +187,7 @@ export default function AuthPage() {
         if (loginData.user && localStorage.getItem('gr-avatar-pending-data')) {
           try { await uploadPendingAvatar(loginData.user); } catch (_) { localStorage.setItem('gr-avatar-upload-reminder', '1'); }
         }
-        window.location.href = returnTo;
+        goHome();
         return;
       }
       await validateBasics();
@@ -215,7 +216,7 @@ export default function AuthPage() {
           try { await makeDefaultAvatar(username, data.user); } catch (_) { localStorage.setItem('gr-avatar-upload-reminder', '1'); }
         }
         localStorage.setItem('gr-onboarding-pending', JSON.stringify({ roles, version: 1 }));
-        navigate('/', { replace: true });
+        goHome();
         return;
       }
       localStorage.setItem('gr-onboarding-pending', JSON.stringify({ roles, version: 1 }));
